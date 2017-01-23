@@ -1,0 +1,14 @@
+C:\Users\Minddy\Downloads\PROJECT\SocialHerb\SocialHerb\bin\SocialHerb.dll
+C:\Users\Minddy\Downloads\PROJECT\SocialHerb\SocialHerb\bin\SocialHerb.pdb
+C:\Users\Minddy\Downloads\PROJECT\SocialHerb\SocialHerb\bin\SocialHerb.xml
+C:\Users\Minddy\Downloads\PROJECT\SocialHerb\SocialHerb\bin\Microsoft.Windows.Design.Interaction.dll
+C:\Users\Minddy\Downloads\PROJECT\SocialHerb\SocialHerb\bin\Microsoft.Windows.Design.Extensibility.dll
+C:\Users\Minddy\Downloads\PROJECT\SocialHerb\SocialHerb\bin\Microsoft.Windows.Design.Interaction.xml
+C:\Users\Minddy\Downloads\PROJECT\SocialHerb\SocialHerb\bin\Microsoft.Windows.Design.Extensibility.xml
+C:\Users\Minddy\Downloads\PROJECT\SocialHerb\SocialHerb\obj\Debug\SocialHerb.vbprojResolveAssemblyReference.cache
+C:\Users\Minddy\Downloads\PROJECT\SocialHerb\SocialHerb\obj\Debug\SocialHerb.Resources.resources
+C:\Users\Minddy\Downloads\PROJECT\SocialHerb\SocialHerb\obj\Debug\SocialHerb.vbproj.GenerateResource.Cache
+C:\Users\Minddy\Downloads\PROJECT\SocialHerb\SocialHerb\obj\Debug\SocialHerb.dll.licenses
+C:\Users\Minddy\Downloads\PROJECT\SocialHerb\SocialHerb\obj\Debug\SocialHerb.dll
+C:\Users\Minddy\Downloads\PROJECT\SocialHerb\SocialHerb\obj\Debug\SocialHerb.xml
+C:\Users\Minddy\Downloads\PROJECT\SocialHerb\SocialHerb\obj\Debug\SocialHerb.pdb
