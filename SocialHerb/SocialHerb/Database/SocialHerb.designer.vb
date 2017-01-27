@@ -31,12 +31,6 @@ Partial Public Class SocialHerbDataContext
   #Region "Extensibility Method Definitions"
   Partial Private Sub OnCreated()
   End Sub
-  Partial Private Sub InsertPharmacist(instance As Pharmacist)
-    End Sub
-  Partial Private Sub UpdatePharmacist(instance As Pharmacist)
-    End Sub
-  Partial Private Sub DeletePharmacist(instance As Pharmacist)
-    End Sub
   Partial Private Sub InsertAdmin(instance As Admin)
     End Sub
   Partial Private Sub UpdateAdmin(instance As Admin)
@@ -73,17 +67,17 @@ Partial Public Class SocialHerbDataContext
     End Sub
   Partial Private Sub DeleteHerb(instance As Herb)
     End Sub
-  Partial Private Sub InsertHerbImg(instance As HerbImg)
-    End Sub
-  Partial Private Sub UpdateHerbImg(instance As HerbImg)
-    End Sub
-  Partial Private Sub DeleteHerbImg(instance As HerbImg)
-    End Sub
   Partial Private Sub InsertHerbComment(instance As HerbComment)
     End Sub
   Partial Private Sub UpdateHerbComment(instance As HerbComment)
     End Sub
   Partial Private Sub DeleteHerbComment(instance As HerbComment)
+    End Sub
+  Partial Private Sub InsertHerbImg(instance As HerbImg)
+    End Sub
+  Partial Private Sub UpdateHerbImg(instance As HerbImg)
+    End Sub
+  Partial Private Sub DeleteHerbImg(instance As HerbImg)
     End Sub
   Partial Private Sub InsertHerbRating(instance As HerbRating)
     End Sub
@@ -109,10 +103,16 @@ Partial Public Class SocialHerbDataContext
     End Sub
   Partial Private Sub DeleteInfographicRating(instance As InfographicRating)
     End Sub
+  Partial Private Sub InsertPharmacist(instance As Pharmacist)
+    End Sub
+  Partial Private Sub UpdatePharmacist(instance As Pharmacist)
+    End Sub
+  Partial Private Sub DeletePharmacist(instance As Pharmacist)
+    End Sub
   #End Region
 	
 	Public Sub New()
-		MyBase.New(Global.System.Configuration.ConfigurationManager.ConnectionStrings("SocialHerbConnectionString").ConnectionString, mappingSource)
+		MyBase.New(Global.System.Configuration.ConfigurationManager.ConnectionStrings("SocialHerb").ConnectionString, mappingSource)
 		OnCreated
 	End Sub
 	
@@ -135,12 +135,6 @@ Partial Public Class SocialHerbDataContext
 		MyBase.New(connection, mappingSource)
 		OnCreated
 	End Sub
-	
-	Public ReadOnly Property Pharmacists() As System.Data.Linq.Table(Of Pharmacist)
-		Get
-			Return Me.GetTable(Of Pharmacist)
-		End Get
-	End Property
 	
 	Public ReadOnly Property Admins() As System.Data.Linq.Table(Of Admin)
 		Get
@@ -178,15 +172,15 @@ Partial Public Class SocialHerbDataContext
 		End Get
 	End Property
 	
-	Public ReadOnly Property HerbImgs() As System.Data.Linq.Table(Of HerbImg)
-		Get
-			Return Me.GetTable(Of HerbImg)
-		End Get
-	End Property
-	
 	Public ReadOnly Property HerbComments() As System.Data.Linq.Table(Of HerbComment)
 		Get
 			Return Me.GetTable(Of HerbComment)
+		End Get
+	End Property
+	
+	Public ReadOnly Property HerbImgs() As System.Data.Linq.Table(Of HerbImg)
+		Get
+			Return Me.GetTable(Of HerbImg)
 		End Get
 	End Property
 	
@@ -213,248 +207,12 @@ Partial Public Class SocialHerbDataContext
 			Return Me.GetTable(Of InfographicRating)
 		End Get
 	End Property
-End Class
-
-<Global.System.Data.Linq.Mapping.TableAttribute(Name:="dbo.Pharmacist")>  _
-Partial Public Class Pharmacist
-	Implements System.ComponentModel.INotifyPropertyChanging, System.ComponentModel.INotifyPropertyChanged
 	
-	Private Shared emptyChangingEventArgs As PropertyChangingEventArgs = New PropertyChangingEventArgs(String.Empty)
-	
-	Private _username As String
-	
-	Private _password As String
-	
-	Private _email As String
-	
-	Private _encrypPass As String
-	
-	Private _ArticleRatings As EntitySet(Of ArticleRating)
-	
-	Private _DiseaseRatings As EntitySet(Of DiseaseRating)
-	
-	Private _HerbComments As EntitySet(Of HerbComment)
-	
-	Private _HerbRatings As EntitySet(Of HerbRating)
-	
-	Private _InfographicRatings As EntitySet(Of InfographicRating)
-	
-    #Region "Extensibility Method Definitions"
-    Partial Private Sub OnLoaded()
-    End Sub
-    Partial Private Sub OnValidate(action As System.Data.Linq.ChangeAction)
-    End Sub
-    Partial Private Sub OnCreated()
-    End Sub
-    Partial Private Sub OnusernameChanging(value As String)
-    End Sub
-    Partial Private Sub OnusernameChanged()
-    End Sub
-    Partial Private Sub OnpasswordChanging(value As String)
-    End Sub
-    Partial Private Sub OnpasswordChanged()
-    End Sub
-    Partial Private Sub OnemailChanging(value As String)
-    End Sub
-    Partial Private Sub OnemailChanged()
-    End Sub
-    Partial Private Sub OnencrypPassChanging(value As String)
-    End Sub
-    Partial Private Sub OnencrypPassChanged()
-    End Sub
-    #End Region
-	
-	Public Sub New()
-		MyBase.New
-		Me._ArticleRatings = New EntitySet(Of ArticleRating)(AddressOf Me.attach_ArticleRatings, AddressOf Me.detach_ArticleRatings)
-		Me._DiseaseRatings = New EntitySet(Of DiseaseRating)(AddressOf Me.attach_DiseaseRatings, AddressOf Me.detach_DiseaseRatings)
-		Me._HerbComments = New EntitySet(Of HerbComment)(AddressOf Me.attach_HerbComments, AddressOf Me.detach_HerbComments)
-		Me._HerbRatings = New EntitySet(Of HerbRating)(AddressOf Me.attach_HerbRatings, AddressOf Me.detach_HerbRatings)
-		Me._InfographicRatings = New EntitySet(Of InfographicRating)(AddressOf Me.attach_InfographicRatings, AddressOf Me.detach_InfographicRatings)
-		OnCreated
-	End Sub
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_username", DbType:="VarChar(50) NOT NULL", CanBeNull:=false, IsPrimaryKey:=true)>  _
-	Public Property username() As String
+	Public ReadOnly Property Pharmacists() As System.Data.Linq.Table(Of Pharmacist)
 		Get
-			Return Me._username
+			Return Me.GetTable(Of Pharmacist)
 		End Get
-		Set
-			If (String.Equals(Me._username, value) = false) Then
-				Me.OnusernameChanging(value)
-				Me.SendPropertyChanging
-				Me._username = value
-				Me.SendPropertyChanged("username")
-				Me.OnusernameChanged
-			End If
-		End Set
 	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_password", DbType:="VarChar(50) NOT NULL", CanBeNull:=false)>  _
-	Public Property password() As String
-		Get
-			Return Me._password
-		End Get
-		Set
-			If (String.Equals(Me._password, value) = false) Then
-				Me.OnpasswordChanging(value)
-				Me.SendPropertyChanging
-				Me._password = value
-				Me.SendPropertyChanged("password")
-				Me.OnpasswordChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_email", DbType:="Text NOT NULL", CanBeNull:=false, UpdateCheck:=UpdateCheck.Never)>  _
-	Public Property email() As String
-		Get
-			Return Me._email
-		End Get
-		Set
-			If (String.Equals(Me._email, value) = false) Then
-				Me.OnemailChanging(value)
-				Me.SendPropertyChanging
-				Me._email = value
-				Me.SendPropertyChanged("email")
-				Me.OnemailChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_encrypPass", DbType:="VarChar(50) NOT NULL", CanBeNull:=false)>  _
-	Public Property encrypPass() As String
-		Get
-			Return Me._encrypPass
-		End Get
-		Set
-			If (String.Equals(Me._encrypPass, value) = false) Then
-				Me.OnencrypPassChanging(value)
-				Me.SendPropertyChanging
-				Me._encrypPass = value
-				Me.SendPropertyChanged("encrypPass")
-				Me.OnencrypPassChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="Pharmacist_ArticleRating", Storage:="_ArticleRatings", ThisKey:="username", OtherKey:="username")>  _
-	Public Property ArticleRatings() As EntitySet(Of ArticleRating)
-		Get
-			Return Me._ArticleRatings
-		End Get
-		Set
-			Me._ArticleRatings.Assign(value)
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="Pharmacist_DiseaseRating", Storage:="_DiseaseRatings", ThisKey:="username", OtherKey:="username")>  _
-	Public Property DiseaseRatings() As EntitySet(Of DiseaseRating)
-		Get
-			Return Me._DiseaseRatings
-		End Get
-		Set
-			Me._DiseaseRatings.Assign(value)
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="Pharmacist_HerbComment", Storage:="_HerbComments", ThisKey:="username", OtherKey:="username")>  _
-	Public Property HerbComments() As EntitySet(Of HerbComment)
-		Get
-			Return Me._HerbComments
-		End Get
-		Set
-			Me._HerbComments.Assign(value)
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="Pharmacist_HerbRating", Storage:="_HerbRatings", ThisKey:="username", OtherKey:="username")>  _
-	Public Property HerbRatings() As EntitySet(Of HerbRating)
-		Get
-			Return Me._HerbRatings
-		End Get
-		Set
-			Me._HerbRatings.Assign(value)
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="Pharmacist_InfographicRating", Storage:="_InfographicRatings", ThisKey:="username", OtherKey:="username")>  _
-	Public Property InfographicRatings() As EntitySet(Of InfographicRating)
-		Get
-			Return Me._InfographicRatings
-		End Get
-		Set
-			Me._InfographicRatings.Assign(value)
-		End Set
-	End Property
-	
-	Public Event PropertyChanging As PropertyChangingEventHandler Implements System.ComponentModel.INotifyPropertyChanging.PropertyChanging
-	
-	Public Event PropertyChanged As PropertyChangedEventHandler Implements System.ComponentModel.INotifyPropertyChanged.PropertyChanged
-	
-	Protected Overridable Sub SendPropertyChanging()
-		If ((Me.PropertyChangingEvent Is Nothing)  _
-					= false) Then
-			RaiseEvent PropertyChanging(Me, emptyChangingEventArgs)
-		End If
-	End Sub
-	
-	Protected Overridable Sub SendPropertyChanged(ByVal propertyName As [String])
-		If ((Me.PropertyChangedEvent Is Nothing)  _
-					= false) Then
-			RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(propertyName))
-		End If
-	End Sub
-	
-	Private Sub attach_ArticleRatings(ByVal entity As ArticleRating)
-		Me.SendPropertyChanging
-		entity.Pharmacist = Me
-	End Sub
-	
-	Private Sub detach_ArticleRatings(ByVal entity As ArticleRating)
-		Me.SendPropertyChanging
-		entity.Pharmacist = Nothing
-	End Sub
-	
-	Private Sub attach_DiseaseRatings(ByVal entity As DiseaseRating)
-		Me.SendPropertyChanging
-		entity.Pharmacist = Me
-	End Sub
-	
-	Private Sub detach_DiseaseRatings(ByVal entity As DiseaseRating)
-		Me.SendPropertyChanging
-		entity.Pharmacist = Nothing
-	End Sub
-	
-	Private Sub attach_HerbComments(ByVal entity As HerbComment)
-		Me.SendPropertyChanging
-		entity.Pharmacist = Me
-	End Sub
-	
-	Private Sub detach_HerbComments(ByVal entity As HerbComment)
-		Me.SendPropertyChanging
-		entity.Pharmacist = Nothing
-	End Sub
-	
-	Private Sub attach_HerbRatings(ByVal entity As HerbRating)
-		Me.SendPropertyChanging
-		entity.Pharmacist = Me
-	End Sub
-	
-	Private Sub detach_HerbRatings(ByVal entity As HerbRating)
-		Me.SendPropertyChanging
-		entity.Pharmacist = Nothing
-	End Sub
-	
-	Private Sub attach_InfographicRatings(ByVal entity As InfographicRating)
-		Me.SendPropertyChanging
-		entity.Pharmacist = Me
-	End Sub
-	
-	Private Sub detach_InfographicRatings(ByVal entity As InfographicRating)
-		Me.SendPropertyChanging
-		entity.Pharmacist = Nothing
-	End Sub
 End Class
 
 <Global.System.Data.Linq.Mapping.TableAttribute(Name:="dbo.Admin")>  _
@@ -967,7 +725,7 @@ Partial Public Class Disease
 	
 	Private _herb As String
 	
-	Private _dateDisease As Date
+	Private _dateDisease As System.Nullable(Of Date) = CType(Nothing, System.Nullable(Of Date))
 	
 	Private _DiseaseRatings As EntitySet(Of DiseaseRating)
 	
@@ -994,10 +752,6 @@ Partial Public Class Disease
     End Sub
     Partial Private Sub OnherbChanged()
     End Sub
-    Partial Private Sub OndateDiseaseChanging(value As Date)
-    End Sub
-    Partial Private Sub OndateDiseaseChanged()
-    End Sub
     #End Region
 	
 	Public Sub New()
@@ -1006,7 +760,7 @@ Partial Public Class Disease
 		OnCreated
 	End Sub
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_diseaseID", DbType:="VarChar(10) NOT NULL", CanBeNull:=false, IsPrimaryKey:=true)>  _
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_diseaseID", DbType:="VarChar(10) NOT NULL", CanBeNull:=false, IsPrimaryKey:=true, IsDbGenerated:=true)>  _
 	Public Property diseaseID() As String
 		Get
 			Return Me._diseaseID
@@ -1070,21 +824,11 @@ Partial Public Class Disease
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_dateDisease", DbType:="Date NOT NULL")>  _
-	Public Property dateDisease() As Date
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_dateDisease", IsDbGenerated:=true, UpdateCheck:=UpdateCheck.Never)>  _
+	Public ReadOnly Property dateDisease() As System.Nullable(Of Date)
 		Get
 			Return Me._dateDisease
 		End Get
-		Set
-			If ((Me._dateDisease = value)  _
-						= false) Then
-				Me.OndateDiseaseChanging(value)
-				Me.SendPropertyChanging
-				Me._dateDisease = value
-				Me.SendPropertyChanged("dateDisease")
-				Me.OndateDiseaseChanged
-			End If
-		End Set
 	End Property
 	
 	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="Disease_DiseaseRating", Storage:="_DiseaseRatings", ThisKey:="diseaseID", OtherKey:="diseaseID")>  _
@@ -1344,9 +1088,9 @@ Partial Public Class Herb
 	
 	Private _dateHerb As Date
 	
-	Private _HerbImgs As EntitySet(Of HerbImg)
-	
 	Private _HerbComments As EntitySet(Of HerbComment)
+	
+	Private _HerbImgs As EntitySet(Of HerbImg)
 	
 	Private _HerbRatings As EntitySet(Of HerbRating)
 	
@@ -1395,8 +1139,8 @@ Partial Public Class Herb
 	
 	Public Sub New()
 		MyBase.New
-		Me._HerbImgs = New EntitySet(Of HerbImg)(AddressOf Me.attach_HerbImgs, AddressOf Me.detach_HerbImgs)
 		Me._HerbComments = New EntitySet(Of HerbComment)(AddressOf Me.attach_HerbComments, AddressOf Me.detach_HerbComments)
+		Me._HerbImgs = New EntitySet(Of HerbImg)(AddressOf Me.attach_HerbImgs, AddressOf Me.detach_HerbImgs)
 		Me._HerbRatings = New EntitySet(Of HerbRating)(AddressOf Me.attach_HerbRatings, AddressOf Me.detach_HerbRatings)
 		Me._HerbResearches = New EntitySet(Of HerbResearch)(AddressOf Me.attach_HerbResearches, AddressOf Me.detach_HerbResearches)
 		OnCreated
@@ -1531,16 +1275,6 @@ Partial Public Class Herb
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="Herb_HerbImg", Storage:="_HerbImgs", ThisKey:="herbID", OtherKey:="herbID")>  _
-	Public Property HerbImgs() As EntitySet(Of HerbImg)
-		Get
-			Return Me._HerbImgs
-		End Get
-		Set
-			Me._HerbImgs.Assign(value)
-		End Set
-	End Property
-	
 	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="Herb_HerbComment", Storage:="_HerbComments", ThisKey:="herbID", OtherKey:="herbID")>  _
 	Public Property HerbComments() As EntitySet(Of HerbComment)
 		Get
@@ -1548,6 +1282,16 @@ Partial Public Class Herb
 		End Get
 		Set
 			Me._HerbComments.Assign(value)
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="Herb_HerbImg", Storage:="_HerbImgs", ThisKey:="herbID", OtherKey:="herbID")>  _
+	Public Property HerbImgs() As EntitySet(Of HerbImg)
+		Get
+			Return Me._HerbImgs
+		End Get
+		Set
+			Me._HerbImgs.Assign(value)
 		End Set
 	End Property
 	
@@ -1589,22 +1333,22 @@ Partial Public Class Herb
 		End If
 	End Sub
 	
-	Private Sub attach_HerbImgs(ByVal entity As HerbImg)
-		Me.SendPropertyChanging
-		entity.Herb = Me
-	End Sub
-	
-	Private Sub detach_HerbImgs(ByVal entity As HerbImg)
-		Me.SendPropertyChanging
-		entity.Herb = Nothing
-	End Sub
-	
 	Private Sub attach_HerbComments(ByVal entity As HerbComment)
 		Me.SendPropertyChanging
 		entity.Herb = Me
 	End Sub
 	
 	Private Sub detach_HerbComments(ByVal entity As HerbComment)
+		Me.SendPropertyChanging
+		entity.Herb = Nothing
+	End Sub
+	
+	Private Sub attach_HerbImgs(ByVal entity As HerbImg)
+		Me.SendPropertyChanging
+		entity.Herb = Me
+	End Sub
+	
+	Private Sub detach_HerbImgs(ByVal entity As HerbImg)
 		Me.SendPropertyChanging
 		entity.Herb = Nothing
 	End Sub
@@ -1627,6 +1371,224 @@ Partial Public Class Herb
 	Private Sub detach_HerbResearches(ByVal entity As HerbResearch)
 		Me.SendPropertyChanging
 		entity.Herb = Nothing
+	End Sub
+End Class
+
+<Global.System.Data.Linq.Mapping.TableAttribute(Name:="dbo.HerbComment")>  _
+Partial Public Class HerbComment
+	Implements System.ComponentModel.INotifyPropertyChanging, System.ComponentModel.INotifyPropertyChanged
+	
+	Private Shared emptyChangingEventArgs As PropertyChangingEventArgs = New PropertyChangingEventArgs(String.Empty)
+	
+	Private _herbCommentID As String
+	
+	Private _herbID As String
+	
+	Private _username As String
+	
+	Private _comment As String
+	
+	Private _date As Date
+	
+	Private _Herb As EntityRef(Of Herb)
+	
+	Private _Pharmacist As EntityRef(Of Pharmacist)
+	
+    #Region "Extensibility Method Definitions"
+    Partial Private Sub OnLoaded()
+    End Sub
+    Partial Private Sub OnValidate(action As System.Data.Linq.ChangeAction)
+    End Sub
+    Partial Private Sub OnCreated()
+    End Sub
+    Partial Private Sub OnherbCommentIDChanging(value As String)
+    End Sub
+    Partial Private Sub OnherbCommentIDChanged()
+    End Sub
+    Partial Private Sub OnherbIDChanging(value As String)
+    End Sub
+    Partial Private Sub OnherbIDChanged()
+    End Sub
+    Partial Private Sub OnusernameChanging(value As String)
+    End Sub
+    Partial Private Sub OnusernameChanged()
+    End Sub
+    Partial Private Sub OncommentChanging(value As String)
+    End Sub
+    Partial Private Sub OncommentChanged()
+    End Sub
+    Partial Private Sub OndateChanging(value As Date)
+    End Sub
+    Partial Private Sub OndateChanged()
+    End Sub
+    #End Region
+	
+	Public Sub New()
+		MyBase.New
+		Me._Herb = CType(Nothing, EntityRef(Of Herb))
+		Me._Pharmacist = CType(Nothing, EntityRef(Of Pharmacist))
+		OnCreated
+	End Sub
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_herbCommentID", DbType:="VarChar(10) NOT NULL", CanBeNull:=false, IsPrimaryKey:=true)>  _
+	Public Property herbCommentID() As String
+		Get
+			Return Me._herbCommentID
+		End Get
+		Set
+			If (String.Equals(Me._herbCommentID, value) = false) Then
+				Me.OnherbCommentIDChanging(value)
+				Me.SendPropertyChanging
+				Me._herbCommentID = value
+				Me.SendPropertyChanged("herbCommentID")
+				Me.OnherbCommentIDChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_herbID", DbType:="VarChar(10) NOT NULL", CanBeNull:=false)>  _
+	Public Property herbID() As String
+		Get
+			Return Me._herbID
+		End Get
+		Set
+			If (String.Equals(Me._herbID, value) = false) Then
+				If Me._Herb.HasLoadedOrAssignedValue Then
+					Throw New System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException()
+				End If
+				Me.OnherbIDChanging(value)
+				Me.SendPropertyChanging
+				Me._herbID = value
+				Me.SendPropertyChanged("herbID")
+				Me.OnherbIDChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_username", DbType:="VarChar(50) NOT NULL", CanBeNull:=false)>  _
+	Public Property username() As String
+		Get
+			Return Me._username
+		End Get
+		Set
+			If (String.Equals(Me._username, value) = false) Then
+				If Me._Pharmacist.HasLoadedOrAssignedValue Then
+					Throw New System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException()
+				End If
+				Me.OnusernameChanging(value)
+				Me.SendPropertyChanging
+				Me._username = value
+				Me.SendPropertyChanged("username")
+				Me.OnusernameChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_comment", DbType:="Text NOT NULL", CanBeNull:=false, UpdateCheck:=UpdateCheck.Never)>  _
+	Public Property comment() As String
+		Get
+			Return Me._comment
+		End Get
+		Set
+			If (String.Equals(Me._comment, value) = false) Then
+				Me.OncommentChanging(value)
+				Me.SendPropertyChanging
+				Me._comment = value
+				Me.SendPropertyChanged("comment")
+				Me.OncommentChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Name:="date", Storage:="_date", DbType:="Date NOT NULL")>  _
+	Public Property [date]() As Date
+		Get
+			Return Me._date
+		End Get
+		Set
+			If ((Me._date = value)  _
+						= false) Then
+				Me.OndateChanging(value)
+				Me.SendPropertyChanging
+				Me._date = value
+				Me.SendPropertyChanged("[date]")
+				Me.OndateChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="Herb_HerbComment", Storage:="_Herb", ThisKey:="herbID", OtherKey:="herbID", IsForeignKey:=true)>  _
+	Public Property Herb() As Herb
+		Get
+			Return Me._Herb.Entity
+		End Get
+		Set
+			Dim previousValue As Herb = Me._Herb.Entity
+			If ((Object.Equals(previousValue, value) = false)  _
+						OrElse (Me._Herb.HasLoadedOrAssignedValue = false)) Then
+				Me.SendPropertyChanging
+				If ((previousValue Is Nothing)  _
+							= false) Then
+					Me._Herb.Entity = Nothing
+					previousValue.HerbComments.Remove(Me)
+				End If
+				Me._Herb.Entity = value
+				If ((value Is Nothing)  _
+							= false) Then
+					value.HerbComments.Add(Me)
+					Me._herbID = value.herbID
+				Else
+					Me._herbID = CType(Nothing, String)
+				End If
+				Me.SendPropertyChanged("Herb")
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="Pharmacist_HerbComment", Storage:="_Pharmacist", ThisKey:="username", OtherKey:="username", IsForeignKey:=true)>  _
+	Public Property Pharmacist() As Pharmacist
+		Get
+			Return Me._Pharmacist.Entity
+		End Get
+		Set
+			Dim previousValue As Pharmacist = Me._Pharmacist.Entity
+			If ((Object.Equals(previousValue, value) = false)  _
+						OrElse (Me._Pharmacist.HasLoadedOrAssignedValue = false)) Then
+				Me.SendPropertyChanging
+				If ((previousValue Is Nothing)  _
+							= false) Then
+					Me._Pharmacist.Entity = Nothing
+					previousValue.HerbComments.Remove(Me)
+				End If
+				Me._Pharmacist.Entity = value
+				If ((value Is Nothing)  _
+							= false) Then
+					value.HerbComments.Add(Me)
+					Me._username = value.username
+				Else
+					Me._username = CType(Nothing, String)
+				End If
+				Me.SendPropertyChanged("Pharmacist")
+			End If
+		End Set
+	End Property
+	
+	Public Event PropertyChanging As PropertyChangingEventHandler Implements System.ComponentModel.INotifyPropertyChanging.PropertyChanging
+	
+	Public Event PropertyChanged As PropertyChangedEventHandler Implements System.ComponentModel.INotifyPropertyChanged.PropertyChanged
+	
+	Protected Overridable Sub SendPropertyChanging()
+		If ((Me.PropertyChangingEvent Is Nothing)  _
+					= false) Then
+			RaiseEvent PropertyChanging(Me, emptyChangingEventArgs)
+		End If
+	End Sub
+	
+	Protected Overridable Sub SendPropertyChanged(ByVal propertyName As [String])
+		If ((Me.PropertyChangedEvent Is Nothing)  _
+					= false) Then
+			RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(propertyName))
+		End If
 	End Sub
 End Class
 
@@ -2055,231 +2017,13 @@ Partial Public Class HerbImg
 	End Sub
 End Class
 
-<Global.System.Data.Linq.Mapping.TableAttribute(Name:="dbo.HerbComment")>  _
-Partial Public Class HerbComment
-	Implements System.ComponentModel.INotifyPropertyChanging, System.ComponentModel.INotifyPropertyChanged
-	
-	Private Shared emptyChangingEventArgs As PropertyChangingEventArgs = New PropertyChangingEventArgs(String.Empty)
-	
-	Private _herbCommentID As String
-	
-	Private _herbID As String
-	
-	Private _username As String
-	
-	Private _comment As String
-	
-	Private _date As Date
-	
-	Private _Herb As EntityRef(Of Herb)
-	
-	Private _Pharmacist As EntityRef(Of Pharmacist)
-	
-    #Region "Extensibility Method Definitions"
-    Partial Private Sub OnLoaded()
-    End Sub
-    Partial Private Sub OnValidate(action As System.Data.Linq.ChangeAction)
-    End Sub
-    Partial Private Sub OnCreated()
-    End Sub
-    Partial Private Sub OnherbCommentIDChanging(value As String)
-    End Sub
-    Partial Private Sub OnherbCommentIDChanged()
-    End Sub
-    Partial Private Sub OnherbIDChanging(value As String)
-    End Sub
-    Partial Private Sub OnherbIDChanged()
-    End Sub
-    Partial Private Sub OnusernameChanging(value As String)
-    End Sub
-    Partial Private Sub OnusernameChanged()
-    End Sub
-    Partial Private Sub OncommentChanging(value As String)
-    End Sub
-    Partial Private Sub OncommentChanged()
-    End Sub
-    Partial Private Sub OndateChanging(value As Date)
-    End Sub
-    Partial Private Sub OndateChanged()
-    End Sub
-    #End Region
-	
-	Public Sub New()
-		MyBase.New
-		Me._Herb = CType(Nothing, EntityRef(Of Herb))
-		Me._Pharmacist = CType(Nothing, EntityRef(Of Pharmacist))
-		OnCreated
-	End Sub
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_herbCommentID", DbType:="VarChar(10) NOT NULL", CanBeNull:=false, IsPrimaryKey:=true)>  _
-	Public Property herbCommentID() As String
-		Get
-			Return Me._herbCommentID
-		End Get
-		Set
-			If (String.Equals(Me._herbCommentID, value) = false) Then
-				Me.OnherbCommentIDChanging(value)
-				Me.SendPropertyChanging
-				Me._herbCommentID = value
-				Me.SendPropertyChanged("herbCommentID")
-				Me.OnherbCommentIDChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_herbID", DbType:="VarChar(10) NOT NULL", CanBeNull:=false)>  _
-	Public Property herbID() As String
-		Get
-			Return Me._herbID
-		End Get
-		Set
-			If (String.Equals(Me._herbID, value) = false) Then
-				If Me._Herb.HasLoadedOrAssignedValue Then
-					Throw New System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException()
-				End If
-				Me.OnherbIDChanging(value)
-				Me.SendPropertyChanging
-				Me._herbID = value
-				Me.SendPropertyChanged("herbID")
-				Me.OnherbIDChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_username", DbType:="VarChar(50) NOT NULL", CanBeNull:=false)>  _
-	Public Property username() As String
-		Get
-			Return Me._username
-		End Get
-		Set
-			If (String.Equals(Me._username, value) = false) Then
-				If Me._Pharmacist.HasLoadedOrAssignedValue Then
-					Throw New System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException()
-				End If
-				Me.OnusernameChanging(value)
-				Me.SendPropertyChanging
-				Me._username = value
-				Me.SendPropertyChanged("username")
-				Me.OnusernameChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_comment", DbType:="Text NOT NULL", CanBeNull:=false, UpdateCheck:=UpdateCheck.Never)>  _
-	Public Property comment() As String
-		Get
-			Return Me._comment
-		End Get
-		Set
-			If (String.Equals(Me._comment, value) = false) Then
-				Me.OncommentChanging(value)
-				Me.SendPropertyChanging
-				Me._comment = value
-				Me.SendPropertyChanged("comment")
-				Me.OncommentChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Name:="date", Storage:="_date", DbType:="Date NOT NULL")>  _
-	Public Property [date]() As Date
-		Get
-			Return Me._date
-		End Get
-		Set
-			If ((Me._date = value)  _
-						= false) Then
-				Me.OndateChanging(value)
-				Me.SendPropertyChanging
-				Me._date = value
-				Me.SendPropertyChanged("[date]")
-				Me.OndateChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="Herb_HerbComment", Storage:="_Herb", ThisKey:="herbID", OtherKey:="herbID", IsForeignKey:=true)>  _
-	Public Property Herb() As Herb
-		Get
-			Return Me._Herb.Entity
-		End Get
-		Set
-			Dim previousValue As Herb = Me._Herb.Entity
-			If ((Object.Equals(previousValue, value) = false)  _
-						OrElse (Me._Herb.HasLoadedOrAssignedValue = false)) Then
-				Me.SendPropertyChanging
-				If ((previousValue Is Nothing)  _
-							= false) Then
-					Me._Herb.Entity = Nothing
-					previousValue.HerbComments.Remove(Me)
-				End If
-				Me._Herb.Entity = value
-				If ((value Is Nothing)  _
-							= false) Then
-					value.HerbComments.Add(Me)
-					Me._herbID = value.herbID
-				Else
-					Me._herbID = CType(Nothing, String)
-				End If
-				Me.SendPropertyChanged("Herb")
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="Pharmacist_HerbComment", Storage:="_Pharmacist", ThisKey:="username", OtherKey:="username", IsForeignKey:=true)>  _
-	Public Property Pharmacist() As Pharmacist
-		Get
-			Return Me._Pharmacist.Entity
-		End Get
-		Set
-			Dim previousValue As Pharmacist = Me._Pharmacist.Entity
-			If ((Object.Equals(previousValue, value) = false)  _
-						OrElse (Me._Pharmacist.HasLoadedOrAssignedValue = false)) Then
-				Me.SendPropertyChanging
-				If ((previousValue Is Nothing)  _
-							= false) Then
-					Me._Pharmacist.Entity = Nothing
-					previousValue.HerbComments.Remove(Me)
-				End If
-				Me._Pharmacist.Entity = value
-				If ((value Is Nothing)  _
-							= false) Then
-					value.HerbComments.Add(Me)
-					Me._username = value.username
-				Else
-					Me._username = CType(Nothing, String)
-				End If
-				Me.SendPropertyChanged("Pharmacist")
-			End If
-		End Set
-	End Property
-	
-	Public Event PropertyChanging As PropertyChangingEventHandler Implements System.ComponentModel.INotifyPropertyChanging.PropertyChanging
-	
-	Public Event PropertyChanged As PropertyChangedEventHandler Implements System.ComponentModel.INotifyPropertyChanged.PropertyChanged
-	
-	Protected Overridable Sub SendPropertyChanging()
-		If ((Me.PropertyChangingEvent Is Nothing)  _
-					= false) Then
-			RaiseEvent PropertyChanging(Me, emptyChangingEventArgs)
-		End If
-	End Sub
-	
-	Protected Overridable Sub SendPropertyChanged(ByVal propertyName As [String])
-		If ((Me.PropertyChangedEvent Is Nothing)  _
-					= false) Then
-			RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(propertyName))
-		End If
-	End Sub
-End Class
-
 <Global.System.Data.Linq.Mapping.TableAttribute(Name:="dbo.HerbRating")>  _
 Partial Public Class HerbRating
 	Implements System.ComponentModel.INotifyPropertyChanging, System.ComponentModel.INotifyPropertyChanged
 	
 	Private Shared emptyChangingEventArgs As PropertyChangingEventArgs = New PropertyChangingEventArgs(String.Empty)
 	
-	Private _herbRating As String
+	Private _herbRatingID As String
 	
 	Private _ratingHerb As Double
 	
@@ -2298,9 +2042,9 @@ Partial Public Class HerbRating
     End Sub
     Partial Private Sub OnCreated()
     End Sub
-    Partial Private Sub OnherbRatingChanging(value As String)
+    Partial Private Sub OnherbRatingIDChanging(value As String)
     End Sub
-    Partial Private Sub OnherbRatingChanged()
+    Partial Private Sub OnherbRatingIDChanged()
     End Sub
     Partial Private Sub OnratingHerbChanging(value As Double)
     End Sub
@@ -2323,18 +2067,18 @@ Partial Public Class HerbRating
 		OnCreated
 	End Sub
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_herbRating", DbType:="VarChar(10) NOT NULL", CanBeNull:=false, IsPrimaryKey:=true)>  _
-	Public Property herbRating() As String
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_herbRatingID", DbType:="VarChar(10) NOT NULL", CanBeNull:=false, IsPrimaryKey:=true)>  _
+	Public Property herbRatingID() As String
 		Get
-			Return Me._herbRating
+			Return Me._herbRatingID
 		End Get
 		Set
-			If (String.Equals(Me._herbRating, value) = false) Then
-				Me.OnherbRatingChanging(value)
+			If (String.Equals(Me._herbRatingID, value) = false) Then
+				Me.OnherbRatingIDChanging(value)
 				Me.SendPropertyChanging
-				Me._herbRating = value
-				Me.SendPropertyChanged("herbRating")
-				Me.OnherbRatingChanged
+				Me._herbRatingID = value
+				Me.SendPropertyChanged("herbRatingID")
+				Me.OnherbRatingIDChanged
 			End If
 		End Set
 	End Property
@@ -3018,5 +2762,247 @@ Partial Public Class InfographicRating
 					= false) Then
 			RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(propertyName))
 		End If
+	End Sub
+End Class
+
+<Global.System.Data.Linq.Mapping.TableAttribute(Name:="dbo.Pharmacist")>  _
+Partial Public Class Pharmacist
+	Implements System.ComponentModel.INotifyPropertyChanging, System.ComponentModel.INotifyPropertyChanged
+	
+	Private Shared emptyChangingEventArgs As PropertyChangingEventArgs = New PropertyChangingEventArgs(String.Empty)
+	
+	Private _username As String
+	
+	Private _password As String
+	
+	Private _email As String
+	
+	Private _encrypPass As String
+	
+	Private _ArticleRatings As EntitySet(Of ArticleRating)
+	
+	Private _DiseaseRatings As EntitySet(Of DiseaseRating)
+	
+	Private _HerbComments As EntitySet(Of HerbComment)
+	
+	Private _HerbRatings As EntitySet(Of HerbRating)
+	
+	Private _InfographicRatings As EntitySet(Of InfographicRating)
+	
+    #Region "Extensibility Method Definitions"
+    Partial Private Sub OnLoaded()
+    End Sub
+    Partial Private Sub OnValidate(action As System.Data.Linq.ChangeAction)
+    End Sub
+    Partial Private Sub OnCreated()
+    End Sub
+    Partial Private Sub OnusernameChanging(value As String)
+    End Sub
+    Partial Private Sub OnusernameChanged()
+    End Sub
+    Partial Private Sub OnpasswordChanging(value As String)
+    End Sub
+    Partial Private Sub OnpasswordChanged()
+    End Sub
+    Partial Private Sub OnemailChanging(value As String)
+    End Sub
+    Partial Private Sub OnemailChanged()
+    End Sub
+    Partial Private Sub OnencrypPassChanging(value As String)
+    End Sub
+    Partial Private Sub OnencrypPassChanged()
+    End Sub
+    #End Region
+	
+	Public Sub New()
+		MyBase.New
+		Me._ArticleRatings = New EntitySet(Of ArticleRating)(AddressOf Me.attach_ArticleRatings, AddressOf Me.detach_ArticleRatings)
+		Me._DiseaseRatings = New EntitySet(Of DiseaseRating)(AddressOf Me.attach_DiseaseRatings, AddressOf Me.detach_DiseaseRatings)
+		Me._HerbComments = New EntitySet(Of HerbComment)(AddressOf Me.attach_HerbComments, AddressOf Me.detach_HerbComments)
+		Me._HerbRatings = New EntitySet(Of HerbRating)(AddressOf Me.attach_HerbRatings, AddressOf Me.detach_HerbRatings)
+		Me._InfographicRatings = New EntitySet(Of InfographicRating)(AddressOf Me.attach_InfographicRatings, AddressOf Me.detach_InfographicRatings)
+		OnCreated
+	End Sub
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_username", DbType:="VarChar(50) NOT NULL", CanBeNull:=false, IsPrimaryKey:=true)>  _
+	Public Property username() As String
+		Get
+			Return Me._username
+		End Get
+		Set
+			If (String.Equals(Me._username, value) = false) Then
+				Me.OnusernameChanging(value)
+				Me.SendPropertyChanging
+				Me._username = value
+				Me.SendPropertyChanged("username")
+				Me.OnusernameChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_password", DbType:="VarChar(50) NOT NULL", CanBeNull:=false)>  _
+	Public Property password() As String
+		Get
+			Return Me._password
+		End Get
+		Set
+			If (String.Equals(Me._password, value) = false) Then
+				Me.OnpasswordChanging(value)
+				Me.SendPropertyChanging
+				Me._password = value
+				Me.SendPropertyChanged("password")
+				Me.OnpasswordChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_email", DbType:="Text NOT NULL", CanBeNull:=false, UpdateCheck:=UpdateCheck.Never)>  _
+	Public Property email() As String
+		Get
+			Return Me._email
+		End Get
+		Set
+			If (String.Equals(Me._email, value) = false) Then
+				Me.OnemailChanging(value)
+				Me.SendPropertyChanging
+				Me._email = value
+				Me.SendPropertyChanged("email")
+				Me.OnemailChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_encrypPass", DbType:="VarChar(50) NOT NULL", CanBeNull:=false)>  _
+	Public Property encrypPass() As String
+		Get
+			Return Me._encrypPass
+		End Get
+		Set
+			If (String.Equals(Me._encrypPass, value) = false) Then
+				Me.OnencrypPassChanging(value)
+				Me.SendPropertyChanging
+				Me._encrypPass = value
+				Me.SendPropertyChanged("encrypPass")
+				Me.OnencrypPassChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="Pharmacist_ArticleRating", Storage:="_ArticleRatings", ThisKey:="username", OtherKey:="username")>  _
+	Public Property ArticleRatings() As EntitySet(Of ArticleRating)
+		Get
+			Return Me._ArticleRatings
+		End Get
+		Set
+			Me._ArticleRatings.Assign(value)
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="Pharmacist_DiseaseRating", Storage:="_DiseaseRatings", ThisKey:="username", OtherKey:="username")>  _
+	Public Property DiseaseRatings() As EntitySet(Of DiseaseRating)
+		Get
+			Return Me._DiseaseRatings
+		End Get
+		Set
+			Me._DiseaseRatings.Assign(value)
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="Pharmacist_HerbComment", Storage:="_HerbComments", ThisKey:="username", OtherKey:="username")>  _
+	Public Property HerbComments() As EntitySet(Of HerbComment)
+		Get
+			Return Me._HerbComments
+		End Get
+		Set
+			Me._HerbComments.Assign(value)
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="Pharmacist_HerbRating", Storage:="_HerbRatings", ThisKey:="username", OtherKey:="username")>  _
+	Public Property HerbRatings() As EntitySet(Of HerbRating)
+		Get
+			Return Me._HerbRatings
+		End Get
+		Set
+			Me._HerbRatings.Assign(value)
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="Pharmacist_InfographicRating", Storage:="_InfographicRatings", ThisKey:="username", OtherKey:="username")>  _
+	Public Property InfographicRatings() As EntitySet(Of InfographicRating)
+		Get
+			Return Me._InfographicRatings
+		End Get
+		Set
+			Me._InfographicRatings.Assign(value)
+		End Set
+	End Property
+	
+	Public Event PropertyChanging As PropertyChangingEventHandler Implements System.ComponentModel.INotifyPropertyChanging.PropertyChanging
+	
+	Public Event PropertyChanged As PropertyChangedEventHandler Implements System.ComponentModel.INotifyPropertyChanged.PropertyChanged
+	
+	Protected Overridable Sub SendPropertyChanging()
+		If ((Me.PropertyChangingEvent Is Nothing)  _
+					= false) Then
+			RaiseEvent PropertyChanging(Me, emptyChangingEventArgs)
+		End If
+	End Sub
+	
+	Protected Overridable Sub SendPropertyChanged(ByVal propertyName As [String])
+		If ((Me.PropertyChangedEvent Is Nothing)  _
+					= false) Then
+			RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(propertyName))
+		End If
+	End Sub
+	
+	Private Sub attach_ArticleRatings(ByVal entity As ArticleRating)
+		Me.SendPropertyChanging
+		entity.Pharmacist = Me
+	End Sub
+	
+	Private Sub detach_ArticleRatings(ByVal entity As ArticleRating)
+		Me.SendPropertyChanging
+		entity.Pharmacist = Nothing
+	End Sub
+	
+	Private Sub attach_DiseaseRatings(ByVal entity As DiseaseRating)
+		Me.SendPropertyChanging
+		entity.Pharmacist = Me
+	End Sub
+	
+	Private Sub detach_DiseaseRatings(ByVal entity As DiseaseRating)
+		Me.SendPropertyChanging
+		entity.Pharmacist = Nothing
+	End Sub
+	
+	Private Sub attach_HerbComments(ByVal entity As HerbComment)
+		Me.SendPropertyChanging
+		entity.Pharmacist = Me
+	End Sub
+	
+	Private Sub detach_HerbComments(ByVal entity As HerbComment)
+		Me.SendPropertyChanging
+		entity.Pharmacist = Nothing
+	End Sub
+	
+	Private Sub attach_HerbRatings(ByVal entity As HerbRating)
+		Me.SendPropertyChanging
+		entity.Pharmacist = Me
+	End Sub
+	
+	Private Sub detach_HerbRatings(ByVal entity As HerbRating)
+		Me.SendPropertyChanging
+		entity.Pharmacist = Nothing
+	End Sub
+	
+	Private Sub attach_InfographicRatings(ByVal entity As InfographicRating)
+		Me.SendPropertyChanging
+		entity.Pharmacist = Me
+	End Sub
+	
+	Private Sub detach_InfographicRatings(ByVal entity As InfographicRating)
+		Me.SendPropertyChanging
+		entity.Pharmacist = Nothing
 	End Sub
 End Class

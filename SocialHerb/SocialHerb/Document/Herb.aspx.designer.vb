@@ -30,4 +30,31 @@ Partial Public Class Herb
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents gv_HerbShow As Global.DevExpress.Web.ASPxGridView
+
+    '''<summary>
+    '''DetailImage control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents DetailImage As Global.DevExpress.Web.ASPxImage
+
+    '''<summary>
+    '''DetailNotes control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents DetailNotes As Global.DevExpress.Web.ASPxMemo
+
+    '''<summary>
+    '''EmployeesDataSource control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents EmployeesDataSource As Global.System.Web.UI.WebControls.EntityDataSource
 End Class

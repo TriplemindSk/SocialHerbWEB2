@@ -200,10 +200,6 @@
                 <EditCellStyle HorizontalAlign="Center">
                 </EditCellStyle>
             </dx:GridViewDataColumn>
-
         </Columns>
     </dx:ASPxGridView>
-
-    
-
 </asp:Content>

@@ -5,7 +5,7 @@
     Namespace="DevExpress.Web" TagPrefix="dx" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
     <link href="Styles/Site.css" rel="Stylesheet" type="text/css" />
-    <%--<script type="text/javascript">
+    <script language="javascript" type="text/javascript">
         function OnGridFocusedRowChanged() {
             // Query the server for the "EmployeeID" and "Notes" fields from the focused row 
             // The values will be returned to the OnGetRowValues() function
@@ -18,7 +18,7 @@
             DetailImage.SetVisible(true);
             DetailNotes.SetText(values[1]);
         }
-    </script>--%>
+    </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
@@ -70,9 +70,26 @@
             </dx:GridViewDataColumn>
         </Columns>
         <SettingsEditing Mode="Inline" />
-        <%--<Settings ShowGroupPanel="true" />
-        <SettingsBehavior AllowFocusedRow="True" />--%>
-        <%-- <ClientSideEvents FocusedRowChanged="function(s, e) { OnGridFocusedRowChanged(); }" />--%>
+        <Settings ShowGroupPanel="true" />
+        <SettingsBehavior AllowFocusedRow="True" />
+        <ClientSideEvents FocusedRowChanged="function(s, e) { OnGridFocusedRowChanged(); }" />
         <SettingsSearchPanel Visible="true" />
     </dx:ASPxGridView>
+
+    <table style="width: 100%; height: 200px" class="OptionsTable TopMargin">
+        <tr>
+            <td style="width: 160px">
+                <dx:ASPxImage runat="server" ID="DetailImage" ClientInstanceName="DetailImage" ClientVisible="false" Width="160px" />
+            </td>
+            <td class="LeftPadding">
+                <dx:ASPxMemo runat="server" ID="DetailNotes" ClientInstanceName="DetailNotes" Width="100%"
+                    Height="170" ReadOnly="true"  BackColor="#afd168"/>
+            </td>
+        </tr>
+    </table>
+    <asp:EntityDataSource runat="server" ID="EmployeesDataSource" ContextTypeName="NorthwindContext" EntitySetName="Employees" />
+
+
+
+
 </asp:Content>

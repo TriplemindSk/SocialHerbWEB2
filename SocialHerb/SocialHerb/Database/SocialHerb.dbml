@@ -1,18 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="SocialHerb" Class="SocialHerbDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="WebSettings" ConnectionString="Data Source=(local)\SQL2008R2;Initial Catalog=SocialHerb;User ID=sa" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="SocialHerbConnectionString" Provider="System.Data.SqlClient" />
-  <Table Name="dbo.Pharmacist" Member="Pharmacists">
-    <Type Name="Pharmacist">
-      <Column Name="username" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="password" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="email" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
-      <Column Name="encrypPass" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
-      <Association Name="Pharmacist_ArticleRating" Member="ArticleRatings" ThisKey="username" OtherKey="username" Type="ArticleRating" />
-      <Association Name="Pharmacist_DiseaseRating" Member="DiseaseRatings" ThisKey="username" OtherKey="username" Type="DiseaseRating" />
-      <Association Name="Pharmacist_HerbComment" Member="HerbComments" ThisKey="username" OtherKey="username" Type="HerbComment" />
-      <Association Name="Pharmacist_HerbRating" Member="HerbRatings" ThisKey="username" OtherKey="username" Type="HerbRating" />
-      <Association Name="Pharmacist_InfographicRating" Member="InfographicRatings" ThisKey="username" OtherKey="username" Type="InfographicRating" />
-    </Type>
-  </Table>
+  <Connection Mode="WebSettings" ConnectionString="Data Source=(local)\SQL2008R2;Initial Catalog=SocialHerb;User ID=sa" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="SocialHerb" Provider="System.Data.SqlClient" />
   <Table Name="dbo.Admin" Member="Admins">
     <Type Name="Admin">
       <Column Name="usernameAd" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -43,11 +30,11 @@
   </Table>
   <Table Name="dbo.Disease" Member="Diseases">
     <Type Name="Disease">
-      <Column Name="diseaseID" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="diseaseID" AutoSync="Never" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="symptom" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
       <Column Name="howtoRelief" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
       <Column Name="herb" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
-      <Column Name="dateDisease" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="dateDisease" AutoSync="Never" Type="System.DateTime" IsReadOnly="true" IsDbGenerated="true" CanBeNull="true" UpdateCheck="Always" />
       <Association Name="Disease_DiseaseRating" Member="DiseaseRatings" ThisKey="diseaseID" OtherKey="diseaseID" Type="DiseaseRating" />
     </Type>
   </Table>
@@ -71,10 +58,21 @@
       <Column Name="warning" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
       <Column Name="properties" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
       <Column Name="dateHerb" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
-      <Association Name="Herb_HerbImg" Member="HerbImgs" ThisKey="herbID" OtherKey="herbID" Type="HerbImg" />
       <Association Name="Herb_HerbComment" Member="HerbComments" ThisKey="herbID" OtherKey="herbID" Type="HerbComment" />
+      <Association Name="Herb_HerbImg" Member="HerbImgs" ThisKey="herbID" OtherKey="herbID" Type="HerbImg" />
       <Association Name="Herb_HerbRating" Member="HerbRatings" ThisKey="herbID" OtherKey="herbID" Type="HerbRating" />
       <Association Name="Herb_HerbResearch" Member="HerbResearches" ThisKey="herbID" OtherKey="herbID" Type="HerbResearch" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HerbComment" Member="HerbComments">
+    <Type Name="HerbComment">
+      <Column Name="herbCommentID" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="herbID" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="username" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="comment" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="date" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Association Name="Herb_HerbComment" Member="Herb" ThisKey="herbID" OtherKey="herbID" Type="Herb" IsForeignKey="true" />
+      <Association Name="Pharmacist_HerbComment" Member="Pharmacist" ThisKey="username" OtherKey="username" Type="Pharmacist" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.HerbImg" Member="HerbImgs">
@@ -98,20 +96,9 @@
       <Association Name="Herb_HerbImg" Member="Herb" ThisKey="herbID" OtherKey="herbID" Type="Herb" IsForeignKey="true" />
     </Type>
   </Table>
-  <Table Name="dbo.HerbComment" Member="HerbComments">
-    <Type Name="HerbComment">
-      <Column Name="herbCommentID" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="herbID" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
-      <Column Name="username" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="comment" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
-      <Column Name="date" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
-      <Association Name="Herb_HerbComment" Member="Herb" ThisKey="herbID" OtherKey="herbID" Type="Herb" IsForeignKey="true" />
-      <Association Name="Pharmacist_HerbComment" Member="Pharmacist" ThisKey="username" OtherKey="username" Type="Pharmacist" IsForeignKey="true" />
-    </Type>
-  </Table>
   <Table Name="dbo.HerbRating" Member="HerbRatings">
     <Type Name="HerbRating">
-      <Column Name="herbRating" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="herbRatingID" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="ratingHerb" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
       <Column Name="herbID" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
       <Column Name="username" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
@@ -147,6 +134,19 @@
       <Column Name="username" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
       <Association Name="Infographic_InfographicRating" Member="Infographic" ThisKey="infoID" OtherKey="infoID" Type="Infographic" IsForeignKey="true" />
       <Association Name="Pharmacist_InfographicRating" Member="Pharmacist" ThisKey="username" OtherKey="username" Type="Pharmacist" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Pharmacist" Member="Pharmacists">
+    <Type Name="Pharmacist">
+      <Column Name="username" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="password" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="email" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="encrypPass" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="Pharmacist_ArticleRating" Member="ArticleRatings" ThisKey="username" OtherKey="username" Type="ArticleRating" />
+      <Association Name="Pharmacist_DiseaseRating" Member="DiseaseRatings" ThisKey="username" OtherKey="username" Type="DiseaseRating" />
+      <Association Name="Pharmacist_HerbComment" Member="HerbComments" ThisKey="username" OtherKey="username" Type="HerbComment" />
+      <Association Name="Pharmacist_HerbRating" Member="HerbRatings" ThisKey="username" OtherKey="username" Type="HerbRating" />
+      <Association Name="Pharmacist_InfographicRating" Member="InfographicRatings" ThisKey="username" OtherKey="username" Type="InfographicRating" />
     </Type>
   </Table>
 </Database>

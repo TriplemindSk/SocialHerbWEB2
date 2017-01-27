@@ -6,17 +6,49 @@ SocialHerb
 </name>
 </assembly>
 <members>
-<member name="F:SocialHerb.Herb.hpHerb">
+<member name="F:SocialHerb.Disease.hpDisease">
 	<summary>
-hpHerb control.
+hpDisease control.
 </summary>
 	<remarks>
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:SocialHerb.Herb.gv_HerbShow">
+</member><member name="F:SocialHerb.Disease.gv_DiseaseShow">
 	<summary>
-gv_HerbShow control.
+gv_DiseaseShow control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:SocialHerb.Login.Head1">
+	<summary>
+Head1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:SocialHerb.Login.form1">
+	<summary>
+form1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:SocialHerb.Login.div_bg">
+	<summary>
+div_bg control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:SocialHerb.Login.LoginUser">
+	<summary>
+LoginUser control.
 </summary>
 	<remarks>
 Auto-generated field.
@@ -246,103 +278,6 @@ RegisterUserWizardStep control.
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="P:SocialHerb.My.MyWebExtension.Application">
-	<summary>
- Returns information about the current application.
- </summary>
-</member><member name="P:SocialHerb.My.MyWebExtension.Computer">
-	<summary>
- Returns information about the host computer.
- </summary>
-</member><member name="P:SocialHerb.My.MyWebExtension.User">
-	<summary>
- Returns information for the current Web user.
- </summary>
-</member><member name="P:SocialHerb.My.MyWebExtension.Request">
-	<summary>
- Returns Request object.
- </summary>
-</member><member name="P:SocialHerb.My.MyWebExtension.Response">
-	<summary>
- Returns Response object.
- </summary>
-</member><member name="P:SocialHerb.My.MyWebExtension.Log">
-	<summary>
- Returns the Asp log object.
- </summary>
-</member><member name="P:SocialHerb.My.MyWebExtension.WebServices">
-	<summary>
- Provides access to WebServices added to this project.
- </summary>
-</member><member name="T:SocialHerb.My.MyWebExtension">
-	<summary>
- Module used to define the properties that are available in the My Namespace for Web projects.
- </summary>
-	<remarks></remarks>
-</member><member name="F:SocialHerb.CreateDisease.lb_disease">
-	<summary>
-lb_disease control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:SocialHerb.CreateDisease.lblErrorEdit">
-	<summary>
-lblErrorEdit control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:SocialHerb.CreateDisease.txtID">
-	<summary>
-txtID control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:SocialHerb.CreateDisease.txtName">
-	<summary>
-txtName control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:SocialHerb.CreateDisease.txtDetail">
-	<summary>
-txtDetail control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:SocialHerb.CreateDisease.TextBox1">
-	<summary>
-TextBox1 control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:SocialHerb.CreateDisease.btnUpdate">
-	<summary>
-btnUpdate control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:SocialHerb.CreateDisease.btnCancel">
-	<summary>
-btnCancel control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
 </member><member name="F:SocialHerb.Site.HeadContent">
 	<summary>
 HeadContent control.
@@ -383,33 +318,65 @@ ChangeUserPassword control.
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:SocialHerb.Login.Head1">
+</member><member name="F:SocialHerb.CreateDisease.lb_disease">
 	<summary>
-Head1 control.
+lb_disease control.
 </summary>
 	<remarks>
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:SocialHerb.Login.form1">
+</member><member name="F:SocialHerb.CreateDisease.lblErrorEdit">
 	<summary>
-form1 control.
+lblErrorEdit control.
 </summary>
 	<remarks>
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:SocialHerb.Login.div_bg">
+</member><member name="F:SocialHerb.CreateDisease.txtID">
 	<summary>
-div_bg control.
+txtID control.
 </summary>
 	<remarks>
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:SocialHerb.Login.LoginUser">
+</member><member name="F:SocialHerb.CreateDisease.txtName">
 	<summary>
-LoginUser control.
+txtName control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:SocialHerb.CreateDisease.txtDetail">
+	<summary>
+txtDetail control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:SocialHerb.CreateDisease.txtherb">
+	<summary>
+txtherb control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:SocialHerb.CreateDisease.btnUpdate">
+	<summary>
+btnUpdate control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:SocialHerb.CreateDisease.btnCancel">
+	<summary>
+btnCancel control.
 </summary>
 	<remarks>
 Auto-generated field.
@@ -479,6 +446,79 @@ btnCancel control.
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
+</member><member name="F:SocialHerb.Herb.hpHerb">
+	<summary>
+hpHerb control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:SocialHerb.Herb.gv_HerbShow">
+	<summary>
+gv_HerbShow control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:SocialHerb.Herb.DetailImage">
+	<summary>
+DetailImage control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:SocialHerb.Herb.DetailNotes">
+	<summary>
+DetailNotes control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:SocialHerb.Herb.EmployeesDataSource">
+	<summary>
+EmployeesDataSource control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="P:SocialHerb.My.MyWebExtension.Application">
+	<summary>
+ Returns information about the current application.
+ </summary>
+</member><member name="P:SocialHerb.My.MyWebExtension.Computer">
+	<summary>
+ Returns information about the host computer.
+ </summary>
+</member><member name="P:SocialHerb.My.MyWebExtension.User">
+	<summary>
+ Returns information for the current Web user.
+ </summary>
+</member><member name="P:SocialHerb.My.MyWebExtension.Request">
+	<summary>
+ Returns Request object.
+ </summary>
+</member><member name="P:SocialHerb.My.MyWebExtension.Response">
+	<summary>
+ Returns Response object.
+ </summary>
+</member><member name="P:SocialHerb.My.MyWebExtension.Log">
+	<summary>
+ Returns the Asp log object.
+ </summary>
+</member><member name="P:SocialHerb.My.MyWebExtension.WebServices">
+	<summary>
+ Provides access to WebServices added to this project.
+ </summary>
+</member><member name="T:SocialHerb.My.MyWebExtension">
+	<summary>
+ Module used to define the properties that are available in the My Namespace for Web projects.
+ </summary>
+	<remarks></remarks>
 </member><member name="F:SocialHerb._Default.ASPxImageSlider1">
 	<summary>
 ASPxImageSlider1 control.
@@ -530,22 +570,6 @@ To modify move field declaration from designer file to code-behind file.
 </member><member name="F:SocialHerb.Infographic.gv_InfoShow">
 	<summary>
 gv_InfoShow control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:SocialHerb.Disease.hpDisease">
-	<summary>
-hpDisease control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:SocialHerb.Disease.gv_DiseaseShow">
-	<summary>
-gv_DiseaseShow control.
 </summary>
 	<remarks>
 Auto-generated field.
