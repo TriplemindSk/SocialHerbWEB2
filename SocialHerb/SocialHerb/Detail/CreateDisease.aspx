@@ -12,7 +12,7 @@
         .style3
         {
             font-size: large;
-            color: #3e2723 ;
+            color: #3e2723;
         }
     </style>
 </asp:Content>
@@ -26,9 +26,10 @@
                 </td>
             </tr>
         </table>
-        <h2 align="right"></h2>
+        <h2 align="right">
+        </h2>
         <asp:Label ID="lblErrorEdit" runat="server" ForeColor="Red"></asp:Label>
-        <asp:TextBox ID="txtID" runat="server" Visible="true"></asp:TextBox>
+        <asp:TextBox ID="txtID" runat="server" Visible="false"></asp:TextBox>
         <table border="0" width="600">
             <tr>
                 <td align="right" class="style3">
@@ -36,7 +37,6 @@
                 </td>
                 <td>
                     <asp:TextBox ID="txtName" runat="server" CssClass="textbox" Width="199px"></asp:TextBox>
-                    
                 </td>
             </tr>
             <tr>
@@ -45,7 +45,7 @@
                 </td>
                 <td>
                     <asp:TextBox ID="txtDetail" runat="server" Height="100px" TextMode="MultiLine" Width="400px"
-                        CssClass="textbox">
+                        CssClass="textbox" Font-Size="Large">
                     </asp:TextBox>
                 </td>
             </tr>
@@ -55,10 +55,22 @@
                 </td>
                 <td>
                     <asp:TextBox ID="txtherb" runat="server" Height="100px" TextMode="MultiLine" Width="400px"
-                        CssClass="textbox">
+                        CssClass="textbox" Font-Size="Large">
                     </asp:TextBox>
                 </td>
             </tr>
+            <%--<tr>
+                <td align="right" class="style3" valign="top">
+                    วันที่บันทึก :
+                </td>
+                <td>
+                    <dx:ASPxDateEdit ID="date_Disease" ClientInstanceName="dateEdit" runat="server" NullText="dd/MM/yyyy"
+                        EditFormat="Custom" EditFormatString="dd/MM/yyyy" Width="170px">
+                        <ClearButton DisplayMode="OnHover">
+                        </ClearButton>
+                    </dx:ASPxDateEdit>
+                </td>
+            </tr>--%>
             <tr>
                 <td align="center" colspan="2">
                     <asp:Button ID="btnUpdate" runat="server" Height="25px" Text="Update" Width="70px"

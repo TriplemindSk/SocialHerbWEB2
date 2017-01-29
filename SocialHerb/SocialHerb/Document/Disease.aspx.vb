@@ -16,6 +16,8 @@ Public Class Disease
 
         hpDisease.NavigateUrl = "~\Detail\CreateDisease.aspx"
 
+        'gv_DiseaseShow.SearchPanelFilter = "รค"
+
 
     End Sub
 

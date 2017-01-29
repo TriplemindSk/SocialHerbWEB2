@@ -17,9 +17,9 @@ Public Class Herb
         '    PostImage(Request.Params("Photo"))
         'End If
 
-        If (Not IsPostBack) Then
-            gv_HerbShow.SearchPanelFilter = "an"
-        End If
+        'If (Not IsPostBack) Then
+        '    gv_HerbShow.SearchPanelFilter = "an"
+        'End If
 
         hpHerb.NavigateUrl = "~\Detail\CreateHerb.aspx"
 

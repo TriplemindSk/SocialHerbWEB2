@@ -38,38 +38,52 @@
     </div>
 
     <dx:ASPxGridView ID="gv_ArticleShow" ClientInstanceName="grid" runat="server" KeyFieldName="EmployeeID"
-        PreviewFieldName="Notes" AutoGenerateColumns="False" EnableRowsCache="false"
+        PreviewFieldName="Notes" AutoGenerateColumns="False" EnableRowsCache="false" DataSourceID="Article_SH"
         Width="100%">
         <Columns>
-            <dx:GridViewDataColumn FieldName="ArticleName" VisibleIndex="0" Caption="ชื่อบทความ"
-                ReadOnly="True" CellStyle-HorizontalAlign="Center" SortOrder="Descending" HeaderStyle-HorizontalAlign="Center">
+            <dx:GridViewDataColumn FieldName="articleName" VisibleIndex="0" Caption="ชื่อบทความ"
+                ReadOnly="True"  SortOrder="Descending" HeaderStyle-HorizontalAlign="Center" Width="100px">
                 <EditCellStyle HorizontalAlign="Center">
                 </EditCellStyle>
                 <DataItemTemplate>
-                    <asp:LinkButton ID="lnk_HerbN" runat="server" Text='<%# Eval("ArticleName") %>' CommandArgument='<%# Eval("ArticleName") %>'>
+                    <asp:LinkButton ID="lnk_HerbN" runat="server" Text='<%# Eval("articleName") %>' CommandArgument='<%# Eval("articleName") %>'>
                             </asp:LinkButton>
                 </DataItemTemplate>
                 <EditItemTemplate>
-                    <asp:Label ID="lbl_HerbN" runat="server" Text='<%# Eval("ArticleName") %>'></asp:Label>
+                    <asp:Label ID="lbl_HerbN" runat="server" Text='<%# Eval("articleName") %>'></asp:Label>
                 </EditItemTemplate>
-                <CellStyle HorizontalAlign="Center">
-                </CellStyle>
+               
                 <Settings AutoFilterCondition="Contains" />
             </dx:GridViewDataColumn>
-            <dx:GridViewDataColumn FieldName="Detail" VisibleIndex="1" Caption="เนื้อหาของบทความ"
-                ReadOnly="True" CellStyle-HorizontalAlign="Center" HeaderStyle-HorizontalAlign="Center">
+            <dx:GridViewDataColumn FieldName="article" VisibleIndex="1" Caption="เนื้อหาของบทความ"
+                ReadOnly="True"  HeaderStyle-HorizontalAlign="Center" Width="300px">
                 <EditCellStyle HorizontalAlign="Center">
                 </EditCellStyle>
+                <EditItemTemplate>
+                    <asp:Label ID="lbl_DherbName" runat="server" Text='<%# Eval("article") %>'>
+                            </asp:Label>
+                </EditItemTemplate>
+                <Settings AutoFilterCondition="Contains" />
             </dx:GridViewDataColumn>
-            <dx:GridViewDataColumn FieldName="Ref_Article" VisibleIndex="2" Caption="ที่มาของบทความเพื่อสุขภาพ"
-                ReadOnly="True" CellStyle-HorizontalAlign="Center" HeaderStyle-HorizontalAlign="Center">
+            <dx:GridViewDataColumn FieldName="creditArt" VisibleIndex="2" Caption="ที่มาของบทความเพื่อสุขภาพ"
+                ReadOnly="True"  HeaderStyle-HorizontalAlign="Center" Width="100px">
                 <EditCellStyle HorizontalAlign="Center">
                 </EditCellStyle>
+                <EditItemTemplate>
+                    <asp:Label ID="lbl_DherbName" runat="server" Text='<%# Eval("creditArt") %>'>
+                            </asp:Label>
+                </EditItemTemplate>
+                <Settings AutoFilterCondition="Contains" />
             </dx:GridViewDataColumn>            
-            <dx:GridViewDataColumn FieldName="Date" VisibleIndex="3" Caption="วันที่แก้ไข" ReadOnly="True"
-                CellStyle-HorizontalAlign="Center" HeaderStyle-HorizontalAlign="Center">
+            <dx:GridViewDataColumn FieldName="dateArticle" VisibleIndex="3" Caption="วันที่แก้ไข" ReadOnly="True"
+                CellStyle-HorizontalAlign="Center" HeaderStyle-HorizontalAlign="Center" Width="50px">
                 <EditCellStyle HorizontalAlign="Center">
                 </EditCellStyle>
+                <EditItemTemplate>
+                    <asp:Label ID="lbl_DherbName" runat="server" Text='<%# Eval("dateArticle", "{0:d/MM/yyyy}") %>'>
+                            </asp:Label>
+                </EditItemTemplate>
+                <Settings AutoFilterCondition="Contains" />
             </dx:GridViewDataColumn>
         </Columns>
         <SettingsEditing Mode="Inline" />
@@ -77,9 +91,16 @@
         <SettingsBehavior AllowFocusedRow="True" />--%>
         <%-- <ClientSideEvents FocusedRowChanged="function(s, e) { OnGridFocusedRowChanged(); }" />--%>
         <SettingsSearchPanel Visible="true" />
+         <Settings ShowFooter="True" />
+            <SettingsPager>
+                <PageSizeItemSettings Visible="true" Items="10, 20, 50" />
+            </SettingsPager>
     </dx:ASPxGridView>
 
-
+    <asp:SqlDataSource ID="Article_SH" runat="server" ConnectionString="<%$ ConnectionStrings:SocialHerb %>"
+                    SelectCommand=" SELECT articleName,article,creditArt, dateArticle
+                    FROM Article ORDER BY [dateArticle] DESC">
+                </asp:SqlDataSource>
 
 
 </asp:Content>

@@ -27,25 +27,32 @@ Public Class CreateDisease
         'If CheckValidateCalculate() Then Exit Sub
         Dim disease As New SocialHerb.Disease
         'Dim Disid As String
+        Dim date_Disease As DateTime
+
 
 
         Dim strSQL, strConnString As String
-        Dim ContactDate As Date
+
         strConnString = WebConfigurationManager.ConnectionStrings("SocialHerb").ConnectionString
         strSQL = "insert into Disease (diseaseID,symptom,howtoRelief,herb,dateDisease" & _
-        ") values ('" & txtID.Text & "','" & txtName.Text & "','" & txtDetail.Text & "','" & txtherb.Text & "','" & ContactDate & "')"
+        ") values ('" & txtID.Text & "','" & txtName.Text & "','" & txtDetail.Text & "','" & txtherb.Text & "','" & date_Disease & "')"
 
         Try
             Using objConn As New SqlConnection(strConnString)
                 objConn.Open()
                 Dim objCmd As New SqlCommand(strSQL, objConn)
 
-
+                'Dim diseaseDate As Date
+                'diseaseDate = date_Disease.Date
                 txtID.Text = ""
                 txtName.Text = ""
                 txtDetail.Text = ""
                 txtherb.Text = ""
-                'ContactDate = Format(DateTime.Now, "dd/MM/yyyy")
+                date_Disease = Now
+                'Dim timeFormat As String = "yyyy-MM-dd HH:mm:ss"
+                'Date.TryParse(timeFormat, diseaseDate)
+
+
 
                 'objCmd.Parameters.Add("@diseaseID")
                 'cmdInsert.Parameters.Add("@FirstName", Data.SqlDbType.NVarChar).Value = FirstName.Text()

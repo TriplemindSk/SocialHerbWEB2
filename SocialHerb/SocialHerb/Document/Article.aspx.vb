@@ -11,6 +11,8 @@ Public Class WebForm1
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
 
         hpArticle.NavigateUrl = "~\Detail\CreateArticle.aspx"
+
+        'gv_ArticleShow.SearchPanelFilter = "รค"
     End Sub
 
 End Class

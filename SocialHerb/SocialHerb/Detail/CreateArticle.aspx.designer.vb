@@ -41,31 +41,40 @@ Partial Public Class CreateArticle
     Protected WithEvents txtID As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''txtName control.
+    '''txtNameA control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents txtName As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents txtNameA As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''TextBox1 control.
+    '''UploadControl control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents TextBox1 As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents UploadControl As Global.DevExpress.Web.ASPxUploadControl
 
     '''<summary>
-    '''TextBox2 control.
+    '''txtDetailA control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents TextBox2 As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents txtDetailA As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''txtRefA control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txtRefA As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
     '''btnUpdate control.

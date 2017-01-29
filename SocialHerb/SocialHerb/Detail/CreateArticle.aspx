@@ -44,14 +44,14 @@
         </table>
         <h2 align="right"></h2>
         <asp:Label ID="lblErrorEdit" runat="server" ForeColor="Red"></asp:Label>
-        <asp:TextBox ID="txtID" runat="server" Visible="False"></asp:TextBox>
+        <asp:TextBox ID="txtID" runat="server" Visible="true"></asp:TextBox>
         <table border="0" width="600">
             <tr>
                 <td align="right" class="style3">
                     ชื่อบทความ :
                 </td>
                 <td>
-                    <asp:TextBox ID="txtName" runat="server" CssClass="textbox" Width="199px"></asp:TextBox>
+                    <asp:TextBox ID="txtNameA" runat="server" CssClass="textbox" Width="199px"></asp:TextBox>
                     
                 </td>
             </tr>
@@ -77,7 +77,7 @@
                     เนื้อหา :
                 </td>
                 <td>
-                    <asp:TextBox ID="TextBox1" runat="server" Height="100px" TextMode="MultiLine" Width="400px"
+                    <asp:TextBox ID="txtDetailA" runat="server" Height="100px" TextMode="MultiLine" Width="400px"
                         CssClass="textbox">
                     </asp:TextBox>
                 </td>
@@ -87,7 +87,7 @@
                     ที่มา :
                 </td>
                 <td>
-                    <asp:TextBox ID="TextBox2" runat="server" CssClass="textbox" Width="199px"></asp:TextBox>
+                    <asp:TextBox ID="txtRefA" runat="server" CssClass="textbox" Width="199px"></asp:TextBox>
                     
                 </td>
             </tr>

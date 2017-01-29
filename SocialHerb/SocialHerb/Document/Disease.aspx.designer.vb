@@ -30,4 +30,13 @@ Partial Public Class Disease
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents gv_DiseaseShow As Global.DevExpress.Web.ASPxGridView
+
+    '''<summary>
+    '''Disease_SH control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Disease_SH As Global.System.Web.UI.WebControls.SqlDataSource
 End Class

@@ -32,29 +32,56 @@ Partial Public Class _Default
     Protected WithEvents gv_Herb As Global.DevExpress.Web.ASPxGridView
 
     '''<summary>
-    '''gv_Disease control.
+    '''gv_DiseaseShow control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents gv_Disease As Global.DevExpress.Web.ASPxGridView
+    Protected WithEvents gv_DiseaseShow As Global.DevExpress.Web.ASPxGridView
 
     '''<summary>
-    '''gv_Article control.
+    '''Disease_SH control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents gv_Article As Global.DevExpress.Web.ASPxGridView
+    Protected WithEvents Disease_SH As Global.System.Web.UI.WebControls.SqlDataSource
 
     '''<summary>
-    '''gv_Info control.
+    '''gv_ArticleShow control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents gv_Info As Global.DevExpress.Web.ASPxGridView
+    Protected WithEvents gv_ArticleShow As Global.DevExpress.Web.ASPxGridView
+
+    '''<summary>
+    '''Article_SH control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Article_SH As Global.System.Web.UI.WebControls.SqlDataSource
+
+    '''<summary>
+    '''gv_InfoShow control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents gv_InfoShow As Global.DevExpress.Web.ASPxGridView
+
+    '''<summary>
+    '''Info_SH control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Info_SH As Global.System.Web.UI.WebControls.SqlDataSource
 End Class
