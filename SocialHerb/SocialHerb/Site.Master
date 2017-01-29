@@ -3,6 +3,9 @@
 <%@ Register Assembly="DevExpress.Web.v16.2, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a"
     Namespace="DevExpress.Web" TagPrefix="dx" %>
 
+
+
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head runat="server">
@@ -16,13 +19,14 @@
     <form runat="server">
     <div class="page">
         <div class="header">
-            <div class="title" style="background-image: url('http://localhost:52273/Images/socialherbLOGOTEXT.png');
+            <div class="title" style="background-image: url('http://localhost:52273/Images/LOGOLast.png');
                 width: 194px; height: 90px;">
+                <a href="Default.aspx">
             </div>
             <div class="loginDisplay">
                 <asp:LoginView ID="HeadLoginView" runat="server" EnableViewState="false">
                     <AnonymousTemplate>
-                        [ <a href="~/Account/Login.aspx" id="HeadLoginStatus" runat="server">Log In</a>
+                        [ <a href="~/Account/Login.aspx" id="HeadLoginStatus" runat="server">Log Out</a>
                         ]
                     </AnonymousTemplate>
                     <LoggedInTemplate>
@@ -34,6 +38,12 @@
                         ]
                     </LoggedInTemplate>
                 </asp:LoginView>
+               
+                <div align="right">
+                <asp:Label ID="lbl_dateT" runat="server" Font-Size="Medium"></asp:Label>
+                
+                </div>
+
             </div>
             <div class="clear hideSkiplink" align="right">
                 <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="false"
@@ -48,7 +58,10 @@
                         <asp:MenuItem NavigateUrl="~/About.aspx" Text="สร้างผู้ใช้" />
                     </Items>
                 </asp:Menu>
+
+
             </div>
+            
         </div>
         <div class="main">
             <asp:ContentPlaceHolder ID="MainContent" runat="server" />

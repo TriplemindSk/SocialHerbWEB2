@@ -3,7 +3,6 @@
 
 <%@ Register Assembly="DevExpress.Web.v16.2, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a"
     Namespace="DevExpress.Web" TagPrefix="dx" %>
-
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
     <style type="text/css">
         .style1
@@ -16,8 +15,6 @@
             color: #3e2723;
         }
     </style>
-
-
     <%--<script type="text/javascript">
         function onFileUploadComplete(s, e) {
             if (e.callbackData) {
@@ -29,9 +26,6 @@
             }
         }
     </script>--%>
-
-
-
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <center>
@@ -46,7 +40,9 @@
         <h2 align="right">
         </h2>
         <asp:Label ID="lblErrorEdit" runat="server" ForeColor="Red"></asp:Label>
-        <asp:TextBox ID="txtID" runat="server" Visible="False"></asp:TextBox>
+        <asp:TextBox ID="txtID" runat="server" Visible="false"></asp:TextBox>
+        <asp:TextBox ID="txt_REid" runat="server" Visible="false"></asp:TextBox>
+        <asp:TextBox ID="txt_HerbImgid" runat="server" Visible="false"></asp:TextBox>
         <table border="0" width="600">
             <tr>
                 <td align="right" class="style3">
@@ -61,13 +57,13 @@
                     ชื่อสมุนไพร (อื่นๆ) :
                 </td>
                 <td>
-                    <asp:TextBox ID="TextBox4" runat="server" Height="100px" TextMode="MultiLine" Width="400px"
+                    <asp:TextBox ID="txt_OtherName" runat="server" Height="100px" TextMode="MultiLine" Width="400px"
                         CssClass="textbox">
-                        </asp:TextBox>
+                    </asp:TextBox>
                 </td>
             </tr>
             <tr>
-                <td align="right" class="style3" valign="top" >
+                <td align="right" class="style3" valign="top">
                     รูปสมุนไพร :
                 </td>
                 <td>
@@ -85,7 +81,7 @@
                     วิธีการนำไปใช้ :
                 </td>
                 <td>
-                    <asp:TextBox ID="TextBox1" runat="server" Height="100px" TextMode="MultiLine" Width="400px"
+                    <asp:TextBox ID="txt_Howto" runat="server" Height="100px" TextMode="MultiLine" Width="400px"
                         CssClass="textbox">
                     </asp:TextBox>
                 </td>
@@ -95,38 +91,65 @@
                     ข้อควรระวัง :
                 </td>
                 <td>
-                    <asp:TextBox ID="TextBox2" runat="server" Height="100px" TextMode="MultiLine" Width="400px"
+                    <asp:TextBox ID="txt_warnnig" runat="server" Height="100px" TextMode="MultiLine" Width="400px"
                         CssClass="textbox">
                     </asp:TextBox>
                 </td>
             </tr>
             <tr>
                 <td align="right" class="style3" valign="top">
-                    ลักษณะ :
+                    ลักษณะทั่วไป :
                 </td>
                 <td>
-                    <asp:TextBox ID="TextBox3" runat="server" Height="100px" TextMode="MultiLine" Width="400px"
+                    <asp:TextBox ID="txt_Properties" runat="server" Height="100px" TextMode="MultiLine" Width="400px"
                         CssClass="textbox">
-                        </asp:TextBox>
+                    </asp:TextBox>
+                </td>
+            </tr>        
+            <tr>
+            
+                <td align="right" class="style3">
+                    ชื่องานวิจัยที่เกี่ยวข้อง :
+                </td>
+                <td>
+                    <asp:TextBox ID="txt_RefName" runat="server" CssClass="textbox" Width="400px"></asp:TextBox>
                 </td>
             </tr>
+            <tr>
+                <td align="right" class="style3">
+                    ที่มาของงานวิจัย :
+                </td>
+                <td>
+                    <asp:TextBox ID="txt_RefRe" runat="server" CssClass="textbox" Width="400px"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td align="right" class="style3">
+                    Link งานวิจัย :
+                </td>
+                <td>
+                    <asp:TextBox ID="txt_LinkRe" runat="server" CssClass="textbox" Width="400px"></asp:TextBox>
+                </td>
+            </tr>
+        </table>
+        <br />
+        <br />
+        <table border="0" width="1000px">
             <tr>
                 <td align="right" class="style3" valign="top">
                     ลักษณะใบ :
                 </td>
                 <td>
-                     <asp:TextBox ID="TextBox11" runat="server" Height="100px" TextMode="MultiLine" Width="400px"
+                    <asp:TextBox ID="txt_leaf" runat="server" Height="100px" TextMode="MultiLine" Width="400px"
                         CssClass="textbox">
-                        </asp:TextBox>
+                    </asp:TextBox>
                 </td>
-            </tr>
-            <tr>
-                <td align="right" class="style3" valign="top" >
+                <%-- <td align="right" class="style3">
                     รูปใบ :
-                </td>
+                </td>--%>
                 <td>
                     <dx:ASPxUploadControl ID="ASPxUploadControl1" runat="server" ClientInstanceName="UploadControl"
-                        Width="320" NullText="Select multiple files..." UploadMode="Advanced" ShowUploadButton="True"
+                        Width="320" NullText="เลือกรูปใบ..." UploadMode="Advanced" ShowUploadButton="True"
                         ShowProgressPanel="True">
                         <AdvancedModeSettings EnableMultiSelect="True" EnableFileList="True" EnableDragAndDrop="True" />
                         <ValidationSettings MaxFileSize="4194304" AllowedFileExtensions=".jpg,.jpeg,.gif,.png">
@@ -141,18 +164,16 @@
                     ลักษณะราก :
                 </td>
                 <td>
-                     <asp:TextBox ID="TextBox5" runat="server" Height="100px" TextMode="MultiLine" Width="400px"
+                    <asp:TextBox ID="txt_Root" runat="server" Height="100px" TextMode="MultiLine" Width="400px"
                         CssClass="textbox">
-                        </asp:TextBox>
+                    </asp:TextBox>
                 </td>
-            </tr>
-            <tr>
-                <td align="right" class="style3" valign="top" >
+                <%--<td align="right" class="style3">
                     รูปราก :
-                </td>
+                </td>--%>
                 <td>
                     <dx:ASPxUploadControl ID="ASPxUploadControl2" runat="server" ClientInstanceName="UploadControl"
-                        Width="320" NullText="Select multiple files..." UploadMode="Advanced" ShowUploadButton="True"
+                        Width="320" NullText="เลือกรูปราก..." UploadMode="Advanced" ShowUploadButton="True"
                         ShowProgressPanel="True">
                         <AdvancedModeSettings EnableMultiSelect="True" EnableFileList="True" EnableDragAndDrop="True" />
                         <ValidationSettings MaxFileSize="4194304" AllowedFileExtensions=".jpg,.jpeg,.gif,.png">
@@ -167,18 +188,16 @@
                     ลักษณะลำต้น :
                 </td>
                 <td>
-                    <asp:TextBox ID="TextBox6" runat="server" Height="100px" TextMode="MultiLine" Width="400px"
+                    <asp:TextBox ID="txt_trunk" runat="server" Height="100px" TextMode="MultiLine" Width="400px"
                         CssClass="textbox">
-                        </asp:TextBox>
+                    </asp:TextBox>
                 </td>
-            </tr>
-            <tr>
-                <td align="right" class="style3" valign="top" >
+                <%--<td align="right" class="style3">
                     รูปลำต้น :
-                </td>
+                </td>--%>
                 <td>
                     <dx:ASPxUploadControl ID="ASPxUploadControl3" runat="server" ClientInstanceName="UploadControl"
-                        Width="320" NullText="Select multiple files..." UploadMode="Advanced" ShowUploadButton="True"
+                        Width="320" NullText="เลือกรูปลำต้น..." UploadMode="Advanced" ShowUploadButton="True"
                         ShowProgressPanel="True">
                         <AdvancedModeSettings EnableMultiSelect="True" EnableFileList="True" EnableDragAndDrop="True" />
                         <ValidationSettings MaxFileSize="4194304" AllowedFileExtensions=".jpg,.jpeg,.gif,.png">
@@ -193,18 +212,16 @@
                     ลักษณะเมล็ด :
                 </td>
                 <td>
-                     <asp:TextBox ID="TextBox7" runat="server" Height="100px" TextMode="MultiLine" Width="400px"
+                    <asp:TextBox ID="txt_Seed" runat="server" Height="100px" TextMode="MultiLine" Width="400px"
                         CssClass="textbox">
-                        </asp:TextBox>
+                    </asp:TextBox>
                 </td>
-            </tr>
-            <tr>
-                <td align="right" class="style3" valign="top" >
+                <%--<td align="right" class="style3">
                     รูปเมล็ด :
-                </td>
+                </td>--%>
                 <td>
                     <dx:ASPxUploadControl ID="ASPxUploadControl4" runat="server" ClientInstanceName="UploadControl"
-                        Width="320" NullText="Select multiple files..." UploadMode="Advanced" ShowUploadButton="True"
+                        Width="320" NullText="เลือกรูปเมล็ด..." UploadMode="Advanced" ShowUploadButton="True"
                         ShowProgressPanel="True">
                         <AdvancedModeSettings EnableMultiSelect="True" EnableFileList="True" EnableDragAndDrop="True" />
                         <ValidationSettings MaxFileSize="4194304" AllowedFileExtensions=".jpg,.jpeg,.gif,.png">
@@ -219,18 +236,16 @@
                     ลักษณะผล :
                 </td>
                 <td>
-                     <asp:TextBox ID="TextBox8" runat="server" Height="100px" TextMode="MultiLine" Width="400px"
+                    <asp:TextBox ID="txt_Fruit" runat="server" Height="100px" TextMode="MultiLine" Width="400px"
                         CssClass="textbox">
-                        </asp:TextBox>
+                    </asp:TextBox>
                 </td>
-            </tr>
-            <tr>
-                <td align="right" class="style3" valign="top" >
+                <%-- <td align="right" class="style3">
                     รูปผล :
-                </td>
+                </td>--%>
                 <td>
                     <dx:ASPxUploadControl ID="ASPxUploadControl5" runat="server" ClientInstanceName="UploadControl"
-                        Width="320" NullText="Select multiple files..." UploadMode="Advanced" ShowUploadButton="True"
+                        Width="320" NullText="เลือกรูปผล..." UploadMode="Advanced" ShowUploadButton="True"
                         ShowProgressPanel="True">
                         <AdvancedModeSettings EnableMultiSelect="True" EnableFileList="True" EnableDragAndDrop="True" />
                         <ValidationSettings MaxFileSize="4194304" AllowedFileExtensions=".jpg,.jpeg,.gif,.png">
@@ -245,18 +260,16 @@
                     ลักษณะกิ่ง :
                 </td>
                 <td>
-                     <asp:TextBox ID="TextBox9" runat="server" Height="100px" TextMode="MultiLine" Width="400px"
+                    <asp:TextBox ID="txt_Branch" runat="server" Height="100px" TextMode="MultiLine" Width="400px"
                         CssClass="textbox">
-                        </asp:TextBox>
+                    </asp:TextBox>
                 </td>
-            </tr>
-            <tr>
-                <td align="right" class="style3" valign="top" >
+                <%-- <td align="right" class="style3">
                     รูปกิ่ง :
-                </td>
+                </td>--%>
                 <td>
                     <dx:ASPxUploadControl ID="ASPxUploadControl6" runat="server" ClientInstanceName="UploadControl"
-                        Width="320" NullText="Select multiple files..." UploadMode="Advanced" ShowUploadButton="True"
+                        Width="320" NullText="เลือกรูปกิ่ง..." UploadMode="Advanced" ShowUploadButton="True"
                         ShowProgressPanel="True">
                         <AdvancedModeSettings EnableMultiSelect="True" EnableFileList="True" EnableDragAndDrop="True" />
                         <ValidationSettings MaxFileSize="4194304" AllowedFileExtensions=".jpg,.jpeg,.gif,.png">
@@ -271,18 +284,16 @@
                     ลักษณะดอก :
                 </td>
                 <td>
-                   <asp:TextBox ID="TextBox10" runat="server" Height="100px" TextMode="MultiLine" Width="400px"
+                    <asp:TextBox ID="txt_Flower" runat="server" Height="100px" TextMode="MultiLine" Width="400px"
                         CssClass="textbox">
-                        </asp:TextBox>
+                    </asp:TextBox>
                 </td>
-            </tr>
-            <tr>
-                <td align="right" class="style3" valign="top" >
+                <%-- <td align="right" class="style3" style=" vertical-align:inherit;">
                     รูปดอก :
-                </td>
+                </td>--%>
                 <td>
                     <dx:ASPxUploadControl ID="ASPxUploadControl7" runat="server" ClientInstanceName="UploadControl"
-                        Width="320" NullText="Select multiple files..." UploadMode="Advanced" ShowUploadButton="True"
+                        Width="320" NullText="เลือกรูปดอก..." UploadMode="Advanced" ShowUploadButton="True"
                         ShowProgressPanel="True">
                         <AdvancedModeSettings EnableMultiSelect="True" EnableFileList="True" EnableDragAndDrop="True" />
                         <ValidationSettings MaxFileSize="4194304" AllowedFileExtensions=".jpg,.jpeg,.gif,.png">
@@ -292,15 +303,17 @@
                     </dx:ASPxUploadControl>
                 </td>
             </tr>
-            <tr>
-                <td align="center" colspan="2">
-                    <asp:Button ID="btnUpdate" runat="server" Height="25px" Text="Update" Width="70px"
-                        CssClass="button" />
-                    &nbsp;&nbsp;
-                    <asp:Button ID="btnCancel" runat="server" Height="25px" Text="Cancel" Width="70px"
-                        CssClass="button" />
-                </td>
-            </tr>
         </table>
+        <br />
+        <br />
+        <asp:Button ID="btnUpdate" runat="server" Height="25px" Text="Update" Width="70px"
+            CssClass="button" />
+        &nbsp;&nbsp;
+        <asp:Button ID="btnCancel" runat="server" Height="25px" Text="Cancel" Width="70px"
+            Visible="false" CssClass="button" />
     </center>
+    <br />
+    <br />
+    <br />
+    <br />
 </asp:Content>

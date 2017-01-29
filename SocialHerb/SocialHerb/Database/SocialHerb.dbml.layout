@@ -20,7 +20,7 @@
         <elementListCompartment Id="8e38305e-bcba-4a62-9fb7-07eb93fa6142" absoluteBounds="13.265, 0.96, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(16.75 : 1.28929768880208); (15.25 : 1.28929768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(16.75 : 1.28929768880208); (15.25 : 1.28929768880208)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/SocialHerbDataContext/Article/Article_ArticleRating" />
       <nodes>
         <classShapeMoniker Id="5eaba123-f259-4114-b2e1-6ee2d7c12c6a" />
@@ -39,7 +39,7 @@
         <elementListCompartment Id="f2ccd600-9ade-437b-8744-5ff634c1f23e" absoluteBounds="14.265, 4.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(18.5 : 4.66429768880208); (16.25 : 4.66429768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(18.5 : 4.66429768880208); (16.25 : 4.66429768880208)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/SocialHerbDataContext/Disease/Disease_DiseaseRating" />
       <nodes>
         <classShapeMoniker Id="a1bd0e8a-10ea-402c-9c38-10fcce032f70" />
@@ -58,7 +58,7 @@
         <elementListCompartment Id="28e370d3-1364-4852-8b8d-3dc6927efe9a" absoluteBounds="6.89, 6.71, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(5.375 : 5.09780110677083); (5.375 : 7.13544840494792); (6.875 : 7.13544840494792)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(5.375 : 5.09780110677083); (5.375 : 7.13544840494792); (6.875 : 7.13544840494792)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/SocialHerbDataContext/Herb/Herb_HerbComment" />
       <nodes>
         <classShapeMoniker Id="e7636423-9ec6-472c-b23a-8d886eb62fec" />
@@ -71,7 +71,7 @@
         <elementListCompartment Id="a0ff71a1-1ce9-4a20-bad5-4d3aede161b4" absoluteBounds="1.0149999999999997, 4.46, 1.9700000000000002, 3.3262125651041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(4.375 : 4.54890055338542); (3 : 4.54890055338542)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(4.375 : 4.54890055338542); (3 : 4.54890055338542)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/SocialHerbDataContext/Herb/Herb_HerbImg" />
       <nodes>
         <classShapeMoniker Id="e7636423-9ec6-472c-b23a-8d886eb62fec" />
@@ -84,24 +84,11 @@
         <elementListCompartment Id="ce0e2246-2809-48f0-942b-a6ea85fcefb6" absoluteBounds="7.7650000000000006, 0.96, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(5.375 : 2.75); (5.375 : 1.28929768880208); (7.75 : 1.28929768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(6.03125 : 2.75); (6.03125 : 1.15625); (7.75 : 1.15625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/SocialHerbDataContext/Herb/Herb_HerbRating" />
       <nodes>
         <classShapeMoniker Id="e7636423-9ec6-472c-b23a-8d886eb62fec" />
         <classShapeMoniker Id="97e3dc94-4717-4a30-9052-1f782f3ec7f4" />
-      </nodes>
-    </associationConnector>
-    <classShape Id="31909066-9489-4679-b4a2-3b99237fb3ad" absoluteBounds="1.25, 0.75, 2, 1.7708968098958331">
-      <DataClassMoniker Name="/SocialHerbDataContext/HerbResearch" />
-      <nestedChildShapes>
-        <elementListCompartment Id="eb4a7acc-f474-4f02-afdc-45df03cb411d" absoluteBounds="1.2649999999999997, 1.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
-      </nestedChildShapes>
-    </classShape>
-    <associationConnector edgePoints="[(4.375 : 3.34375); (3.15625 : 3.34375); (3.15625 : 2.52089680989583)]" fixedFrom="Algorithm" fixedTo="Algorithm">
-      <AssociationMoniker Name="/SocialHerbDataContext/Herb/Herb_HerbResearch" />
-      <nodes>
-        <classShapeMoniker Id="e7636423-9ec6-472c-b23a-8d886eb62fec" />
-        <classShapeMoniker Id="31909066-9489-4679-b4a2-3b99237fb3ad" />
       </nodes>
     </associationConnector>
     <classShape Id="766aac53-3205-4429-8080-8157bcfb4405" absoluteBounds="14.75, 6.75, 2, 1.7708968098958331">
@@ -116,7 +103,7 @@
         <elementListCompartment Id="cd99dab5-0713-4533-a883-89ea39a1a364" absoluteBounds="10.89, 7.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(14.75 : 7.53929768880208); (12.875 : 7.53929768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(14.75 : 7.53929768880208); (12.875 : 7.53929768880208)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/SocialHerbDataContext/Infographic/Infographic_InfographicRating" />
       <nodes>
         <classShapeMoniker Id="766aac53-3205-4429-8080-8157bcfb4405" />
@@ -129,40 +116,46 @@
         <elementListCompartment Id="574861d1-c827-45fc-906a-a956778bdc5c" absoluteBounds="9.89, 3.585, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(11.4062525 : 3.125); (11.4062525 : 1.68394653320312); (13.25 : 1.68394653320312)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(11.4062525 : 3.125); (11.4062525 : 1.68394653320312); (13.25 : 1.68394653320312)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/SocialHerbDataContext/Pharmacist/Pharmacist_ArticleRating" />
       <nodes>
         <classShapeMoniker Id="72b2b944-3c16-454d-9ba4-7ef7dfe65275" />
         <classShapeMoniker Id="eddfd21b-269e-445c-9a36-a0c1570408ea" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(11.875 : 4.22679768880208); (14.25 : 4.22679768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(11.875 : 4.22679768880208); (14.25 : 4.22679768880208)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/SocialHerbDataContext/Pharmacist/Pharmacist_DiseaseRating" />
       <nodes>
         <classShapeMoniker Id="72b2b944-3c16-454d-9ba4-7ef7dfe65275" />
         <classShapeMoniker Id="aaea4495-b4b4-4934-aa3b-c230b4d26b1e" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(10.34375 : 4.70359537760417); (10.34375 : 6.46875); (8.875 : 6.46875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(10.34375 : 4.70359537760417); (10.34375 : 6.46875); (8.875 : 6.46875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/SocialHerbDataContext/Pharmacist/Pharmacist_HerbComment" />
       <nodes>
         <classShapeMoniker Id="72b2b944-3c16-454d-9ba4-7ef7dfe65275" />
         <classShapeMoniker Id="37024ff5-ba44-4d33-b565-0f6b6b942b3a" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(10.875 : 3.125); (10.875 : 1.28929768880208); (9.75 : 1.28929768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(10.875 : 3.125); (10.875 : 1.28929768880208); (9.75 : 1.28929768880208)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/SocialHerbDataContext/Pharmacist/Pharmacist_HerbRating" />
       <nodes>
         <classShapeMoniker Id="72b2b944-3c16-454d-9ba4-7ef7dfe65275" />
         <classShapeMoniker Id="97e3dc94-4717-4a30-9052-1f782f3ec7f4" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(11.375 : 4.70359537760417); (11.375 : 6.75)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(11.375 : 4.70359537760417); (11.375 : 6.75)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/SocialHerbDataContext/Pharmacist/Pharmacist_InfographicRating" />
       <nodes>
         <classShapeMoniker Id="72b2b944-3c16-454d-9ba4-7ef7dfe65275" />
         <classShapeMoniker Id="d615dea6-9e0d-45d3-b41b-210d891f55df" />
       </nodes>
     </associationConnector>
+    <classShape Id="91474ef7-d5c0-4595-b6a5-ad8de1f81a6a" absoluteBounds="2, 0.625, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/SocialHerbDataContext/HerbResearch" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ff683527-af91-4bac-8042-a9daee167143" absoluteBounds="2.015, 1.085, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
   </nestedChildShapes>
 </ordesignerObjectsDiagram>

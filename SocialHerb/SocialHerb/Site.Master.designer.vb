@@ -41,6 +41,15 @@ Partial Public Class Site
     Protected WithEvents NavigationMenu As Global.System.Web.UI.WebControls.Menu
 
     '''<summary>
+    '''lbl_dateT control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lbl_dateT As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
     '''MainContent control.
     '''</summary>
     '''<remarks>

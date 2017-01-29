@@ -85,12 +85,6 @@ Partial Public Class SocialHerbDataContext
     End Sub
   Partial Private Sub DeleteHerbRating(instance As HerbRating)
     End Sub
-  Partial Private Sub InsertHerbResearch(instance As HerbResearch)
-    End Sub
-  Partial Private Sub UpdateHerbResearch(instance As HerbResearch)
-    End Sub
-  Partial Private Sub DeleteHerbResearch(instance As HerbResearch)
-    End Sub
   Partial Private Sub InsertInfographic(instance As Infographic)
     End Sub
   Partial Private Sub UpdateInfographic(instance As Infographic)
@@ -108,6 +102,12 @@ Partial Public Class SocialHerbDataContext
   Partial Private Sub UpdatePharmacist(instance As Pharmacist)
     End Sub
   Partial Private Sub DeletePharmacist(instance As Pharmacist)
+    End Sub
+  Partial Private Sub InsertHerbResearch(instance As HerbResearch)
+    End Sub
+  Partial Private Sub UpdateHerbResearch(instance As HerbResearch)
+    End Sub
+  Partial Private Sub DeleteHerbResearch(instance As HerbResearch)
     End Sub
   #End Region
 	
@@ -190,12 +190,6 @@ Partial Public Class SocialHerbDataContext
 		End Get
 	End Property
 	
-	Public ReadOnly Property HerbResearches() As System.Data.Linq.Table(Of HerbResearch)
-		Get
-			Return Me.GetTable(Of HerbResearch)
-		End Get
-	End Property
-	
 	Public ReadOnly Property Infographics() As System.Data.Linq.Table(Of Infographic)
 		Get
 			Return Me.GetTable(Of Infographic)
@@ -211,6 +205,12 @@ Partial Public Class SocialHerbDataContext
 	Public ReadOnly Property Pharmacists() As System.Data.Linq.Table(Of Pharmacist)
 		Get
 			Return Me.GetTable(Of Pharmacist)
+		End Get
+	End Property
+	
+	Public ReadOnly Property HerbResearches() As System.Data.Linq.Table(Of HerbResearch)
+		Get
+			Return Me.GetTable(Of HerbResearch)
 		End Get
 	End Property
 End Class
@@ -1107,8 +1107,6 @@ Partial Public Class Herb
 	
 	Private _HerbRatings As EntitySet(Of HerbRating)
 	
-	Private _HerbResearches As EntitySet(Of HerbResearch)
-	
     #Region "Extensibility Method Definitions"
     Partial Private Sub OnLoaded()
     End Sub
@@ -1155,7 +1153,6 @@ Partial Public Class Herb
 		Me._HerbComments = New EntitySet(Of HerbComment)(AddressOf Me.attach_HerbComments, AddressOf Me.detach_HerbComments)
 		Me._HerbImgs = New EntitySet(Of HerbImg)(AddressOf Me.attach_HerbImgs, AddressOf Me.detach_HerbImgs)
 		Me._HerbRatings = New EntitySet(Of HerbRating)(AddressOf Me.attach_HerbRatings, AddressOf Me.detach_HerbRatings)
-		Me._HerbResearches = New EntitySet(Of HerbResearch)(AddressOf Me.attach_HerbResearches, AddressOf Me.detach_HerbResearches)
 		OnCreated
 	End Sub
 	
@@ -1318,16 +1315,6 @@ Partial Public Class Herb
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="Herb_HerbResearch", Storage:="_HerbResearches", ThisKey:="herbID", OtherKey:="herbID")>  _
-	Public Property HerbResearches() As EntitySet(Of HerbResearch)
-		Get
-			Return Me._HerbResearches
-		End Get
-		Set
-			Me._HerbResearches.Assign(value)
-		End Set
-	End Property
-	
 	Public Event PropertyChanging As PropertyChangingEventHandler Implements System.ComponentModel.INotifyPropertyChanging.PropertyChanging
 	
 	Public Event PropertyChanged As PropertyChangedEventHandler Implements System.ComponentModel.INotifyPropertyChanged.PropertyChanged
@@ -1372,16 +1359,6 @@ Partial Public Class Herb
 	End Sub
 	
 	Private Sub detach_HerbRatings(ByVal entity As HerbRating)
-		Me.SendPropertyChanging
-		entity.Herb = Nothing
-	End Sub
-	
-	Private Sub attach_HerbResearches(ByVal entity As HerbResearch)
-		Me.SendPropertyChanging
-		entity.Herb = Me
-	End Sub
-	
-	Private Sub detach_HerbResearches(ByVal entity As HerbResearch)
 		Me.SendPropertyChanging
 		entity.Herb = Nothing
 	End Sub
@@ -2226,189 +2203,6 @@ Partial Public Class HerbRating
 	End Sub
 End Class
 
-<Global.System.Data.Linq.Mapping.TableAttribute(Name:="dbo.HerbResearch")>  _
-Partial Public Class HerbResearch
-	Implements System.ComponentModel.INotifyPropertyChanging, System.ComponentModel.INotifyPropertyChanged
-	
-	Private Shared emptyChangingEventArgs As PropertyChangingEventArgs = New PropertyChangingEventArgs(String.Empty)
-	
-	Private _researchID As String
-	
-	Private _researchName As String
-	
-	Private _creditRe As String
-	
-	Private _link As String
-	
-	Private _herbID As String
-	
-	Private _Herb As EntityRef(Of Herb)
-	
-    #Region "Extensibility Method Definitions"
-    Partial Private Sub OnLoaded()
-    End Sub
-    Partial Private Sub OnValidate(action As System.Data.Linq.ChangeAction)
-    End Sub
-    Partial Private Sub OnCreated()
-    End Sub
-    Partial Private Sub OnresearchIDChanging(value As String)
-    End Sub
-    Partial Private Sub OnresearchIDChanged()
-    End Sub
-    Partial Private Sub OnresearchNameChanging(value As String)
-    End Sub
-    Partial Private Sub OnresearchNameChanged()
-    End Sub
-    Partial Private Sub OncreditReChanging(value As String)
-    End Sub
-    Partial Private Sub OncreditReChanged()
-    End Sub
-    Partial Private Sub OnlinkChanging(value As String)
-    End Sub
-    Partial Private Sub OnlinkChanged()
-    End Sub
-    Partial Private Sub OnherbIDChanging(value As String)
-    End Sub
-    Partial Private Sub OnherbIDChanged()
-    End Sub
-    #End Region
-	
-	Public Sub New()
-		MyBase.New
-		Me._Herb = CType(Nothing, EntityRef(Of Herb))
-		OnCreated
-	End Sub
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_researchID", DbType:="VarChar(10) NOT NULL", CanBeNull:=false, IsPrimaryKey:=true)>  _
-	Public Property researchID() As String
-		Get
-			Return Me._researchID
-		End Get
-		Set
-			If (String.Equals(Me._researchID, value) = false) Then
-				Me.OnresearchIDChanging(value)
-				Me.SendPropertyChanging
-				Me._researchID = value
-				Me.SendPropertyChanged("researchID")
-				Me.OnresearchIDChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_researchName", DbType:="Text NOT NULL", CanBeNull:=false, UpdateCheck:=UpdateCheck.Never)>  _
-	Public Property researchName() As String
-		Get
-			Return Me._researchName
-		End Get
-		Set
-			If (String.Equals(Me._researchName, value) = false) Then
-				Me.OnresearchNameChanging(value)
-				Me.SendPropertyChanging
-				Me._researchName = value
-				Me.SendPropertyChanged("researchName")
-				Me.OnresearchNameChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_creditRe", DbType:="Text NOT NULL", CanBeNull:=false, UpdateCheck:=UpdateCheck.Never)>  _
-	Public Property creditRe() As String
-		Get
-			Return Me._creditRe
-		End Get
-		Set
-			If (String.Equals(Me._creditRe, value) = false) Then
-				Me.OncreditReChanging(value)
-				Me.SendPropertyChanging
-				Me._creditRe = value
-				Me.SendPropertyChanged("creditRe")
-				Me.OncreditReChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_link", DbType:="Text NOT NULL", CanBeNull:=false, UpdateCheck:=UpdateCheck.Never)>  _
-	Public Property link() As String
-		Get
-			Return Me._link
-		End Get
-		Set
-			If (String.Equals(Me._link, value) = false) Then
-				Me.OnlinkChanging(value)
-				Me.SendPropertyChanging
-				Me._link = value
-				Me.SendPropertyChanged("link")
-				Me.OnlinkChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_herbID", DbType:="VarChar(10) NOT NULL", CanBeNull:=false)>  _
-	Public Property herbID() As String
-		Get
-			Return Me._herbID
-		End Get
-		Set
-			If (String.Equals(Me._herbID, value) = false) Then
-				If Me._Herb.HasLoadedOrAssignedValue Then
-					Throw New System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException()
-				End If
-				Me.OnherbIDChanging(value)
-				Me.SendPropertyChanging
-				Me._herbID = value
-				Me.SendPropertyChanged("herbID")
-				Me.OnherbIDChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="Herb_HerbResearch", Storage:="_Herb", ThisKey:="herbID", OtherKey:="herbID", IsForeignKey:=true)>  _
-	Public Property Herb() As Herb
-		Get
-			Return Me._Herb.Entity
-		End Get
-		Set
-			Dim previousValue As Herb = Me._Herb.Entity
-			If ((Object.Equals(previousValue, value) = false)  _
-						OrElse (Me._Herb.HasLoadedOrAssignedValue = false)) Then
-				Me.SendPropertyChanging
-				If ((previousValue Is Nothing)  _
-							= false) Then
-					Me._Herb.Entity = Nothing
-					previousValue.HerbResearches.Remove(Me)
-				End If
-				Me._Herb.Entity = value
-				If ((value Is Nothing)  _
-							= false) Then
-					value.HerbResearches.Add(Me)
-					Me._herbID = value.herbID
-				Else
-					Me._herbID = CType(Nothing, String)
-				End If
-				Me.SendPropertyChanged("Herb")
-			End If
-		End Set
-	End Property
-	
-	Public Event PropertyChanging As PropertyChangingEventHandler Implements System.ComponentModel.INotifyPropertyChanging.PropertyChanging
-	
-	Public Event PropertyChanged As PropertyChangedEventHandler Implements System.ComponentModel.INotifyPropertyChanged.PropertyChanged
-	
-	Protected Overridable Sub SendPropertyChanging()
-		If ((Me.PropertyChangingEvent Is Nothing)  _
-					= false) Then
-			RaiseEvent PropertyChanging(Me, emptyChangingEventArgs)
-		End If
-	End Sub
-	
-	Protected Overridable Sub SendPropertyChanged(ByVal propertyName As [String])
-		If ((Me.PropertyChangedEvent Is Nothing)  _
-					= false) Then
-			RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(propertyName))
-		End If
-	End Sub
-End Class
-
 <Global.System.Data.Linq.Mapping.TableAttribute(Name:="dbo.Infographic")>  _
 Partial Public Class Infographic
 	Implements System.ComponentModel.INotifyPropertyChanging, System.ComponentModel.INotifyPropertyChanged
@@ -3017,5 +2811,154 @@ Partial Public Class Pharmacist
 	Private Sub detach_InfographicRatings(ByVal entity As InfographicRating)
 		Me.SendPropertyChanging
 		entity.Pharmacist = Nothing
+	End Sub
+End Class
+
+<Global.System.Data.Linq.Mapping.TableAttribute(Name:="dbo.HerbResearch")>  _
+Partial Public Class HerbResearch
+	Implements System.ComponentModel.INotifyPropertyChanging, System.ComponentModel.INotifyPropertyChanged
+	
+	Private Shared emptyChangingEventArgs As PropertyChangingEventArgs = New PropertyChangingEventArgs(String.Empty)
+	
+	Private _researchID As String
+	
+	Private _researchName As String
+	
+	Private _creditRe As String
+	
+	Private _link As String
+	
+	Private _herbREID As String
+	
+    #Region "Extensibility Method Definitions"
+    Partial Private Sub OnLoaded()
+    End Sub
+    Partial Private Sub OnValidate(action As System.Data.Linq.ChangeAction)
+    End Sub
+    Partial Private Sub OnCreated()
+    End Sub
+    Partial Private Sub OnresearchIDChanging(value As String)
+    End Sub
+    Partial Private Sub OnresearchIDChanged()
+    End Sub
+    Partial Private Sub OnresearchNameChanging(value As String)
+    End Sub
+    Partial Private Sub OnresearchNameChanged()
+    End Sub
+    Partial Private Sub OncreditReChanging(value As String)
+    End Sub
+    Partial Private Sub OncreditReChanged()
+    End Sub
+    Partial Private Sub OnlinkChanging(value As String)
+    End Sub
+    Partial Private Sub OnlinkChanged()
+    End Sub
+    Partial Private Sub OnherbREIDChanging(value As String)
+    End Sub
+    Partial Private Sub OnherbREIDChanged()
+    End Sub
+    #End Region
+	
+	Public Sub New()
+		MyBase.New
+		OnCreated
+	End Sub
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_researchID", DbType:="VarChar(10) NOT NULL", CanBeNull:=false, IsPrimaryKey:=true)>  _
+	Public Property researchID() As String
+		Get
+			Return Me._researchID
+		End Get
+		Set
+			If (String.Equals(Me._researchID, value) = false) Then
+				Me.OnresearchIDChanging(value)
+				Me.SendPropertyChanging
+				Me._researchID = value
+				Me.SendPropertyChanged("researchID")
+				Me.OnresearchIDChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_researchName", DbType:="Text NOT NULL", CanBeNull:=false, UpdateCheck:=UpdateCheck.Never)>  _
+	Public Property researchName() As String
+		Get
+			Return Me._researchName
+		End Get
+		Set
+			If (String.Equals(Me._researchName, value) = false) Then
+				Me.OnresearchNameChanging(value)
+				Me.SendPropertyChanging
+				Me._researchName = value
+				Me.SendPropertyChanged("researchName")
+				Me.OnresearchNameChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_creditRe", DbType:="Text NOT NULL", CanBeNull:=false, UpdateCheck:=UpdateCheck.Never)>  _
+	Public Property creditRe() As String
+		Get
+			Return Me._creditRe
+		End Get
+		Set
+			If (String.Equals(Me._creditRe, value) = false) Then
+				Me.OncreditReChanging(value)
+				Me.SendPropertyChanging
+				Me._creditRe = value
+				Me.SendPropertyChanged("creditRe")
+				Me.OncreditReChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_link", DbType:="Text NOT NULL", CanBeNull:=false, UpdateCheck:=UpdateCheck.Never)>  _
+	Public Property link() As String
+		Get
+			Return Me._link
+		End Get
+		Set
+			If (String.Equals(Me._link, value) = false) Then
+				Me.OnlinkChanging(value)
+				Me.SendPropertyChanging
+				Me._link = value
+				Me.SendPropertyChanged("link")
+				Me.OnlinkChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_herbREID", DbType:="VarChar(10) NOT NULL", CanBeNull:=false)>  _
+	Public Property herbREID() As String
+		Get
+			Return Me._herbREID
+		End Get
+		Set
+			If (String.Equals(Me._herbREID, value) = false) Then
+				Me.OnherbREIDChanging(value)
+				Me.SendPropertyChanging
+				Me._herbREID = value
+				Me.SendPropertyChanged("herbREID")
+				Me.OnherbREIDChanged
+			End If
+		End Set
+	End Property
+	
+	Public Event PropertyChanging As PropertyChangingEventHandler Implements System.ComponentModel.INotifyPropertyChanging.PropertyChanging
+	
+	Public Event PropertyChanged As PropertyChangedEventHandler Implements System.ComponentModel.INotifyPropertyChanged.PropertyChanged
+	
+	Protected Overridable Sub SendPropertyChanging()
+		If ((Me.PropertyChangingEvent Is Nothing)  _
+					= false) Then
+			RaiseEvent PropertyChanging(Me, emptyChangingEventArgs)
+		End If
+	End Sub
+	
+	Protected Overridable Sub SendPropertyChanged(ByVal propertyName As [String])
+		If ((Me.PropertyChangedEvent Is Nothing)  _
+					= false) Then
+			RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(propertyName))
+		End If
 	End Sub
 End Class

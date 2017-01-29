@@ -211,6 +211,7 @@
     <Content Include="Document\Infographic.aspx" />
     <Content Include="Images\BG.jpg" />
     <Content Include="Images\BGTT.png" />
+    <Content Include="Images\LOGOLast.png" />
     <Content Include="Images\logonew.png" />
     <Content Include="Images\logout.png" />
     <Content Include="Images\NEW.jpg" />

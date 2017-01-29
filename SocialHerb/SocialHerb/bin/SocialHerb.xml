@@ -62,6 +62,14 @@ LoginUser control.
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
+</member><member name="F:SocialHerb.Login.LoginButton">
+	<summary>
+LoginButton control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
 </member><member name="F:SocialHerb.CreateHerb.Label1">
 	<summary>
 Label1 control.
@@ -86,6 +94,22 @@ txtID control.
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
+</member><member name="F:SocialHerb.CreateHerb.txt_REid">
+	<summary>
+txt_REid control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:SocialHerb.CreateHerb.txt_HerbImgid">
+	<summary>
+txt_HerbImgid control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
 </member><member name="F:SocialHerb.CreateHerb.txtName">
 	<summary>
 txtName control.
@@ -94,41 +118,73 @@ txtName control.
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:SocialHerb.CreateHerb.TextBox4">
+</member><member name="F:SocialHerb.CreateHerb.txt_OtherName">
 	<summary>
-TextBox4 control.
+txt_OtherName control.
 </summary>
 	<remarks>
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:SocialHerb.CreateHerb.TextBox1">
+</member><member name="F:SocialHerb.CreateHerb.UploadControl">
 	<summary>
-TextBox1 control.
+UploadControl control.
 </summary>
 	<remarks>
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:SocialHerb.CreateHerb.TextBox2">
+</member><member name="F:SocialHerb.CreateHerb.txt_Howto">
 	<summary>
-TextBox2 control.
+txt_Howto control.
 </summary>
 	<remarks>
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:SocialHerb.CreateHerb.TextBox3">
+</member><member name="F:SocialHerb.CreateHerb.txt_warnnig">
 	<summary>
-TextBox3 control.
+txt_warnnig control.
 </summary>
 	<remarks>
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:SocialHerb.CreateHerb.txtZip">
+</member><member name="F:SocialHerb.CreateHerb.txt_Properties">
 	<summary>
-txtZip control.
+txt_Properties control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:SocialHerb.CreateHerb.txt_RefName">
+	<summary>
+txt_RefName control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:SocialHerb.CreateHerb.txt_RefRe">
+	<summary>
+txt_RefRe control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:SocialHerb.CreateHerb.txt_LinkRe">
+	<summary>
+txt_LinkRe control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:SocialHerb.CreateHerb.txt_leaf">
+	<summary>
+txt_leaf control.
 </summary>
 	<remarks>
 Auto-generated field.
@@ -142,9 +198,9 @@ ASPxUploadControl1 control.
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:SocialHerb.CreateHerb.TextBox5">
+</member><member name="F:SocialHerb.CreateHerb.txt_Root">
 	<summary>
-TextBox5 control.
+txt_Root control.
 </summary>
 	<remarks>
 Auto-generated field.
@@ -158,9 +214,9 @@ ASPxUploadControl2 control.
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:SocialHerb.CreateHerb.TextBox6">
+</member><member name="F:SocialHerb.CreateHerb.txt_trunk">
 	<summary>
-TextBox6 control.
+txt_trunk control.
 </summary>
 	<remarks>
 Auto-generated field.
@@ -174,9 +230,9 @@ ASPxUploadControl3 control.
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:SocialHerb.CreateHerb.TextBox7">
+</member><member name="F:SocialHerb.CreateHerb.txt_Seed">
 	<summary>
-TextBox7 control.
+txt_Seed control.
 </summary>
 	<remarks>
 Auto-generated field.
@@ -190,9 +246,9 @@ ASPxUploadControl4 control.
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:SocialHerb.CreateHerb.TextBox8">
+</member><member name="F:SocialHerb.CreateHerb.txt_Fruit">
 	<summary>
-TextBox8 control.
+txt_Fruit control.
 </summary>
 	<remarks>
 Auto-generated field.
@@ -206,9 +262,9 @@ ASPxUploadControl5 control.
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:SocialHerb.CreateHerb.TextBox9">
+</member><member name="F:SocialHerb.CreateHerb.txt_Branch">
 	<summary>
-TextBox9 control.
+txt_Branch control.
 </summary>
 	<remarks>
 Auto-generated field.
@@ -222,9 +278,9 @@ ASPxUploadControl6 control.
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:SocialHerb.CreateHerb.TextBox10">
+</member><member name="F:SocialHerb.CreateHerb.txt_Flower">
 	<summary>
-TextBox10 control.
+txt_Flower control.
 </summary>
 	<remarks>
 Auto-generated field.
@@ -313,6 +369,14 @@ To modify move field declaration from designer file to code-behind file.
 </member><member name="F:SocialHerb.Site.NavigationMenu">
 	<summary>
 NavigationMenu control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:SocialHerb.Site.lbl_dateT">
+	<summary>
+lbl_dateT control.
 </summary>
 	<remarks>
 Auto-generated field.
@@ -550,6 +614,14 @@ gv_HerbShow control.
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
+</member><member name="F:SocialHerb.Herb.Herb_SH">
+	<summary>
+Herb_SH control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
 </member><member name="P:SocialHerb.My.MyWebExtension.Application">
 	<summary>
  Returns information about the current application.
@@ -642,6 +714,70 @@ To modify move field declaration from designer file to code-behind file.
 </member><member name="F:SocialHerb._Default.Info_SH">
 	<summary>
 Info_SH control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:SocialHerb.About.lb_disease">
+	<summary>
+lb_disease control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:SocialHerb.About.lblErrorEdit">
+	<summary>
+lblErrorEdit control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:SocialHerb.About.txtID">
+	<summary>
+txtID control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:SocialHerb.About.txtUser">
+	<summary>
+txtUser control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:SocialHerb.About.txtPass">
+	<summary>
+txtPass control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:SocialHerb.About.txtRe">
+	<summary>
+txtRe control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:SocialHerb.About.btnUpdate">
+	<summary>
+btnUpdate control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:SocialHerb.About.btnCancel">
+	<summary>
+btnCancel control.
 </summary>
 	<remarks>
 Auto-generated field.

@@ -17,7 +17,7 @@ Public Class CreateDisease
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
 
-
+        Dim RequestDiseaseID = Request.QueryString("DiseaseID")
 
 
     End Sub
@@ -93,7 +93,7 @@ Public Class CreateDisease
 
 
     Private Sub btnUpdate_Click(sender As Object, e As System.EventArgs) Handles btnUpdate.Click
-        AddData()
+        'AddData()
     End Sub
 
     

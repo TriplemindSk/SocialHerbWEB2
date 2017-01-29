@@ -39,48 +39,81 @@
     </dx:ASPxImageSlider>
     <h1>
         สมุนไพรที่แก้ไขล่าสุด</h1>
-    <dx:ASPxGridView ID="gv_Herb" ClientInstanceName="grid" runat="server" KeyFieldName="EmployeeID"
-        PreviewFieldName="Notes" AutoGenerateColumns="False" EnableRowsCache="false"
+     <dx:ASPxGridView ID="gv_HerbShow" ClientInstanceName="grid" runat="server" KeyFieldName="EmployeeID"
+        PreviewFieldName="Notes" AutoGenerateColumns="False" EnableRowsCache="false" DataSourceID="Herb_SH"
         Width="100%">
         <Columns>
             <dx:GridViewDataColumn FieldName="HerbName" VisibleIndex="0" Caption="ชื่อสมุนไพร"
-                ReadOnly="True" CellStyle-HorizontalAlign="Center" SortOrder="Descending" HeaderStyle-HorizontalAlign="Center">
+                ReadOnly="True"  SortOrder="Descending" HeaderStyle-HorizontalAlign="Center" Width="100px">
                 <EditCellStyle HorizontalAlign="Center">
                 </EditCellStyle>
-                <DataItemTemplate>
-                    <asp:LinkButton ID="lnk_HerbN" runat="server" Text='<%# Eval("HerbName") %>' CommandArgument='<%# Eval("HerbName") %>'>
+                 <DataItemTemplate>
+                            <asp:LinkButton ID="lnk_HerbN" runat="server" Text='<%# Eval("HerbName") %>'
+                                CommandArgument='<%# Eval("HerbName") %>' >
                             </asp:LinkButton>
-                </DataItemTemplate>
-                <EditItemTemplate>
-                    <asp:Label ID="lbl_HerbN" runat="server" Text='<%# Eval("HerbName") %>'></asp:Label>
-                </EditItemTemplate>
-                <CellStyle HorizontalAlign="Center">
-                </CellStyle>
-                <Settings AutoFilterCondition="Contains" />
+                        </DataItemTemplate>
+                        <EditItemTemplate>
+                            <asp:Label ID="lbl_HerbN" runat="server" Text='<%# Eval("HerbName") %>'></asp:Label>
+                        </EditItemTemplate>
+                        
+                        <Settings AutoFilterCondition="Contains" />
             </dx:GridViewDataColumn>
             <dx:GridViewDataColumn FieldName="HerbOtherName" VisibleIndex="1" Caption="ชื่อสมุนไพร(อื่นๆ)"
-                ReadOnly="True" CellStyle-HorizontalAlign="Center" HeaderStyle-HorizontalAlign="Center">
+                ReadOnly="True"  HeaderStyle-HorizontalAlign="Center" Width="100px">
                 <EditCellStyle HorizontalAlign="Center">
                 </EditCellStyle>
+                <EditItemTemplate>
+                    <asp:Label ID="lbl_HerbOtherName" runat="server" Text='<%# Eval("HerbOtherName") %>'>
+                            </asp:Label>
+                </EditItemTemplate>
+                <Settings AutoFilterCondition="Contains" />
             </dx:GridViewDataColumn>
-            <dx:GridViewDataColumn FieldName="Properties" VisibleIndex="2" Caption="ลักษณะ" ReadOnly="True"
-                CellStyle-HorizontalAlign="Center" HeaderStyle-HorizontalAlign="Center">
+            <dx:GridViewDataColumn FieldName="Properties" VisibleIndex="2" Caption="ลักษณะทั่วไป" ReadOnly="True"
+                 HeaderStyle-HorizontalAlign="Center" Width="100px">
                 <EditCellStyle HorizontalAlign="Center">
                 </EditCellStyle>
+                <EditItemTemplate>
+                    <asp:Label ID="lbl_Properties" runat="server" Text='<%# Eval("Properties") %>'>
+                            </asp:Label>
+                </EditItemTemplate>
+                <Settings AutoFilterCondition="Contains" />
             </dx:GridViewDataColumn>
-            <dx:GridViewDataColumn FieldName="Img" VisibleIndex="3" Caption="รูปภาพ" ReadOnly="True"
-                CellStyle-HorizontalAlign="Center" HeaderStyle-HorizontalAlign="Center">
+            <dx:GridViewDataColumn FieldName="researchName" VisibleIndex="3" Caption="งานวิจัยที่เกี่ยวข้อง" ReadOnly="True"
+                 HeaderStyle-HorizontalAlign="Center" Width="100px">
                 <EditCellStyle HorizontalAlign="Center">
                 </EditCellStyle>
+                <EditItemTemplate>
+                    <asp:Label ID="lbl_researchName" runat="server" Text='<%# Eval("researchName") %>'>
+                            </asp:Label>
+                </EditItemTemplate>
+                <Settings AutoFilterCondition="Contains" />
             </dx:GridViewDataColumn>
-            <dx:GridViewDataColumn FieldName="Date" VisibleIndex="4" Caption="วันที่แก้ไข" ReadOnly="True"
-                CellStyle-HorizontalAlign="Center" HeaderStyle-HorizontalAlign="Center">
+            <dx:GridViewDataColumn FieldName="dateHerb" VisibleIndex="4" Caption="วันที่แก้ไข" ReadOnly="True"
+                HeaderStyle-HorizontalAlign="Center" Width="50px">
                 <EditCellStyle HorizontalAlign="Center">
                 </EditCellStyle>
+                <EditItemTemplate>
+                    <asp:Label ID="lbl_dateHerb" runat="server" Text='<%# Eval("dateHerb", "{0:d/MM/yyyy}") %>'>
+                            </asp:Label>
+                </EditItemTemplate>
+                <Settings AutoFilterCondition="Contains" />
             </dx:GridViewDataColumn>
         </Columns>
-        <SettingsEditing Mode="Inline" />
+        <SettingsEditing Mode="Inline" />       
+         <Settings ShowFooter="True" />
+         <Styles>
+            <AlternatingRow Enabled="true" />            
+        </Styles>
+        
+            <%--<SettingsPager>
+                <PageSizeItemSettings Visible="true" Items="10, 20, 50" />
+            </SettingsPager>--%>
     </dx:ASPxGridView>
+
+     <asp:SqlDataSource ID="Herb_SH" runat="server" ConnectionString="<%$ ConnectionStrings:SocialHerb %>"
+        SelectCommand=" SELECT Herb.HerbName,Herb.HerbOtherName,Herb.Properties,Herb.dateHerb,HerbResearch.researchName 
+                    FROM Herb LEFT OUTER JOIN HerbResearch ON herbID = HerbResearch.herbREID
+                     ORDER BY [dateHerb] DESC"></asp:SqlDataSource>
     <h1>
         อาการ/โรคที่แก้ไขล่าสุด</h1>
     <dx:ASPxGridView ID="gv_DiseaseShow" ClientInstanceName="gv_DiseaseShow" runat="server"

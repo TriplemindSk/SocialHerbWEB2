@@ -77,13 +77,16 @@
             <SettingsPager>
                 <PageSizeItemSettings Visible="true" Items="5, 10, 15, 20, 25" />
             </SettingsPager>
-                     
+                  <SettingsBehavior AllowFocusedRow="True" />   
                 </dx:ASPxGridView>
               
                 <asp:SqlDataSource ID="Disease_SH" runat="server" ConnectionString="<%$ ConnectionStrings:SocialHerb %>"
                     SelectCommand=" SELECT diseaseID,symptom, herb, howtoRelief,dateDisease 
                     FROM Disease ORDER BY [dateDisease] DESC">
                 </asp:SqlDataSource>
+<br /><br />
+<br />
+<br />
 
            
 </asp:Content>

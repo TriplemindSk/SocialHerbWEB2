@@ -95,12 +95,17 @@
             <SettingsPager>
                 <PageSizeItemSettings Visible="true" Items="10, 20, 50" />
             </SettingsPager>
+            <SettingsBehavior AllowFocusedRow="True" />
     </dx:ASPxGridView>
 
     <asp:SqlDataSource ID="Article_SH" runat="server" ConnectionString="<%$ ConnectionStrings:SocialHerb %>"
                     SelectCommand=" SELECT articleName,article,creditArt, dateArticle
                     FROM Article ORDER BY [dateArticle] DESC">
                 </asp:SqlDataSource>
+
+                <br /><br />
+<br />
+<br />
 
 
 </asp:Content>

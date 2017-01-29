@@ -91,6 +91,16 @@
                 </EditItemTemplate>
                 <Settings AutoFilterCondition="Contains" />
             </dx:GridViewDataColumn>
+
+            <dx:GridViewDataColumn FieldName="infoImg" VisibleIndex="4" Caption="รูป Infographic" ReadOnly="True"
+                CellStyle-HorizontalAlign="Center" HeaderStyle-HorizontalAlign="Center" Width="300px" Visible="false">
+                <EditCellStyle HorizontalAlign="Center">
+                </EditCellStyle>
+                <EditItemTemplate>
+                    <dx:ASPxImage ID="imgInfo" FieldName="infoImg" runat="server" ShowLoadingImage="true"></dx:ASPxImage>
+                </EditItemTemplate>
+                <Settings AutoFilterCondition="Contains" />
+            </dx:GridViewDataColumn>
         </Columns>
         <SettingsEditing Mode="Inline" />
         <%--<Settings ShowGroupPanel="true" />
@@ -101,11 +111,12 @@
         <SettingsPager>
             <PageSizeItemSettings Visible="true" Items="10, 20, 50" />
         </SettingsPager>
+        <SettingsBehavior AllowFocusedRow="True" />
     </dx:ASPxGridView>
 
 
      <asp:SqlDataSource ID="Info_SH" runat="server" ConnectionString="<%$ ConnectionStrings:SocialHerb %>"
-        SelectCommand=" SELECT infoName,creditInfo,dateInfo 
+        SelectCommand=" SELECT infoName,infoImg,creditInfo,dateInfo 
                     FROM Infographic  ORDER BY [dateInfo] DESC"></asp:SqlDataSource>
 
 <br /><br />

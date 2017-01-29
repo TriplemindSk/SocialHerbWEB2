@@ -76,7 +76,7 @@
                     <asp:Button ID="btnUpdate" runat="server" Height="25px" Text="Update" Width="70px"
                         CssClass="button" />
                     &nbsp;&nbsp;
-                    <asp:Button ID="btnCancel" runat="server" Height="25px" Text="Cancel" Width="70px"
+                    <asp:Button ID="btnCancel" runat="server" Height="25px" Text="Cancel" Width="70px" Visible="false"
                         CssClass="button" />
                 </td>
             </tr>

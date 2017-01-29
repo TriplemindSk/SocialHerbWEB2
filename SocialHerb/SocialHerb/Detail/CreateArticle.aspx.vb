@@ -16,7 +16,7 @@ Public Class CreateArticle
 
 
     Private Sub btnUpdate_Click(sender As Object, e As System.EventArgs) Handles btnUpdate.Click
-        AddData()
+        ' AddData()
     End Sub
 
 

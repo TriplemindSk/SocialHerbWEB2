@@ -44,7 +44,7 @@
         </table>
         <h2 align="right"></h2>
         <asp:Label ID="lblErrorEdit" runat="server" ForeColor="Red"></asp:Label>
-        <asp:TextBox ID="txtID" runat="server" Visible="true"></asp:TextBox>
+        <asp:TextBox ID="txtID" runat="server" Visible="false"></asp:TextBox>
         <table border="0" width="600">
             <tr>
                 <td align="right" class="style3">
@@ -96,7 +96,7 @@
                     <asp:Button ID="btnUpdate" runat="server" Height="25px" Text="Update" Width="70px"
                         CssClass="button" />
                     &nbsp;&nbsp;
-                    <asp:Button ID="btnCancel" runat="server" Height="25px" Text="Cancel" Width="70px"
+                    <asp:Button ID="btnCancel" runat="server" Height="25px" Text="Cancel" Width="70px" Visible="false"
                         CssClass="button" />
                 </td>
             </tr>

@@ -69,12 +69,15 @@
                         <%--<asp:Label ID="FailureText" runat="server" Text="Incorrect Password Or Username!!" Visible="false"></asp:Label>--%>
                     </p>
                 </fieldset>
-                <p class="submitButton">
-                    <asp:Button ID="LoginButton" runat="server" CommandName="Login" Text="Log In" ValidationGroup="LoginUserValidationGroup" />
+                <p>
+                    <asp:Button ID="LoginButtondd" runat="server" Text="Log In" ValidationGroup="LoginUserValidationGroup"  CssClass="button" Visible="false"/>
                 </p>
             </div>
         </LayoutTemplate>
     </asp:Login>
+    <p>
+    <asp:Button ID="LoginButton" runat="server" Text="Log In" ValidationGroup="LoginUserValidationGroup"  CssClass="button" />
+    </p>
      </div>
            
         </div>

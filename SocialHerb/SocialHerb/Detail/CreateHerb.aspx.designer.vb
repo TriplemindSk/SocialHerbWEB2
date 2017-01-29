@@ -41,6 +41,24 @@ Partial Public Class CreateHerb
     Protected WithEvents txtID As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
+    '''txt_REid control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txt_REid As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''txt_HerbImgid control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txt_HerbImgid As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
     '''txtName control.
     '''</summary>
     '''<remarks>
@@ -50,49 +68,85 @@ Partial Public Class CreateHerb
     Protected WithEvents txtName As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''TextBox4 control.
+    '''txt_OtherName control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents TextBox4 As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents txt_OtherName As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''TextBox1 control.
+    '''UploadControl control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents TextBox1 As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents UploadControl As Global.DevExpress.Web.ASPxUploadControl
 
     '''<summary>
-    '''TextBox2 control.
+    '''txt_Howto control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents TextBox2 As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents txt_Howto As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''TextBox3 control.
+    '''txt_warnnig control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents TextBox3 As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents txt_warnnig As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''txtZip control.
+    '''txt_Properties control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents txtZip As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents txt_Properties As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''txt_RefName control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txt_RefName As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''txt_RefRe control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txt_RefRe As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''txt_LinkRe control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txt_LinkRe As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''txt_leaf control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txt_leaf As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
     '''ASPxUploadControl1 control.
@@ -104,13 +158,13 @@ Partial Public Class CreateHerb
     Protected WithEvents ASPxUploadControl1 As Global.DevExpress.Web.ASPxUploadControl
 
     '''<summary>
-    '''TextBox5 control.
+    '''txt_Root control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents TextBox5 As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents txt_Root As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
     '''ASPxUploadControl2 control.
@@ -122,13 +176,13 @@ Partial Public Class CreateHerb
     Protected WithEvents ASPxUploadControl2 As Global.DevExpress.Web.ASPxUploadControl
 
     '''<summary>
-    '''TextBox6 control.
+    '''txt_trunk control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents TextBox6 As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents txt_trunk As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
     '''ASPxUploadControl3 control.
@@ -140,13 +194,13 @@ Partial Public Class CreateHerb
     Protected WithEvents ASPxUploadControl3 As Global.DevExpress.Web.ASPxUploadControl
 
     '''<summary>
-    '''TextBox7 control.
+    '''txt_Seed control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents TextBox7 As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents txt_Seed As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
     '''ASPxUploadControl4 control.
@@ -158,13 +212,13 @@ Partial Public Class CreateHerb
     Protected WithEvents ASPxUploadControl4 As Global.DevExpress.Web.ASPxUploadControl
 
     '''<summary>
-    '''TextBox8 control.
+    '''txt_Fruit control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents TextBox8 As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents txt_Fruit As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
     '''ASPxUploadControl5 control.
@@ -176,13 +230,13 @@ Partial Public Class CreateHerb
     Protected WithEvents ASPxUploadControl5 As Global.DevExpress.Web.ASPxUploadControl
 
     '''<summary>
-    '''TextBox9 control.
+    '''txt_Branch control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents TextBox9 As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents txt_Branch As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
     '''ASPxUploadControl6 control.
@@ -194,13 +248,13 @@ Partial Public Class CreateHerb
     Protected WithEvents ASPxUploadControl6 As Global.DevExpress.Web.ASPxUploadControl
 
     '''<summary>
-    '''TextBox10 control.
+    '''txt_Flower control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents TextBox10 As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents txt_Flower As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
     '''ASPxUploadControl7 control.

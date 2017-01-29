@@ -61,7 +61,6 @@
       <Association Name="Herb_HerbComment" Member="HerbComments" ThisKey="herbID" OtherKey="herbID" Type="HerbComment" />
       <Association Name="Herb_HerbImg" Member="HerbImgs" ThisKey="herbID" OtherKey="herbID" Type="HerbImg" />
       <Association Name="Herb_HerbRating" Member="HerbRatings" ThisKey="herbID" OtherKey="herbID" Type="HerbRating" />
-      <Association Name="Herb_HerbResearch" Member="HerbResearches" ThisKey="herbID" OtherKey="herbID" Type="HerbResearch" />
     </Type>
   </Table>
   <Table Name="dbo.HerbComment" Member="HerbComments">
@@ -106,16 +105,6 @@
       <Association Name="Pharmacist_HerbRating" Member="Pharmacist" ThisKey="username" OtherKey="username" Type="Pharmacist" IsForeignKey="true" />
     </Type>
   </Table>
-  <Table Name="dbo.HerbResearch" Member="HerbResearches">
-    <Type Name="HerbResearch">
-      <Column Name="researchID" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="researchName" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
-      <Column Name="creditRe" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
-      <Column Name="link" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
-      <Column Name="herbID" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
-      <Association Name="Herb_HerbResearch" Member="Herb" ThisKey="herbID" OtherKey="herbID" Type="Herb" IsForeignKey="true" />
-    </Type>
-  </Table>
   <Table Name="dbo.Infographic" Member="Infographics">
     <Type Name="Infographic">
       <Column Name="infoID" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -147,6 +136,15 @@
       <Association Name="Pharmacist_HerbComment" Member="HerbComments" ThisKey="username" OtherKey="username" Type="HerbComment" />
       <Association Name="Pharmacist_HerbRating" Member="HerbRatings" ThisKey="username" OtherKey="username" Type="HerbRating" />
       <Association Name="Pharmacist_InfographicRating" Member="InfographicRatings" ThisKey="username" OtherKey="username" Type="InfographicRating" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HerbResearch" Member="HerbResearches">
+    <Type Name="HerbResearch">
+      <Column Name="researchID" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="researchName" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="creditRe" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="link" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="herbREID" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
     </Type>
   </Table>
 </Database>
