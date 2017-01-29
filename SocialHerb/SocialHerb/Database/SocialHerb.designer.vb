@@ -330,7 +330,7 @@ Partial Public Class Article
 	
 	Private _articleName As String
 	
-	Private _articleImg As String
+	Private _articleImg As System.Data.Linq.Binary
 	
 	Private _article As String
 	
@@ -355,7 +355,7 @@ Partial Public Class Article
     End Sub
     Partial Private Sub OnarticleNameChanged()
     End Sub
-    Partial Private Sub OnarticleImgChanging(value As String)
+    Partial Private Sub OnarticleImgChanging(value As System.Data.Linq.Binary)
     End Sub
     Partial Private Sub OnarticleImgChanged()
     End Sub
@@ -411,13 +411,13 @@ Partial Public Class Article
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_articleImg", DbType:="Text NOT NULL", CanBeNull:=false, UpdateCheck:=UpdateCheck.Never)>  _
-	Public Property articleImg() As String
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_articleImg", DbType:="Image", UpdateCheck:=UpdateCheck.Never)>  _
+	Public Property articleImg() As System.Data.Linq.Binary
 		Get
 			Return Me._articleImg
 		End Get
 		Set
-			If (String.Equals(Me._articleImg, value) = false) Then
+			If (Object.Equals(Me._articleImg, value) = false) Then
 				Me.OnarticleImgChanging(value)
 				Me.SendPropertyChanging
 				Me._articleImg = value
@@ -725,7 +725,7 @@ Partial Public Class Disease
 	
 	Private _herb As String
 	
-	Private _dateDisease As System.Nullable(Of Date) = CType(Nothing, System.Nullable(Of Date))
+	Private _dateDisease As System.Nullable(Of Date)
 	
 	Private _DiseaseRatings As EntitySet(Of DiseaseRating)
 	
@@ -752,6 +752,10 @@ Partial Public Class Disease
     End Sub
     Partial Private Sub OnherbChanged()
     End Sub
+    Partial Private Sub OndateDiseaseChanging(value As System.Nullable(Of Date))
+    End Sub
+    Partial Private Sub OndateDiseaseChanged()
+    End Sub
     #End Region
 	
 	Public Sub New()
@@ -760,7 +764,7 @@ Partial Public Class Disease
 		OnCreated
 	End Sub
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_diseaseID", DbType:="VarChar(10) NOT NULL", CanBeNull:=false, IsPrimaryKey:=true, IsDbGenerated:=true)>  _
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_diseaseID", DbType:="VarChar(10) NOT NULL", CanBeNull:=false, IsPrimaryKey:=true)>  _
 	Public Property diseaseID() As String
 		Get
 			Return Me._diseaseID
@@ -824,11 +828,20 @@ Partial Public Class Disease
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_dateDisease", IsDbGenerated:=true, UpdateCheck:=UpdateCheck.Never)>  _
-	Public ReadOnly Property dateDisease() As System.Nullable(Of Date)
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_dateDisease", DbType:="Date")>  _
+	Public Property dateDisease() As System.Nullable(Of Date)
 		Get
 			Return Me._dateDisease
 		End Get
+		Set
+			If (Me._dateDisease.Equals(value) = false) Then
+				Me.OndateDiseaseChanging(value)
+				Me.SendPropertyChanging
+				Me._dateDisease = value
+				Me.SendPropertyChanged("dateDisease")
+				Me.OndateDiseaseChanged
+			End If
+		End Set
 	End Property
 	
 	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="Disease_DiseaseRating", Storage:="_DiseaseRatings", ThisKey:="diseaseID", OtherKey:="diseaseID")>  _
@@ -1078,7 +1091,7 @@ Partial Public Class Herb
 	
 	Private _herbOtherName As String
 	
-	Private _img As String
+	Private _img As System.Data.Linq.Binary
 	
 	Private _howto As String
 	
@@ -1115,7 +1128,7 @@ Partial Public Class Herb
     End Sub
     Partial Private Sub OnherbOtherNameChanged()
     End Sub
-    Partial Private Sub OnimgChanging(value As String)
+    Partial Private Sub OnimgChanging(value As System.Data.Linq.Binary)
     End Sub
     Partial Private Sub OnimgChanged()
     End Sub
@@ -1194,13 +1207,13 @@ Partial Public Class Herb
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_img", DbType:="VarChar(50) NOT NULL", CanBeNull:=false)>  _
-	Public Property img() As String
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_img", DbType:="Image NOT NULL", CanBeNull:=false, UpdateCheck:=UpdateCheck.Never)>  _
+	Public Property img() As System.Data.Linq.Binary
 		Get
 			Return Me._img
 		End Get
 		Set
-			If (String.Equals(Me._img, value) = false) Then
+			If (Object.Equals(Me._img, value) = false) Then
 				Me.OnimgChanging(value)
 				Me.SendPropertyChanging
 				Me._img = value
@@ -1604,31 +1617,31 @@ Partial Public Class HerbImg
 	
 	Private _leaf As String
 	
-	Private _leafImg As String
+	Private _leafImg As System.Data.Linq.Binary
 	
 	Private _branch As String
 	
-	Private _branchImg As String
+	Private _branchImg As System.Data.Linq.Binary
 	
 	Private _trunk As String
 	
-	Private _trunkImg As String
+	Private _trunkImg As System.Data.Linq.Binary
 	
 	Private _root As String
 	
-	Private _rootImg As String
+	Private _rootImg As System.Data.Linq.Binary
 	
 	Private _flower As String
 	
-	Private _flowerImg As String
+	Private _flowerImg As System.Data.Linq.Binary
 	
 	Private _fruit As String
 	
-	Private _fruitImg As String
+	Private _fruitImg As System.Data.Linq.Binary
 	
 	Private _seed As String
 	
-	Private _seedImg As String
+	Private _seedImg As System.Data.Linq.Binary
 	
 	Private _Herb As EntityRef(Of Herb)
 	
@@ -1651,7 +1664,7 @@ Partial Public Class HerbImg
     End Sub
     Partial Private Sub OnleafChanged()
     End Sub
-    Partial Private Sub OnleafImgChanging(value As String)
+    Partial Private Sub OnleafImgChanging(value As System.Data.Linq.Binary)
     End Sub
     Partial Private Sub OnleafImgChanged()
     End Sub
@@ -1659,7 +1672,7 @@ Partial Public Class HerbImg
     End Sub
     Partial Private Sub OnbranchChanged()
     End Sub
-    Partial Private Sub OnbranchImgChanging(value As String)
+    Partial Private Sub OnbranchImgChanging(value As System.Data.Linq.Binary)
     End Sub
     Partial Private Sub OnbranchImgChanged()
     End Sub
@@ -1667,7 +1680,7 @@ Partial Public Class HerbImg
     End Sub
     Partial Private Sub OntrunkChanged()
     End Sub
-    Partial Private Sub OntrunkImgChanging(value As String)
+    Partial Private Sub OntrunkImgChanging(value As System.Data.Linq.Binary)
     End Sub
     Partial Private Sub OntrunkImgChanged()
     End Sub
@@ -1675,7 +1688,7 @@ Partial Public Class HerbImg
     End Sub
     Partial Private Sub OnrootChanged()
     End Sub
-    Partial Private Sub OnrootImgChanging(value As String)
+    Partial Private Sub OnrootImgChanging(value As System.Data.Linq.Binary)
     End Sub
     Partial Private Sub OnrootImgChanged()
     End Sub
@@ -1683,7 +1696,7 @@ Partial Public Class HerbImg
     End Sub
     Partial Private Sub OnflowerChanged()
     End Sub
-    Partial Private Sub OnflowerImgChanging(value As String)
+    Partial Private Sub OnflowerImgChanging(value As System.Data.Linq.Binary)
     End Sub
     Partial Private Sub OnflowerImgChanged()
     End Sub
@@ -1691,7 +1704,7 @@ Partial Public Class HerbImg
     End Sub
     Partial Private Sub OnfruitChanged()
     End Sub
-    Partial Private Sub OnfruitImgChanging(value As String)
+    Partial Private Sub OnfruitImgChanging(value As System.Data.Linq.Binary)
     End Sub
     Partial Private Sub OnfruitImgChanged()
     End Sub
@@ -1699,7 +1712,7 @@ Partial Public Class HerbImg
     End Sub
     Partial Private Sub OnseedChanged()
     End Sub
-    Partial Private Sub OnseedImgChanging(value As String)
+    Partial Private Sub OnseedImgChanging(value As System.Data.Linq.Binary)
     End Sub
     Partial Private Sub OnseedImgChanged()
     End Sub
@@ -1762,13 +1775,13 @@ Partial Public Class HerbImg
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_leafImg", DbType:="Text", UpdateCheck:=UpdateCheck.Never)>  _
-	Public Property leafImg() As String
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_leafImg", DbType:="Image", UpdateCheck:=UpdateCheck.Never)>  _
+	Public Property leafImg() As System.Data.Linq.Binary
 		Get
 			Return Me._leafImg
 		End Get
 		Set
-			If (String.Equals(Me._leafImg, value) = false) Then
+			If (Object.Equals(Me._leafImg, value) = false) Then
 				Me.OnleafImgChanging(value)
 				Me.SendPropertyChanging
 				Me._leafImg = value
@@ -1794,13 +1807,13 @@ Partial Public Class HerbImg
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_branchImg", DbType:="Text", UpdateCheck:=UpdateCheck.Never)>  _
-	Public Property branchImg() As String
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_branchImg", DbType:="Image", UpdateCheck:=UpdateCheck.Never)>  _
+	Public Property branchImg() As System.Data.Linq.Binary
 		Get
 			Return Me._branchImg
 		End Get
 		Set
-			If (String.Equals(Me._branchImg, value) = false) Then
+			If (Object.Equals(Me._branchImg, value) = false) Then
 				Me.OnbranchImgChanging(value)
 				Me.SendPropertyChanging
 				Me._branchImg = value
@@ -1826,13 +1839,13 @@ Partial Public Class HerbImg
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_trunkImg", DbType:="Text", UpdateCheck:=UpdateCheck.Never)>  _
-	Public Property trunkImg() As String
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_trunkImg", DbType:="Image", UpdateCheck:=UpdateCheck.Never)>  _
+	Public Property trunkImg() As System.Data.Linq.Binary
 		Get
 			Return Me._trunkImg
 		End Get
 		Set
-			If (String.Equals(Me._trunkImg, value) = false) Then
+			If (Object.Equals(Me._trunkImg, value) = false) Then
 				Me.OntrunkImgChanging(value)
 				Me.SendPropertyChanging
 				Me._trunkImg = value
@@ -1858,13 +1871,13 @@ Partial Public Class HerbImg
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_rootImg", DbType:="Text", UpdateCheck:=UpdateCheck.Never)>  _
-	Public Property rootImg() As String
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_rootImg", DbType:="Image", UpdateCheck:=UpdateCheck.Never)>  _
+	Public Property rootImg() As System.Data.Linq.Binary
 		Get
 			Return Me._rootImg
 		End Get
 		Set
-			If (String.Equals(Me._rootImg, value) = false) Then
+			If (Object.Equals(Me._rootImg, value) = false) Then
 				Me.OnrootImgChanging(value)
 				Me.SendPropertyChanging
 				Me._rootImg = value
@@ -1890,13 +1903,13 @@ Partial Public Class HerbImg
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_flowerImg", DbType:="Text", UpdateCheck:=UpdateCheck.Never)>  _
-	Public Property flowerImg() As String
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_flowerImg", DbType:="Image", UpdateCheck:=UpdateCheck.Never)>  _
+	Public Property flowerImg() As System.Data.Linq.Binary
 		Get
 			Return Me._flowerImg
 		End Get
 		Set
-			If (String.Equals(Me._flowerImg, value) = false) Then
+			If (Object.Equals(Me._flowerImg, value) = false) Then
 				Me.OnflowerImgChanging(value)
 				Me.SendPropertyChanging
 				Me._flowerImg = value
@@ -1922,13 +1935,13 @@ Partial Public Class HerbImg
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_fruitImg", DbType:="Text", UpdateCheck:=UpdateCheck.Never)>  _
-	Public Property fruitImg() As String
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_fruitImg", DbType:="Image", UpdateCheck:=UpdateCheck.Never)>  _
+	Public Property fruitImg() As System.Data.Linq.Binary
 		Get
 			Return Me._fruitImg
 		End Get
 		Set
-			If (String.Equals(Me._fruitImg, value) = false) Then
+			If (Object.Equals(Me._fruitImg, value) = false) Then
 				Me.OnfruitImgChanging(value)
 				Me.SendPropertyChanging
 				Me._fruitImg = value
@@ -1954,13 +1967,13 @@ Partial Public Class HerbImg
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_seedImg", DbType:="Text", UpdateCheck:=UpdateCheck.Never)>  _
-	Public Property seedImg() As String
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_seedImg", DbType:="Image", UpdateCheck:=UpdateCheck.Never)>  _
+	Public Property seedImg() As System.Data.Linq.Binary
 		Get
 			Return Me._seedImg
 		End Get
 		Set
-			If (String.Equals(Me._seedImg, value) = false) Then
+			If (Object.Equals(Me._seedImg, value) = false) Then
 				Me.OnseedImgChanging(value)
 				Me.SendPropertyChanging
 				Me._seedImg = value
@@ -2406,7 +2419,7 @@ Partial Public Class Infographic
 	
 	Private _infoName As String
 	
-	Private _infoImg As String
+	Private _infoImg As System.Data.Linq.Binary
 	
 	Private _creditInfo As String
 	
@@ -2429,7 +2442,7 @@ Partial Public Class Infographic
     End Sub
     Partial Private Sub OninfoNameChanged()
     End Sub
-    Partial Private Sub OninfoImgChanging(value As String)
+    Partial Private Sub OninfoImgChanging(value As System.Data.Linq.Binary)
     End Sub
     Partial Private Sub OninfoImgChanged()
     End Sub
@@ -2481,13 +2494,13 @@ Partial Public Class Infographic
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_infoImg", DbType:="Text NOT NULL", CanBeNull:=false, UpdateCheck:=UpdateCheck.Never)>  _
-	Public Property infoImg() As String
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_infoImg", DbType:="Image", UpdateCheck:=UpdateCheck.Never)>  _
+	Public Property infoImg() As System.Data.Linq.Binary
 		Get
 			Return Me._infoImg
 		End Get
 		Set
-			If (String.Equals(Me._infoImg, value) = false) Then
+			If (Object.Equals(Me._infoImg, value) = false) Then
 				Me.OninfoImgChanging(value)
 				Me.SendPropertyChanging
 				Me._infoImg = value
