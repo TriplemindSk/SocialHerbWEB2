@@ -23,13 +23,31 @@ Partial Public Class _Default
     Protected WithEvents ASPxImageSlider1 As Global.DevExpress.Web.ASPxImageSlider
 
     '''<summary>
-    '''gv_Herb control.
+    '''ASPxImageSlider2 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents gv_Herb As Global.DevExpress.Web.ASPxGridView
+    Protected WithEvents ASPxImageSlider2 As Global.DevExpress.Web.ASPxImageSlider
+
+    '''<summary>
+    '''gv_HerbShow control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents gv_HerbShow As Global.DevExpress.Web.ASPxGridView
+
+    '''<summary>
+    '''Herb_SH control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Herb_SH As Global.System.Web.UI.WebControls.SqlDataSource
 
     '''<summary>
     '''gv_DiseaseShow control.

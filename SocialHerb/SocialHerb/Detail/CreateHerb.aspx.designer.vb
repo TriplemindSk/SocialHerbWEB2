@@ -10,6 +10,8 @@
 Option Strict On
 Option Explicit On
 
+Imports DevExpress.Web
+
 
 Partial Public Class CreateHerb
 
@@ -83,7 +85,7 @@ Partial Public Class CreateHerb
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents UploadControl As Global.DevExpress.Web.ASPxUploadControl
+    Protected WithEvents UploadControl As ASPxUploadControl
 
     '''<summary>
     '''txt_Howto control.
@@ -155,7 +157,7 @@ Partial Public Class CreateHerb
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents ASPxUploadControl1 As Global.DevExpress.Web.ASPxUploadControl
+    Protected WithEvents ASPxUploadControl1 As ASPxUploadControl
 
     '''<summary>
     '''txt_Root control.
@@ -173,7 +175,7 @@ Partial Public Class CreateHerb
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents ASPxUploadControl2 As Global.DevExpress.Web.ASPxUploadControl
+    Protected WithEvents ASPxUploadControl2 As ASPxUploadControl
 
     '''<summary>
     '''txt_trunk control.
@@ -191,7 +193,7 @@ Partial Public Class CreateHerb
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents ASPxUploadControl3 As Global.DevExpress.Web.ASPxUploadControl
+    Protected WithEvents ASPxUploadControl3 As ASPxUploadControl
 
     '''<summary>
     '''txt_Seed control.
@@ -209,7 +211,7 @@ Partial Public Class CreateHerb
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents ASPxUploadControl4 As Global.DevExpress.Web.ASPxUploadControl
+    Protected WithEvents ASPxUploadControl4 As ASPxUploadControl
 
     '''<summary>
     '''txt_Fruit control.
@@ -227,7 +229,7 @@ Partial Public Class CreateHerb
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents ASPxUploadControl5 As Global.DevExpress.Web.ASPxUploadControl
+    Protected WithEvents ASPxUploadControl5 As ASPxUploadControl
 
     '''<summary>
     '''txt_Branch control.
@@ -245,7 +247,7 @@ Partial Public Class CreateHerb
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents ASPxUploadControl6 As Global.DevExpress.Web.ASPxUploadControl
+    Protected WithEvents ASPxUploadControl6 As ASPxUploadControl
 
     '''<summary>
     '''txt_Flower control.
@@ -263,7 +265,7 @@ Partial Public Class CreateHerb
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents ASPxUploadControl7 As Global.DevExpress.Web.ASPxUploadControl
+    Protected WithEvents ASPxUploadControl7 As ASPxUploadControl
 
     '''<summary>
     '''btnUpdate control.

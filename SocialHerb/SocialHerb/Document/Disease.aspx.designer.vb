@@ -10,6 +10,8 @@
 Option Strict On
 Option Explicit On
 
+Imports DevExpress.Web
+
 
 Partial Public Class Disease
 
@@ -29,7 +31,7 @@ Partial Public Class Disease
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents gv_DiseaseShow As Global.DevExpress.Web.ASPxGridView
+    Protected WithEvents gv_DiseaseShow As ASPxGridView
 
     '''<summary>
     '''Disease_SH control.

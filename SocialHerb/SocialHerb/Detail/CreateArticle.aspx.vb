@@ -1,11 +1,9 @@
 ﻿Imports System.Data
 Imports System.Data.DataTable
 Imports System.Data.SqlClient
-Imports DevExpress.Web.ASPxGridView
-Imports DevExpress.Web.ASPxUploadControl
+Imports DevExpress.Web
 Imports System.IO
 Imports System.Web.Configuration
-Imports DevExpress.Web.ASPxPopupControl
 Imports System.Drawing
 Public Class CreateArticle
     Inherits System.Web.UI.Page
@@ -46,6 +44,7 @@ Public Class CreateArticle
                 txtDetailA.Text = ""
                 txtRefA.Text = ""
                 date_Article = Now
+
 
                 'objCmd.Parameters.Add("@diseaseID")
                 'cmdInsert.Parameters.Add("@FirstName", Data.SqlDbType.NVarChar).Value = FirstName.Text()

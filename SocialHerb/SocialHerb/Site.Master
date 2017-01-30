@@ -55,6 +55,8 @@
                         <asp:MenuItem NavigateUrl="Document/Article.aspx" Text="บทความเพื่อสุขภาพ" />
                         <asp:MenuItem NavigateUrl="Document/Infographic.aspx" Text="Infographic" />
                         <asp:MenuItem NavigateUrl="Report/Report.aspx" Text="รายงาน" />
+                        <asp:MenuItem NavigateUrl="Food.aspx" Text="อาหารเพื่อสุขภาพ" />
+                        <asp:MenuItem NavigateUrl="Department.aspx" Text="หน่วยงานที่เกี่ยวข้องกับสมุนไพร" />
                         <asp:MenuItem NavigateUrl="~/About.aspx" Text="สร้างผู้ใช้" />
                     </Items>
                 </asp:Menu>

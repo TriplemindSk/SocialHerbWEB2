@@ -10,6 +10,8 @@
 Option Strict On
 Option Explicit On
 
+Imports DevExpress.Web
+
 
 Partial Public Class Infographic
 
@@ -29,7 +31,7 @@ Partial Public Class Infographic
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents gv_InfoShow As Global.DevExpress.Web.ASPxGridView
+    Protected WithEvents gv_InfoShow As ASPxGridView
 
     '''<summary>
     '''Info_SH control.

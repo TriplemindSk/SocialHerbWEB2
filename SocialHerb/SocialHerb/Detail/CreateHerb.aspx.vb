@@ -1,11 +1,9 @@
 ﻿Imports System.Data
 Imports System.Data.DataTable
 Imports System.Data.SqlClient
-Imports DevExpress.Web.ASPxGridView
-Imports DevExpress.Web.ASPxUploadControl
+Imports DevExpress.Web
 Imports System.IO
 Imports System.Web.Configuration
-Imports DevExpress.Web.ASPxPopupControl
 Imports System.Drawing
 
 

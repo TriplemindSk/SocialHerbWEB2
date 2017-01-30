@@ -10,6 +10,8 @@
 Option Strict On
 Option Explicit On
 
+Imports DevExpress.Web
+
 
 Partial Public Class CreateInfo
 
@@ -56,7 +58,7 @@ Partial Public Class CreateInfo
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents UploadControl As Global.DevExpress.Web.ASPxUploadControl
+    Protected WithEvents UploadControl As ASPxUploadControl
 
     '''<summary>
     '''txt_Ref control.

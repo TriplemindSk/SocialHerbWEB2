@@ -309,8 +309,8 @@
         <asp:Button ID="btnUpdate" runat="server" Height="25px" Text="Update" Width="70px"
             CssClass="button" />
         &nbsp;&nbsp;
-        <asp:Button ID="btnCancel" runat="server" Height="25px" Text="Cancel" Width="70px"
-            Visible="false" CssClass="button" />
+       <asp:Button ID="btnDelete" runat="server" Height="25px" Text="Delete" Width="70px"
+                        CssClass="button" />
     </center>
     <br />
     <br />

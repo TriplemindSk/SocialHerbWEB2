@@ -1,0 +1,15 @@
+﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/Site.Master" 
+CodeBehind="Report.aspx.vb" Inherits="SocialHerb.Report" %>
+
+<%@ Register Assembly="DevExpress.XtraReports.v13.1.Web, Version=13.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a"
+    Namespace="DevExpress.XtraReports.Web" TagPrefix="dx" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
+
+<dx:ReportViewer ID="ReportViewer1" runat="server">
+</dx:ReportViewer>
+
+
+</asp:Content>
+

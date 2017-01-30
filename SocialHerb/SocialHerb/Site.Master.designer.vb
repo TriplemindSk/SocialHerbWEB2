@@ -32,15 +32,6 @@ Partial Public Class Site
     Protected WithEvents HeadLoginView As Global.System.Web.UI.WebControls.LoginView
 
     '''<summary>
-    '''NavigationMenu control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents NavigationMenu As Global.System.Web.UI.WebControls.Menu
-
-    '''<summary>
     '''lbl_dateT control.
     '''</summary>
     '''<remarks>
@@ -48,6 +39,15 @@ Partial Public Class Site
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents lbl_dateT As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''NavigationMenu control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents NavigationMenu As Global.System.Web.UI.WebControls.Menu
 
     '''<summary>
     '''MainContent control.

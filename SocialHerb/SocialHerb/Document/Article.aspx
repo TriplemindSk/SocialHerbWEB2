@@ -37,7 +37,7 @@
 
     </div>
 
-    <dx:ASPxGridView ID="gv_ArticleShow" ClientInstanceName="grid" runat="server" KeyFieldName="EmployeeID"
+    <dx:ASPxGridView ID="gv_ArticleShow" ClientInstanceName="grid" runat="server" 
         PreviewFieldName="Notes" AutoGenerateColumns="False" EnableRowsCache="false" DataSourceID="Article_SH"
         Width="100%">
         <Columns>

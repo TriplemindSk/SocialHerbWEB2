@@ -47,112 +47,19 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DevExpress.Charts.Designer.v16.2.resources, Version=16.2.0.0, Culture=de, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\Program Files (x86)\DevExpress 16.2\Components\Bin\Framework\de\DevExpress.Charts.Designer.v16.2.resources.dll</HintPath>
-    </Reference>
     <Reference Include="DevExpress.Data.v16.2, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Data.v16.2.resources, Version=16.2.0.0, Culture=de, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\Program Files (x86)\DevExpress 16.2\Components\Bin\Framework\de\DevExpress.Data.v16.2.resources.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.DataAccess.v16.2.Design, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\Program Files (x86)\DevExpress 16.2\Components\Bin\Framework\Design\DevExpress.DataAccess.v16.2.Design.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.DataAccess.v16.2.resources, Version=16.2.0.0, Culture=de, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\Program Files (x86)\DevExpress 16.2\Components\Bin\Framework\de\DevExpress.DataAccess.v16.2.resources.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.DataAccess.v16.2.UI.resources, Version=16.2.0.0, Culture=de, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\Program Files (x86)\DevExpress 16.2\Components\Bin\Framework\de\DevExpress.DataAccess.v16.2.UI.resources.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.Design.v16.2, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\Program Files (x86)\DevExpress 16.2\Components\Bin\Framework\Design\DevExpress.Design.v16.2.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.ExpressApp.Demos.Win.v16.2.resources, Version=16.2.0.0, Culture=de, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\Program Files (x86)\DevExpress 16.2\Components\Bin\Framework\de\DevExpress.ExpressApp.Demos.Win.v16.2.resources.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.ExpressApp.FileAttachment.Web.v16.2.resources, Version=16.2.0.0, Culture=de, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\Program Files (x86)\DevExpress 16.2\Components\Bin\Framework\de\DevExpress.ExpressApp.FileAttachment.Web.v16.2.resources.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.ExpressApp.FileAttachment.Win.v16.2.resources, Version=16.2.0.0, Culture=de, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\Program Files (x86)\DevExpress 16.2\Components\Bin\Framework\de\DevExpress.ExpressApp.FileAttachment.Win.v16.2.resources.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.ExpressApp.HtmlPropertyEditor.Web.Design.v16.2, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\Program Files (x86)\DevExpress 16.2\Components\Bin\Framework\Design\DevExpress.ExpressApp.HtmlPropertyEditor.Web.Design.v16.2.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.ExpressApp.HtmlPropertyEditor.Win.v16.2.resources, Version=16.2.0.0, Culture=de, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\Program Files (x86)\DevExpress 16.2\Components\Bin\Framework\de\DevExpress.ExpressApp.HtmlPropertyEditor.Win.v16.2.resources.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.ExpressApp.Objects.v16.2.resources, Version=16.2.0.0, Culture=de, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\Program Files (x86)\DevExpress 16.2\Components\Bin\Framework\de\DevExpress.ExpressApp.Objects.v16.2.resources.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.ExpressApp.ScriptRecorder.Win.v16.2.resources, Version=16.2.0.0, Culture=de, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\Program Files (x86)\DevExpress 16.2\Components\Bin\Framework\de\DevExpress.ExpressApp.ScriptRecorder.Win.v16.2.resources.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.ExpressApp.v16.2.resources, Version=16.2.0.0, Culture=de, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\Program Files (x86)\DevExpress 16.2\Components\Bin\Framework\de\DevExpress.ExpressApp.v16.2.resources.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.ExpressApp.Web.Design.v16.2, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\Program Files (x86)\DevExpress 16.2\Components\Bin\Framework\Design\DevExpress.ExpressApp.Web.Design.v16.2.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.ExpressApp.Web.v16.2.resources, Version=16.2.0.0, Culture=de, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\Program Files (x86)\DevExpress 16.2\Components\Bin\Framework\de\DevExpress.ExpressApp.Web.v16.2.resources.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.ExpressApp.Win.Design.v16.2, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\Program Files (x86)\DevExpress 16.2\Components\Bin\Framework\Design\DevExpress.ExpressApp.Win.Design.v16.2.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.ExpressApp.Win.v16.2.resources, Version=16.2.0.0, Culture=de, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\Program Files (x86)\DevExpress 16.2\Components\Bin\Framework\de\DevExpress.ExpressApp.Win.v16.2.resources.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.ExpressApp.Workflow.v16.2.resources, Version=16.2.0.0, Culture=de, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\Program Files (x86)\DevExpress 16.2\Components\Bin\Framework\de\DevExpress.ExpressApp.Workflow.v16.2.resources.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.ExpressApp.Workflow.Win.v16.2.resources, Version=16.2.0.0, Culture=de, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\Program Files (x86)\DevExpress 16.2\Components\Bin\Framework\de\DevExpress.ExpressApp.Workflow.Win.v16.2.resources.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.Pdf.v16.2.Core.resources, Version=16.2.0.0, Culture=de, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\Program Files (x86)\DevExpress 16.2\Components\Bin\Framework\de\DevExpress.Pdf.v16.2.Core.resources.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.Printing.v16.2.Core, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.RichEdit.v16.2.Core, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Web.ASPxHtmlEditor.v16.2.resources, Version=16.2.0.0, Culture=de, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\Program Files (x86)\DevExpress 16.2\Components\Bin\Framework\de\DevExpress.Web.ASPxHtmlEditor.v16.2.resources.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.Web.ASPxSpellChecker.v16.2.resources, Version=16.2.0.0, Culture=de, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\Program Files (x86)\DevExpress 16.2\Components\Bin\Framework\de\DevExpress.Web.ASPxSpellChecker.v16.2.resources.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.Web.ASPxSpreadsheet.v16.2.resources, Version=16.2.0.0, Culture=de, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\Program Files (x86)\DevExpress 16.2\Components\Bin\Framework\de\DevExpress.Web.ASPxSpreadsheet.v16.2.resources.dll</HintPath>
-    </Reference>
     <Reference Include="DevExpress.Web.ASPxThemes.v16.2, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Web.Bootstrap.v16.2.Design, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Office.v16.2.Core, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v16.2.Core, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Web.v16.2, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Web.Resources.v16.2, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\Program Files (x86)\DevExpress 16.2\Components\Bin\Framework\Design\DevExpress.Web.Bootstrap.v16.2.Design.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.Web.Resources.v16.2, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Web.v16.2, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraCharts.v16.2, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v16.2.Web, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v16.2.Web, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
     <Reference Include="System" />
@@ -201,20 +108,26 @@
     <Content Include="Account\ChangePasswordSuccess.aspx" />
     <Content Include="Account\Login.aspx" />
     <Content Include="Account\Register.aspx" />
+    <Content Include="Department.aspx" />
     <Content Include="Detail\CreateArticle.aspx" />
+    <Content Include="Detail\CreateDepartment.aspx" />
     <Content Include="Detail\CreateDisease.aspx" />
+    <Content Include="Detail\CreateFood.aspx" />
     <Content Include="Detail\CreateHerb.aspx" />
     <Content Include="Detail\CreateInfo.aspx" />
     <Content Include="Document\Disease.aspx" />
     <Content Include="Document\Article.aspx" />
     <Content Include="Document\Herb.aspx" />
     <Content Include="Document\Infographic.aspx" />
+    <Content Include="Food.aspx" />
     <Content Include="Images\BG.jpg" />
     <Content Include="Images\BGTT.png" />
+    <Content Include="Images\Chart.png" />
     <Content Include="Images\LOGOLast.png" />
     <Content Include="Images\logonew.png" />
     <Content Include="Images\logout.png" />
     <Content Include="Images\NEW.jpg" />
+    <Content Include="Images\Report.png" />
     <Content Include="Images\slide1.jpg" />
     <Content Include="Images\slide2.jpg" />
     <Content Include="Images\slide3.jpg" />
@@ -286,6 +199,13 @@
     <Compile Include="Default.aspx.designer.vb">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Department.aspx.designer.vb">
+      <DependentUpon>Department.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Department.aspx.vb">
+      <DependentUpon>Department.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="Detail\CreateArticle.aspx.designer.vb">
       <DependentUpon>CreateArticle.aspx</DependentUpon>
     </Compile>
@@ -293,11 +213,25 @@
       <DependentUpon>CreateArticle.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+    <Compile Include="Detail\CreateDepartment.aspx.designer.vb">
+      <DependentUpon>CreateDepartment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Detail\CreateDepartment.aspx.vb">
+      <DependentUpon>CreateDepartment.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="Detail\CreateDisease.aspx.designer.vb">
       <DependentUpon>CreateDisease.aspx</DependentUpon>
     </Compile>
     <Compile Include="Detail\CreateDisease.aspx.vb">
       <DependentUpon>CreateDisease.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Detail\CreateFood.aspx.designer.vb">
+      <DependentUpon>CreateFood.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Detail\CreateFood.aspx.vb">
+      <DependentUpon>CreateFood.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Detail\CreateHerb.aspx.designer.vb">
@@ -342,6 +276,13 @@
       <DependentUpon>Infographic.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+    <Compile Include="Food.aspx.designer.vb">
+      <DependentUpon>Food.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Food.aspx.vb">
+      <DependentUpon>Food.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="Global.asax.vb">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -371,6 +312,7 @@
       <DependentUpon>Report.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+    <Compile Include="Report\Series.vb" />
     <Compile Include="Site.Master.designer.vb">
       <DependentUpon>Site.Master</DependentUpon>
     </Compile>
@@ -424,7 +366,7 @@
         <WebProjectProperties>
           <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>52273</DevelopmentServerPort>
+          <DevelopmentServerPort>62016</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>
           </IISUrl>
