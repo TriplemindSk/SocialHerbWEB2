@@ -144,6 +144,18 @@
     <Content Include="Images\slide6.jpg" />
     <Content Include="Images\slide7.jpg" />
     <Content Include="Images\socialherbLOGOTEXT.png" />
+    <Content Include="Images\ข้าวโพด.jpg" />
+    <Content Include="Images\ดอกพญายอ.jpg" />
+    <Content Include="Images\น้ำท่วม.jpg" />
+    <Content Include="Images\พญายอ.jpg" />
+    <Content Include="Images\วิ่ง_สู่_4_มิติสุขภาวะ.jpg" />
+    <Content Include="Images\ใบพญายอ.jpg" />
+    <Content Include="Prototype\ProArticle.aspx" />
+    <Content Include="Prototype\ProDepartment.aspx" />
+    <Content Include="Prototype\ProDisease.aspx" />
+    <Content Include="Prototype\ProFood.aspx" />
+    <Content Include="Prototype\ProHerb.aspx" />
+    <Content Include="Prototype\ProInfo.aspx" />
     <Content Include="Report\Report.aspx" />
     <Content Include="Styles\Site.css" />
     <Content Include="Default.aspx" />
@@ -312,6 +324,48 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Prototype\ProArticle.aspx.designer.vb">
+      <DependentUpon>ProArticle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Prototype\ProArticle.aspx.vb">
+      <DependentUpon>ProArticle.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Prototype\ProDepartment.aspx.designer.vb">
+      <DependentUpon>ProDepartment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Prototype\ProDepartment.aspx.vb">
+      <DependentUpon>ProDepartment.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Prototype\ProDisease.aspx.designer.vb">
+      <DependentUpon>ProDisease.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Prototype\ProDisease.aspx.vb">
+      <DependentUpon>ProDisease.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Prototype\ProFood.aspx.designer.vb">
+      <DependentUpon>ProFood.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Prototype\ProFood.aspx.vb">
+      <DependentUpon>ProFood.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Prototype\ProHerb.aspx.designer.vb">
+      <DependentUpon>ProHerb.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Prototype\ProHerb.aspx.vb">
+      <DependentUpon>ProHerb.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Prototype\ProInfo.aspx.designer.vb">
+      <DependentUpon>ProInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Prototype\ProInfo.aspx.vb">
+      <DependentUpon>ProInfo.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Report\Report.aspx.designer.vb">
       <DependentUpon>Report.aspx</DependentUpon>

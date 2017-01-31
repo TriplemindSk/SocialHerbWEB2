@@ -10,8 +10,6 @@
 Option Strict On
 Option Explicit On
 
-Imports DevExpress.Web
-
 
 Partial Public Class Herb
 
@@ -31,7 +29,7 @@ Partial Public Class Herb
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents gv_HerbShow As ASPxGridView
+    Protected WithEvents gv_HerbShow As Global.DevExpress.Web.ASPxGridView
 
     '''<summary>
     '''Herb_SH control.

@@ -25,20 +25,21 @@
 
     </div>
 
-    <dx:ASPxGridView ID="gv_DepartmentShow" ClientInstanceName="grid" runat="server" 
-        PreviewFieldName="Notes" AutoGenerateColumns="False" EnableRowsCache="false" DataSourceID="Department_SH"
-        Width="100%">
+    <dx:ASPxGridView ID="gv_DepartmentShow" ClientInstanceName="gv_DepartmentShow" runat="server" 
+         AutoGenerateColumns="False" EnableRowsCache="false" DataSourceID="Department_SH" KeyFieldName="DepartmentName"
+        Width="100%" Style="text-align: center" Enabled="True">
         <Columns>
             <dx:GridViewDataColumn FieldName="DepartmentName" VisibleIndex="0" Caption="ชื่อหน่วยงาน"
                 ReadOnly="True"  SortOrder="Descending" HeaderStyle-HorizontalAlign="Center" Width="100px">
                 <EditCellStyle HorizontalAlign="Center">
                 </EditCellStyle>
-                <DataItemTemplate>
-                    <asp:LinkButton ID="lnk_DEname" runat="server" Text='<%# Eval("DepartmentName") %>' CommandArgument='<%# Eval("DepartmentName") %>'>
+                <%--<DataItemTemplate>
+                    <asp:LinkButton ID="lnk_DEname" runat="server" Text='<%# Eval("DepartmentName") %>' CommandArgument='<%# Eval("DepartmentName") %>'
+                    >
                             </asp:LinkButton>
-                </DataItemTemplate>
+                </DataItemTemplate>--%>
                 <EditItemTemplate>
-                    <asp:Label ID="lbl_DEname" runat="server" Text='<%# Eval("DepartmentName") %>'></asp:Label>
+                    <asp:Label ID="lbl_DEname" runat="server" Text='<%# Eval("DepartmentName") %>' ></asp:Label>
                 </EditItemTemplate>
                
                 <Settings AutoFilterCondition="Contains" />
@@ -81,6 +82,19 @@
                     <asp:Label ID="lbl_DepartDate" runat="server" Text='<%# Eval("DepartDate", "{0:d/MM/yyyy}") %>'>
                             </asp:Label>
                 </EditItemTemplate>
+                <Settings AutoFilterCondition="Contains" />
+            </dx:GridViewDataColumn>
+            <dx:GridViewDataColumn FieldName="infoName" VisibleIndex="5" Caption="แก้ไขข้อมูล"
+                ReadOnly="True"  HeaderStyle-HorizontalAlign="Center" Width="50px"  CellStyle-HorizontalAlign="Center">
+                <EditCellStyle HorizontalAlign="Center">
+                </EditCellStyle>
+                <DataItemTemplate>
+                    <asp:LinkButton ID="lnk_HerbN" runat="server" Text="Edit"  PostBackUrl="~/Prototype/ProDepartment.aspx?DepartmentName=สถาบันวิจัยสมุนไพร">
+                            </asp:LinkButton>
+                </DataItemTemplate>
+                
+               <%-- <CellStyle HorizontalAlign="Center">
+                </CellStyle>--%>
                 <Settings AutoFilterCondition="Contains" />
             </dx:GridViewDataColumn>
         </Columns>

@@ -11,7 +11,7 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class CreateInfo
+Partial Public Class ProDisease
 
     '''<summary>
     '''lb_disease control.
@@ -50,22 +50,22 @@ Partial Public Class CreateInfo
     Protected WithEvents txtName As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''UploadControl control.
+    '''txtDetail control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents UploadControl As Global.DevExpress.Web.ASPxUploadControl
+    Protected WithEvents txtDetail As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''txt_Ref control.
+    '''txtherb control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents txt_Ref As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents txtherb As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
     '''btnUpdate control.

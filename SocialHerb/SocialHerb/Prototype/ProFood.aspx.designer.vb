@@ -11,7 +11,7 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class CreateInfo
+Partial Public Class ProFood
 
     '''<summary>
     '''lb_disease control.
@@ -41,13 +41,13 @@ Partial Public Class CreateInfo
     Protected WithEvents txtID As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''txtName control.
+    '''txt_Foodname control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents txtName As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents txt_Foodname As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
     '''UploadControl control.
@@ -57,6 +57,42 @@ Partial Public Class CreateInfo
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents UploadControl As Global.DevExpress.Web.ASPxUploadControl
+
+    '''<summary>
+    '''imgInfo control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents imgInfo As Global.System.Web.UI.WebControls.Image
+
+    '''<summary>
+    '''txt_Cooking control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txt_Cooking As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''txt_Ingredient control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txt_Ingredient As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''txt_Benefit control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txt_Benefit As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
     '''txt_Ref control.

@@ -13,6 +13,12 @@ Public Class WebForm1
         hpArticle.NavigateUrl = "~\Detail\CreateArticle.aspx"
 
         'gv_ArticleShow.SearchPanelFilter = "รค"
+
     End Sub
+
+
+
+   
+
 
 End Class

@@ -11,7 +11,7 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class CreateInfo
+Partial Public Class ProDepartment
 
     '''<summary>
     '''lb_disease control.
@@ -41,31 +41,67 @@ Partial Public Class CreateInfo
     Protected WithEvents txtID As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''txtName control.
+    '''txt_DEName control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents txtName As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents txt_DEName As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''UploadControl control.
+    '''txt_Address control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents UploadControl As Global.DevExpress.Web.ASPxUploadControl
+    Protected WithEvents txt_Address As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''txt_Ref control.
+    '''txt_Tel control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents txt_Ref As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents txt_Tel As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''txt_Fax control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txt_Fax As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''txt_Email control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txt_Email As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''txt_Website control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txt_Website As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''txt_Role control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txt_Role As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
     '''btnUpdate control.

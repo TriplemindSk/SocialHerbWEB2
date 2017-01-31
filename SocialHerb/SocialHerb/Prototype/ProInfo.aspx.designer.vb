@@ -11,7 +11,7 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class CreateInfo
+Partial Public Class ProInfo
 
     '''<summary>
     '''lb_disease control.
@@ -57,6 +57,15 @@ Partial Public Class CreateInfo
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents UploadControl As Global.DevExpress.Web.ASPxUploadControl
+
+    '''<summary>
+    '''imgInfo control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents imgInfo As Global.System.Web.UI.WebControls.Image
 
     '''<summary>
     '''txt_Ref control.

@@ -11,12 +11,59 @@ Public Class CreateInfo
     Inherits System.Web.UI.Page
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+        Dim INFOname = Request.QueryString("infoName")
+
+        'If Not IsPostBack Then
+        '    AddDataInForm(INFOname)
+
+        'End If
+
 
     End Sub
 
+    'Public Sub AddDataInForm(ByVal InName)
+    '    txtName.Text = InName
+    '    ShowData(InName)
+    'End Sub
+
+
+    'Public Function chkQuotationByNO(ByVal inNa As String) As Infographic
+    '    Dim infographic As New Infographic
+    '    Using ctx = New SocialHerbDataContext
+    '        infographic = (From q In ctx.Infographics Where q.infoName = inNa).SingleOrDefault
+    '    End Using
+    '    Return infographic
+    'End Function
+
+
+    'Public Sub ShowData(ByVal inNa As String)
+    '    Dim info As New Infographic
+    '    info = chkQuotationByNO(inNa)
 
 
 
+    '    With info
+
+    '        txtNNN.Visible = True
+    '        'txtName.Visible = False
+    '        'txt_Ref.Visible = False
+    '        txtNNN.Text = .infoName
+    '        txtCradit.Visible = True
+    '        txtCradit.Text = .creditInfo
+
+    '        'QuotationID = .Quota_ID
+    '        'cmb_company.Text = .company_name
+    '        'cmb_attn.Text = .attn
+    '        'txt_tel.Text = .tel
+    '        'txt_fax.Text = .fax
+    '        'txt_email.Text = .email
+    '        'txt_totalamount.Text = .total_amount
+    '        'memo_remark.Text = .remark
+
+    '    End With
+
+
+    'End Sub
 
     Private Sub AddData()
 

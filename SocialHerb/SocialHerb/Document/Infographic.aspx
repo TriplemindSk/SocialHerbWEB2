@@ -30,18 +30,18 @@
         <asp:HyperLink ID="hpInfo" runat="server" align="center" ForeColor="#827717" Font-Bold="true"
             Width="100%" Height="25px" Style="text-align: center">Add New Infographic</asp:HyperLink>
     </div>
-    <dx:ASPxGridView ID="gv_InfoShow" ClientInstanceName="grid" runat="server" KeyFieldName="EmployeeID"
-        PreviewFieldName="Notes" AutoGenerateColumns="False" EnableRowsCache="false"  DataSourceID="Info_SH" 
+    <dx:ASPxGridView ID="gv_InfoShow" ClientInstanceName="gv_InfoShow" runat="server" KeyFieldName="infoID"
+         AutoGenerateColumns="False" EnableRowsCache="false"  DataSourceID="Info_SH"  Style="text-align: center" Enabled="True"
         Width="100%"> 
         <Columns>
             <dx:GridViewDataColumn FieldName="infoName" VisibleIndex="0" Caption="ชื่อ Infographic"
                 ReadOnly="True"  SortOrder="Descending" HeaderStyle-HorizontalAlign="Center" Width="100px">
                 <EditCellStyle HorizontalAlign="Center">
                 </EditCellStyle>
-                <DataItemTemplate>
+                <%--<DataItemTemplate>
                     <asp:LinkButton ID="lnk_HerbN" runat="server" Text='<%# Eval("infoName") %>' CommandArgument='<%# Eval("infoName") %>'>
                             </asp:LinkButton>
-                </DataItemTemplate>
+                </DataItemTemplate>--%>
                 <EditItemTemplate>
                     <asp:Label ID="lbl_HerbN" runat="server" Text='<%# Eval("infoName") %>'></asp:Label>
                 </EditItemTemplate>
@@ -99,6 +99,19 @@
                 <EditItemTemplate>
                     <dx:ASPxImage ID="imgInfo" FieldName="infoImg" runat="server" ShowLoadingImage="true"></dx:ASPxImage>
                 </EditItemTemplate>
+                <Settings AutoFilterCondition="Contains" />
+            </dx:GridViewDataColumn>
+            <dx:GridViewDataColumn FieldName="infoName" VisibleIndex="5" Caption="แก้ไขข้อมูล"
+                ReadOnly="True"  HeaderStyle-HorizontalAlign="Center" Width="50px"  CellStyle-HorizontalAlign="Center">
+                <EditCellStyle HorizontalAlign="Center">
+                </EditCellStyle>
+                <DataItemTemplate>
+                    <asp:LinkButton ID="lnk_HerbN" runat="server" Text="Edit"  PostBackUrl="~/Prototype/ProInfo.aspx?infoName=วิ่ง สู่ 4 มิติสุขภาวะ ">
+                            </asp:LinkButton>
+                </DataItemTemplate>
+                
+               <%-- <CellStyle HorizontalAlign="Center">
+                </CellStyle>--%>
                 <Settings AutoFilterCondition="Contains" />
             </dx:GridViewDataColumn>
         </Columns>

@@ -11,7 +11,7 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class CreateInfo
+Partial Public Class ProArticle
 
     '''<summary>
     '''lb_disease control.
@@ -41,13 +41,13 @@ Partial Public Class CreateInfo
     Protected WithEvents txtID As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''txtName control.
+    '''txtNameA control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents txtName As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents txtNameA As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
     '''UploadControl control.
@@ -59,13 +59,31 @@ Partial Public Class CreateInfo
     Protected WithEvents UploadControl As Global.DevExpress.Web.ASPxUploadControl
 
     '''<summary>
-    '''txt_Ref control.
+    '''imgInfo control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents txt_Ref As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents imgInfo As Global.System.Web.UI.WebControls.Image
+
+    '''<summary>
+    '''txtDetailA control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txtDetailA As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''txtRefA control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txtRefA As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
     '''btnUpdate control.

@@ -1,10 +1,12 @@
-﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/Site.Master"
-    CodeBehind="CreateInfo.aspx.vb" Inherits="SocialHerb.CreateInfo" %>
+﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/Site.Master" CodeBehind="ProInfo.aspx.vb" Inherits="SocialHerb.ProInfo" %>
 
 <%@ Register Assembly="DevExpress.Web.v16.2, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a"
     Namespace="DevExpress.Web" TagPrefix="dx" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
-    <style type="text/css">
+
+ <link href="Styles/Site.css" rel="Stylesheet" type="text/css" />
+  <style type="text/css">
         .style1
         {
             width: 149px;
@@ -29,8 +31,8 @@
     </script>--%>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-    <center>
-        <table border="0" width="600">
+<center>
+        <table border="0" width="600px">
             <tr style="height: 20px">
                 <td colspan="3" style="background-image: url(Images/head6.jpg)">
                     <asp:Label ID="lb_disease" runat="server" Text="Infographic" CssClass="labeltext_head"
@@ -42,13 +44,14 @@
         </h2>
         <asp:Label ID="lblErrorEdit" runat="server" ForeColor="Red"></asp:Label>
         <asp:TextBox ID="txtID" runat="server" Visible="false"></asp:TextBox>
-        <table border="0" width="600">
+        <table border="0" width="800px">
             <tr>
                 <td align="right" class="style3">
                     ชื่อ Infographic :
                 </td>
                 <td>
-                    <asp:TextBox ID="txtName" runat="server" CssClass="textbox" Width="199px"></asp:TextBox>
+                    <asp:TextBox ID="txtName" runat="server" CssClass="textbox" Width="199px"
+                     Text="วิ่ง สู่ 4 มิติสุขภาวะ"></asp:TextBox>
                     
                 </td>
             </tr>
@@ -90,11 +93,20 @@
                 </td>
             </tr>
             <tr>
+            <td align="right" class="style3" valign="top">
+            วิ่ง_สู่_4_มิติสุขภาวะ.jpg
+            </td>
+            <td>
+            <asp:Image ID="imgInfo" runat="server" ImageUrl="~/Images/วิ่ง_สู่_4_มิติสุขภาวะ.jpg" Width="500px" Height="353px"/> 
+            </td>
+            </tr>
+            <tr>
                 <td align="right" class="style3" valign="top">
                     ที่มา :
                 </td>
                 <td>
-                    <asp:TextBox ID="txt_Ref" runat="server" CssClass="textbox" Width="199px"></asp:TextBox>
+                    <asp:TextBox ID="txt_Ref" runat="server" CssClass="textbox" Width="199px"
+                     Text="สำนักงานกองทุนสนับสนุนการสร้างเสริมสุขภาพ (สสส.)"></asp:TextBox>
                     
                 </td>
             </tr>
@@ -121,4 +133,7 @@
             </tr>
         </table>
     </center>
+     <br /><br />
+<br />
+<br />
 </asp:Content>

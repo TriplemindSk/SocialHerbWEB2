@@ -29,10 +29,10 @@
                             Width="30px" >
                             <EditCellStyle HorizontalAlign="Center">
                             </EditCellStyle>
-                            <DataItemTemplate>
+                           <%-- <DataItemTemplate>
                                 <asp:LinkButton ID="lnk_HerbN" runat="server" Text='<%# Eval("symptom") %>' CommandArgument='<%# Eval("symptom") %>'>
                                 </asp:LinkButton>
-                            </DataItemTemplate>
+                            </DataItemTemplate>--%>
                             <EditItemTemplate>
                                 <asp:Label ID="lbl_HerbN" runat="server" Text='<%# Eval("symptom") %>'></asp:Label>
                             </EditItemTemplate>
@@ -70,6 +70,19 @@
                             </EditItemTemplate>
                             <Settings AutoFilterCondition="Contains" />
                         </dx:GridViewDataColumn>
+                        <dx:GridViewDataColumn FieldName="infoName" VisibleIndex="5" Caption="แก้ไขข้อมูล"
+                ReadOnly="True"  HeaderStyle-HorizontalAlign="Center" Width="50px"  CellStyle-HorizontalAlign="Center">
+                <EditCellStyle HorizontalAlign="Center">
+                </EditCellStyle>
+                <DataItemTemplate>
+                    <asp:LinkButton ID="lnk_HerbN" runat="server" Text="Edit"  PostBackUrl="~/Prototype/ProDisease.aspx?symptom=อาการปวดฟัน">
+                            </asp:LinkButton>
+                </DataItemTemplate>
+                
+               <%-- <CellStyle HorizontalAlign="Center">
+                </CellStyle>--%>
+                <Settings AutoFilterCondition="Contains" />
+            </dx:GridViewDataColumn>
                     </Columns>
                     <SettingsEditing Mode="Inline" />
                     <SettingsSearchPanel Visible="true" />

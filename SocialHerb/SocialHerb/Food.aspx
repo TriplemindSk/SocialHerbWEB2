@@ -20,18 +20,18 @@
 
     </div>
 
-    <dx:ASPxGridView ID="gv_FoodShow" ClientInstanceName="grid" runat="server" 
-        PreviewFieldName="Notes" AutoGenerateColumns="False" EnableRowsCache="false" DataSourceID="Food_SH"
-        Width="100%">
+    <dx:ASPxGridView ID="gv_FoodShow" ClientInstanceName="gv_FoodShow" runat="server" KeyFieldName="FoodName"
+        AutoGenerateColumns="False" EnableRowsCache="false" DataSourceID="Food_SH"
+        Width="100%" Style="text-align: center" Enabled="True">
         <Columns>
-            <dx:GridViewDataColumn FieldName="FoodName" VisibleIndex="0" Caption="ชื่ออาหาร"
+            <dx:GridViewDataColumn FieldName="FoodName" VisibleIndex="0" Caption="ชื่ออาหาร" 
                 ReadOnly="True"  SortOrder="Descending" HeaderStyle-HorizontalAlign="Center" Width="100px">
                 <EditCellStyle HorizontalAlign="Center">
                 </EditCellStyle>
-                <DataItemTemplate>
+                <%--<DataItemTemplate>
                     <asp:LinkButton ID="lnk_FoodName" runat="server" Text='<%# Eval("FoodName") %>' CommandArgument='<%# Eval("FoodName") %>'>
                             </asp:LinkButton>
-                </DataItemTemplate>
+                </DataItemTemplate>--%>
                 <EditItemTemplate>
                     <asp:Label ID="lbl_FoodName" runat="server" Text='<%# Eval("FoodName") %>'></asp:Label>
                 </EditItemTemplate>
@@ -76,6 +76,19 @@
                     <asp:Label ID="lbl_FoodDate" runat="server" Text='<%# Eval("FoodDate", "{0:d/MM/yyyy}") %>'>
                             </asp:Label>
                 </EditItemTemplate>
+                <Settings AutoFilterCondition="Contains" />
+            </dx:GridViewDataColumn>
+            <dx:GridViewDataColumn FieldName="infoName" VisibleIndex="5" Caption="แก้ไขข้อมูล"
+                ReadOnly="True"  HeaderStyle-HorizontalAlign="Center" Width="50px"  CellStyle-HorizontalAlign="Center">
+                <EditCellStyle HorizontalAlign="Center">
+                </EditCellStyle>
+                <DataItemTemplate>
+                    <asp:LinkButton ID="lnk_HerbN" runat="server" Text="Edit"  PostBackUrl="~/Prototype/ProFood.aspx?FoodName=ตำข้าวโพดใส่ไข่เค็ม เพื่อสุขภาพ">
+                            </asp:LinkButton>
+                </DataItemTemplate>
+                
+               <%-- <CellStyle HorizontalAlign="Center">
+                </CellStyle>--%>
                 <Settings AutoFilterCondition="Contains" />
             </dx:GridViewDataColumn>
         </Columns>

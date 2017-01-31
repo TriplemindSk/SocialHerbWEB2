@@ -39,28 +39,28 @@
     
   <dx:ASPxPageControl ID="carTabPage" runat="server" ActiveTabIndex="0" EnableHierarchyRecreation="True" BackColor="#afd168" TabPosition="Left">
             <TabPages>
-                <dx:TabPage Text="อัตราส่วนของข้อมูลระหว่างสมุนไพร,อาการ/โรคและจิตอาสา(เภสัชกร)" >
+                <dx:TabPage Text="อัตราส่วนของข้อมูลระหว่างสมุนไพร,อาการ/โรคและจิตอาสา(เภสัชกร)" ActiveTabImage-Url="../Images/Chart.png">
                     <ContentCollection>
                         <dx:ContentControl ID="ContentControl1" runat="server" BackColor="#afd168">
                             <dx:ASPxImage runat="server" ID="Image1" ImageUrl="~/Images/ChartNMNM.png" Width="800px" Height="1130px"/>
                         </dx:ContentControl>
                     </ContentCollection>
                 </dx:TabPage>
-                <dx:TabPage Text="อัตราส่วนของสมุนไพรที่มีการแสดงความคิดเห็นกับสมุนไพรที่ไม่มีการแสดงความคิดเห็น">
+                <dx:TabPage Text="อัตราส่วนของสมุนไพรที่มีการแสดงความคิดเห็นกับสมุนไพรที่ไม่มีการแสดงความคิดเห็น" ActiveTabImage-Url="../Images/Chart.png">
                     <ContentCollection>
                         <dx:ContentControl ID="ContentControl2" runat="server">
                             <dx:ASPxImage runat="server" ID="Image2" ImageUrl="~/Images/ChartTWO.png" Width="800px" Height="1130px"/>
                         </dx:ContentControl>
                     </ContentCollection>
                 </dx:TabPage>
-                <dx:TabPage Text="รายงานแสดงจำนวนการแสดงความคิดเห็นและให้คะแนนของเภสัชกรแต่ละคน">
+                <dx:TabPage Text="รายงานแสดงจำนวนการแสดงความคิดเห็นและให้คะแนนของเภสัชกรแต่ละคน" ActiveTabImage-Url="../Images/Report.png">
                     <ContentCollection>
                         <dx:ContentControl ID="ContentControl3" runat="server">
                             <dx:ASPxImage runat="server" ID="Image3" ImageUrl="~/Images/ReportFF.png" Width="800px" Height="1130px" />
                         </dx:ContentControl>
                     </ContentCollection>
                 </dx:TabPage>
-                <dx:TabPage Text="รายงานแสดงจำนวนการแสดงความคิดเห็นและให้คะแนนของเภสัชกรแต่ละคน">
+                <dx:TabPage Text="รายงานแสดงจำนวนการแสดงความคิดเห็นและให้คะแนนของเภสัชกรแต่ละคน" ActiveTabImage-Url="../Images/Report.png">
                     <ContentCollection>
                         <dx:ContentControl ID="ContentControl4" runat="server">
                             <dx:ASPxImage runat="server" ID="ASPxImage1" ImageUrl="~/Images/ReportNM.png" Width="800px" Height="1130px" />

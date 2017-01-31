@@ -8,6 +8,11 @@
         'End If
         hpInfo.NavigateUrl = "~\Detail\CreateInfo.aspx"
 
+
+
+
+
+
     End Sub
 
 End Class
