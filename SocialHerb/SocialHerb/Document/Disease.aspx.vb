@@ -17,8 +17,21 @@ Public Class Disease
         hpDisease.NavigateUrl = "~\Detail\CreateDisease.aspx"
 
         'gv_DiseaseShow.SearchPanelFilter = "รค"
-
+        Dim RequestDiseaseID = Request.QueryString("diseaseID")
 
     End Sub
 
+
+    Private Sub gv_DiseaseShow_CustomCallback(sender As Object, e As DevExpress.Web.ASPxGridViewCustomCallbackEventArgs) Handles gv_DiseaseShow.CustomCallback
+        gv_DiseaseShow.DataBind()
+    End Sub
+
+
+    Protected Sub ListItem_Command(ByVal sender As Object, ByVal e As CommandEventArgs)
+        Select Case e.CommandName
+            Case "OpenCreateDisease"
+                'Session("IsEditing") = True
+                Response.Redirect("~\Detail\CreateDisease.aspx?diseaseID= " & e.CommandArgument)
+        End Select
+    End Sub
 End Class

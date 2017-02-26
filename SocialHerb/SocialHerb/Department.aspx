@@ -26,20 +26,20 @@
     </div>
 
     <dx:ASPxGridView ID="gv_DepartmentShow" ClientInstanceName="gv_DepartmentShow" runat="server" 
-         AutoGenerateColumns="False" EnableRowsCache="false" DataSourceID="Department_SH" KeyFieldName="DepartmentName"
+         AutoGenerateColumns="False" EnableRowsCache="false" DataSourceID="Department_SH" KeyFieldName="ID"
         Width="100%" Style="text-align: center" Enabled="True">
         <Columns>
-            <dx:GridViewDataColumn FieldName="DepartmentName" VisibleIndex="0" Caption="ชื่อหน่วยงาน"
+            <dx:GridViewDataColumn FieldName="contactName" VisibleIndex="0" Caption="ชื่อหน่วยงาน"
                 ReadOnly="True"  SortOrder="Descending" HeaderStyle-HorizontalAlign="Center" Width="100px">
                 <EditCellStyle HorizontalAlign="Center">
                 </EditCellStyle>
-                <%--<DataItemTemplate>
-                    <asp:LinkButton ID="lnk_DEname" runat="server" Text='<%# Eval("DepartmentName") %>' CommandArgument='<%# Eval("DepartmentName") %>'
-                    >
+                <DataItemTemplate>
+                    <asp:LinkButton ID="lnk_DEname" runat="server" Text='<%# Eval("contactName") %>' CommandArgument='<%# Eval("ID") %>'
+                    OnCommand="ListItem_Command" Enabled="True" CommandName="OpenCreateDepartment">
                             </asp:LinkButton>
-                </DataItemTemplate>--%>
+                </DataItemTemplate>
                 <EditItemTemplate>
-                    <asp:Label ID="lbl_DEname" runat="server" Text='<%# Eval("DepartmentName") %>' ></asp:Label>
+                    <asp:Label ID="lbl_DEname" runat="server" Text='<%# Eval("contactName") %>' ></asp:Label>
                 </EditItemTemplate>
                
                 <Settings AutoFilterCondition="Contains" />
@@ -55,7 +55,7 @@
                 <Settings AutoFilterCondition="Contains" />
             </dx:GridViewDataColumn>
             <dx:GridViewDataColumn FieldName="Role" VisibleIndex="2" Caption="บทบาทหน้าที่"
-                ReadOnly="True"  HeaderStyle-HorizontalAlign="Center" Width="300px">
+                ReadOnly="True"  HeaderStyle-HorizontalAlign="Center" Width="300px" Visible = "true">
                 <EditCellStyle HorizontalAlign="Center">
                 </EditCellStyle>
                 <EditItemTemplate>
@@ -64,55 +64,57 @@
                 </EditItemTemplate>
                 <Settings AutoFilterCondition="Contains" />
             </dx:GridViewDataColumn>      
-            <dx:GridViewDataColumn FieldName="Website" VisibleIndex="3" Caption="Website"
+            <dx:GridViewDataColumn FieldName="website" VisibleIndex="3" Caption="Website"
                 ReadOnly="True"  HeaderStyle-HorizontalAlign="Center" Width="100px">
                 <EditCellStyle HorizontalAlign="Center">
                 </EditCellStyle>
                 <EditItemTemplate>
-                    <asp:Label ID="lbl_Website" runat="server" Text='<%# Eval("Website") %>'>
+                    <asp:Label ID="lbl_Website" runat="server" Text='<%# Eval("website") %>'>
                             </asp:Label>
                 </EditItemTemplate>
                 <Settings AutoFilterCondition="Contains" />
             </dx:GridViewDataColumn>         
-            <dx:GridViewDataColumn FieldName="DepartDate" VisibleIndex="4" Caption="วันที่แก้ไข" ReadOnly="True"
+            <dx:GridViewDataColumn FieldName="date" VisibleIndex="4" Caption="วันที่แก้ไข" ReadOnly="True"
                 CellStyle-HorizontalAlign="Center" HeaderStyle-HorizontalAlign="Center" Width="50px">
                 <EditCellStyle HorizontalAlign="Center">
                 </EditCellStyle>
                 <EditItemTemplate>
-                    <asp:Label ID="lbl_DepartDate" runat="server" Text='<%# Eval("DepartDate", "{0:d/MM/yyyy}") %>'>
+                    <asp:Label ID="lbl_DepartDate" runat="server" Text='<%# Eval("date", "{0:d/MM/yyyy}") %>'>
                             </asp:Label>
                 </EditItemTemplate>
                 <Settings AutoFilterCondition="Contains" />
             </dx:GridViewDataColumn>
-            <dx:GridViewDataColumn FieldName="infoName" VisibleIndex="5" Caption="แก้ไขข้อมูล"
+            <%--<dx:GridViewDataColumn FieldName="infoName" VisibleIndex="5" Caption="แก้ไขข้อมูล"
                 ReadOnly="True"  HeaderStyle-HorizontalAlign="Center" Width="50px"  CellStyle-HorizontalAlign="Center">
                 <EditCellStyle HorizontalAlign="Center">
                 </EditCellStyle>
                 <DataItemTemplate>
                     <asp:LinkButton ID="lnk_HerbN" runat="server" Text="Edit"  PostBackUrl="~/Prototype/ProDepartment.aspx?DepartmentName=สถาบันวิจัยสมุนไพร">
                             </asp:LinkButton>
-                </DataItemTemplate>
-                
+                </DataItemTemplate>                
                <%-- <CellStyle HorizontalAlign="Center">
-                </CellStyle>--%>
+                </CellStyle>
                 <Settings AutoFilterCondition="Contains" />
-            </dx:GridViewDataColumn>
+            </dx:GridViewDataColumn>--%>
         </Columns>
         <SettingsEditing Mode="Inline" />
-        <%--<Settings ShowGroupPanel="true" />
-        <SettingsBehavior AllowFocusedRow="True" />--%>
-        <%-- <ClientSideEvents FocusedRowChanged="function(s, e) { OnGridFocusedRowChanged(); }" />--%>
-        <SettingsSearchPanel Visible="true" />
-         <Settings ShowFooter="True" />
+
+                    <SettingsSearchPanel Visible="true" />
+
+                    <%--<Settings ShowFooter="True" />--%>
+
             <SettingsPager>
-                <PageSizeItemSettings Visible="true" Items="10, 20, 50" />
+
+                <PageSizeItemSettings Visible="true" Items="5, 10, 15, 20, 25" />
+
             </SettingsPager>
-            <SettingsBehavior AllowFocusedRow="True" />
+
+                  <SettingsBehavior AllowFocusedRow="True" />   
     </dx:ASPxGridView>
 
     <asp:SqlDataSource ID="Department_SH" runat="server" ConnectionString="<%$ ConnectionStrings:SocialHerb %>"
-                    SelectCommand=" SELECT DepartmentName,Address,Role,Website,DepartDate
-                    FROM Department ORDER BY [DepartDate] DESC">
+                    SelectCommand=" SELECT ID,contactName,Address,Role,Website,date
+                    FROM Contact ORDER BY [date] DESC">
                 </asp:SqlDataSource>
 
                 <br /><br />

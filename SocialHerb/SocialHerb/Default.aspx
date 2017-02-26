@@ -1,6 +1,9 @@
 ﻿<%@ Page Title="Home Page" Language="vb" MasterPageFile="~/Site.Master" AutoEventWireup="true"
     CodeBehind="Default.aspx.vb" Inherits="SocialHerb._Default" %>
 
+<%@ Register Assembly="DevExpress.Web.Bootstrap.v16.2, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a"
+    Namespace="DevExpress.Web.Bootstrap" TagPrefix="dx" %>
+
 
 <%@ Register assembly="DevExpress.Web.v16.2, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" 
 namespace="DevExpress.Web" tagprefix="dx" %>
@@ -8,10 +11,11 @@ namespace="DevExpress.Web" tagprefix="dx" %>
 
 <asp:Content ID="HeaderContent" runat="server" ContentPlaceHolderID="HeadContent">
     <link href="Styles/Site.css" rel="Stylesheet" type="text/css" />
+   
 </asp:Content>
 <asp:Content ID="BodyContent" runat="server" ContentPlaceHolderID="MainContent">
 
-    <dx:ASPxImageSlider ID="ASPxImageSlider1" runat="server" ClientInstanceName="ImageSlider"
+    <dx:ASPxImageSlider ID="ASPxImageSlider1" runat="server" ClientInstanceName="ImageSlider" 
         EnableViewState="False" EnableTheming="False" NavigateUrlFormatString="javascript:void({0});">
 
         <SettingsImageArea ImageSizeMode="ActualSizeOrFit" NavigationButtonVisibility="None"
@@ -32,7 +36,7 @@ namespace="DevExpress.Web" tagprefix="dx" %>
             </dx:ImageSliderItem>
         </Items>
         <Styles>
-            <ImageArea Width="1300" Height="700" />
+            <ImageArea Width="1300px" Height="700px" />
         </Styles>
         <SettingsImageArea ImageSizeMode="FillAndCrop" NavigationButtonVisibility="Always"
             EnableLoopNavigation="true" />
@@ -41,6 +45,12 @@ namespace="DevExpress.Web" tagprefix="dx" %>
     <dx:ASPxImageSlider ID="ASPxImageSlider2" runat="server" 
         BinaryImageCacheFolder="~\Thumb\">
     </dx:ASPxImageSlider>
+
+
+
+
+
+
     <h1>
         สมุนไพรที่แก้ไขล่าสุด</h1>
     <dx:ASPxGridView ID="gv_HerbShow" ClientInstanceName="grid" runat="server" KeyFieldName="EmployeeID"
@@ -52,11 +62,11 @@ namespace="DevExpress.Web" tagprefix="dx" %>
                 <EditCellStyle HorizontalAlign="Center">
                 </EditCellStyle>
                 <DataItemTemplate>
-                    <asp:LinkButton ID="lnk_HerbN" runat="server" Text='<%# Eval("HerbName") %>' CommandArgument='<%# Eval("HerbName") %>'>
+                    <asp:LinkButton ID="lnk_HerbN" runat="server" Text='<%# Eval("herbName") %>' CommandArgument='<%# Eval("herbName") %>'>
                     </asp:LinkButton>
                 </DataItemTemplate>
                 <EditItemTemplate>
-                    <asp:Label ID="lbl_HerbN" runat="server" Text='<%# Eval("HerbName") %>'></asp:Label>
+                    <asp:Label ID="lbl_HerbN" runat="server" Text='<%# Eval("herbName") %>'></asp:Label>
                 </EditItemTemplate>
                 <Settings AutoFilterCondition="Contains" />
             </dx:GridViewDataColumn>
@@ -65,7 +75,7 @@ namespace="DevExpress.Web" tagprefix="dx" %>
                 <EditCellStyle HorizontalAlign="Center">
                 </EditCellStyle>
                 <EditItemTemplate>
-                    <asp:Label ID="lbl_HerbOtherName" runat="server" Text='<%# Eval("HerbOtherName") %>'>
+                    <asp:Label ID="lbl_HerbOtherName" runat="server" Text='<%# Eval("herbOtherName") %>'>
                     </asp:Label>
                 </EditItemTemplate>
                 <Settings AutoFilterCondition="Contains" />
@@ -75,7 +85,7 @@ namespace="DevExpress.Web" tagprefix="dx" %>
                 <EditCellStyle HorizontalAlign="Center">
                 </EditCellStyle>
                 <EditItemTemplate>
-                    <asp:Label ID="lbl_Properties" runat="server" Text='<%# Eval("Properties") %>'>
+                    <asp:Label ID="lbl_Properties" runat="server" Text='<%# Eval("properties") %>'>
                     </asp:Label>
                 </EditItemTemplate>
                 <Settings AutoFilterCondition="Contains" />
@@ -102,7 +112,7 @@ namespace="DevExpress.Web" tagprefix="dx" %>
             </dx:GridViewDataColumn>
         </Columns>
         <SettingsEditing Mode="Inline" />
-        <Settings ShowFooter="True" />
+        <%--<Settings ShowFooter="True" />--%>
         <Styles>
             <AlternatingRow Enabled="true" />
         </Styles>
@@ -111,25 +121,32 @@ namespace="DevExpress.Web" tagprefix="dx" %>
             </SettingsPager>--%>
     </dx:ASPxGridView>
     <asp:SqlDataSource ID="Herb_SH" runat="server" ConnectionString="<%$ ConnectionStrings:SocialHerb %>"
-        SelectCommand=" SELECT Herb.HerbName,Herb.HerbOtherName,Herb.Properties,Herb.dateHerb,HerbResearch.researchName 
-                    FROM Herb LEFT OUTER JOIN HerbResearch ON herbID = HerbResearch.herbREID
+        SelectCommand=" SELECT Herb.herbName,Herb.herbOtherName,Herb.properties,Herb.dateHerb,HerbResearch.researchName 
+                    FROM Herb LEFT OUTER JOIN HerbResearch ON herbID = HerbResearch.researchID
                      ORDER BY [dateHerb] DESC"></asp:SqlDataSource>
+
+
+
+
+
+
+
     <h1>
         อาการ/โรคที่แก้ไขล่าสุด</h1>
     <dx:ASPxGridView ID="gv_DiseaseShow" ClientInstanceName="gv_DiseaseShow" runat="server"
         KeyFieldName="diseaseID" AutoGenerateColumns="False" EnableRowsCache="false"
         DataSourceID="Disease_SH" Width="100%" Style="text-align: center" Enabled="True">
         <Columns>
-            <dx:GridViewDataColumn FieldName="symptom" VisibleIndex="0" Caption="ชื่ออาการ/โรค"
+            <dx:GridViewDataColumn FieldName="diseaseName" VisibleIndex="0" Caption="ชื่ออาการ/โรค"
                 ReadOnly="True" SortOrder="Descending" HeaderStyle-HorizontalAlign="Center" Width="30px">
                 <EditCellStyle HorizontalAlign="Center">
                 </EditCellStyle>
                 <DataItemTemplate>
-                    <asp:LinkButton ID="lnk_HerbN" runat="server" Text='<%# Eval("symptom") %>' CommandArgument='<%# Eval("symptom") %>'>
+                    <asp:LinkButton ID="lnk_HerbN" runat="server" Text='<%# Eval("diseaseName") %>' CommandArgument='<%# Eval("diseaseName") %>'>
                     </asp:LinkButton>
                 </DataItemTemplate>
                 <EditItemTemplate>
-                    <asp:Label ID="lbl_HerbN" runat="server" Text='<%# Eval("symptom") %>'></asp:Label>
+                    <asp:Label ID="lbl_HerbN" runat="server" Text='<%# Eval("diseaseName") %>'></asp:Label>
                 </EditItemTemplate>
                 <Settings AutoFilterCondition="Contains" />
             </dx:GridViewDataColumn>
@@ -143,8 +160,8 @@ namespace="DevExpress.Web" tagprefix="dx" %>
                 </EditItemTemplate>
                 <Settings AutoFilterCondition="Contains" />
             </dx:GridViewDataColumn>
-            <dx:GridViewDataColumn FieldName="howtoRelief" VisibleIndex="2" Caption="ลักษณะอาการ"
-                ReadOnly="True" HeaderStyle-HorizontalAlign="Center" Width="300px">
+            <%--<dx:GridViewDataColumn FieldName="howtoRelief" VisibleIndex="2" Caption="ลักษณะอาการ"
+                ReadOnly="True" HeaderStyle-HorizontalAlign="Center" Width="300px" visible=""true>
                 <EditCellStyle HorizontalAlign="Center">
                 </EditCellStyle>
                 <EditItemTemplate>
@@ -152,7 +169,7 @@ namespace="DevExpress.Web" tagprefix="dx" %>
                     </asp:Label>
                 </EditItemTemplate>
                 <Settings AutoFilterCondition="Contains" />
-            </dx:GridViewDataColumn>
+            </dx:GridViewDataColumn>--%>
             <dx:GridViewDataColumn FieldName="dateDisease" VisibleIndex="3" Caption="วันที่แก้ไข"
                 ReadOnly="True" CellStyle-HorizontalAlign="Center" HeaderStyle-HorizontalAlign="Center"
                 Width="30px">
@@ -169,13 +186,13 @@ namespace="DevExpress.Web" tagprefix="dx" %>
         <Styles>
             <AlternatingRow Enabled="true" />
         </Styles>
-        <Settings ShowFooter="True" />
+        <%--<Settings ShowFooter="True" />--%>
         <%--<SettingsPager>
                 <PageSizeItemSettings Visible="true" Items="5" />
             </SettingsPager>--%>
     </dx:ASPxGridView>
     <asp:SqlDataSource ID="Disease_SH" runat="server" ConnectionString="<%$ ConnectionStrings:SocialHerb %>"
-        SelectCommand=" SELECT TOP 5 diseaseID,symptom, herb, howtoRelief,dateDisease 
+        SelectCommand=" SELECT TOP 5 diseaseID,diseaseName, Symptom, herb, howtoRelief,dateDisease 
                     FROM Disease  ORDER BY [dateDisease] DESC"></asp:SqlDataSource>
     <h1>
         บทความเพื่อสุขภาพที่แก้ไขล่าสุด</h1>
@@ -196,7 +213,7 @@ namespace="DevExpress.Web" tagprefix="dx" %>
                 </EditItemTemplate>
                 <Settings AutoFilterCondition="Contains" />
             </dx:GridViewDataColumn>
-            <dx:GridViewDataColumn FieldName="article" VisibleIndex="1" Caption="เนื้อหาของบทความ"
+            <%--<dx:GridViewDataColumn FieldName="article" VisibleIndex="1" Caption="เนื้อหาของบทความ"
                 ReadOnly="True" HeaderStyle-HorizontalAlign="Center" Width="300px">
                 <EditCellStyle HorizontalAlign="Center">
                 </EditCellStyle>
@@ -205,35 +222,35 @@ namespace="DevExpress.Web" tagprefix="dx" %>
                     </asp:Label>
                 </EditItemTemplate>
                 <Settings AutoFilterCondition="Contains" />
-            </dx:GridViewDataColumn>
-            <dx:GridViewDataColumn FieldName="creditArt" VisibleIndex="2" Caption="ที่มาของบทความเพื่อสุขภาพ"
+            </dx:GridViewDataColumn>--%>
+            <dx:GridViewDataColumn FieldName="articleCredit" VisibleIndex="2" Caption="ที่มาของบทความเพื่อสุขภาพ"
                 ReadOnly="True" HeaderStyle-HorizontalAlign="Center" Width="100px">
                 <EditCellStyle HorizontalAlign="Center">
                 </EditCellStyle>
                 <EditItemTemplate>
-                    <asp:Label ID="lbl_DherbName" runat="server" Text='<%# Eval("creditArt") %>'>
+                    <asp:Label ID="lbl_DherbName" runat="server" Text='<%# Eval("articleCredit") %>'>
                     </asp:Label>
                 </EditItemTemplate>
                 <Settings AutoFilterCondition="Contains" />
             </dx:GridViewDataColumn>
-            <dx:GridViewDataColumn FieldName="dateArticle" VisibleIndex="3" Caption="วันที่แก้ไข"
+           <%-- <dx:GridViewDataColumn FieldName="dateArticle" VisibleIndex="3" Caption="วันที่แก้ไข"
                 ReadOnly="True" CellStyle-HorizontalAlign="Center" HeaderStyle-HorizontalAlign="Center"
                 Width="50px">
                 <EditCellStyle HorizontalAlign="Center">
                 </EditCellStyle>
                 <EditItemTemplate>
-                    <asp:Label ID="lbl_DherbName" runat="server" Text='<%# Eval("dateArticle", "{0:d/MM/yyyy}") %>'>
+                    <asp:Label ID="lbl_DherbName" runat="server" Text='<%# Eval("dateArt", "{0:d/MM/yyyy}") %>'>
                     </asp:Label>
                 </EditItemTemplate>
                 <Settings AutoFilterCondition="Contains" />
-            </dx:GridViewDataColumn>
+            </dx:GridViewDataColumn>--%>
         </Columns>
         <SettingsEditing Mode="Inline" />
         <%--<Settings ShowGroupPanel="true" />
         <SettingsBehavior AllowFocusedRow="True" />--%>
         <%-- <ClientSideEvents FocusedRowChanged="function(s, e) { OnGridFocusedRowChanged(); }" />--%>
         <%--<SettingsSearchPanel Visible="true" />--%>
-        <Settings ShowFooter="True" />
+        <%--<Settings ShowFooter="True" />--%>
         <%--<SettingsPager>
                 <PageSizeItemSettings Visible="true" Items="10, 20, 50" />
             </SettingsPager>--%>
@@ -242,8 +259,10 @@ namespace="DevExpress.Web" tagprefix="dx" %>
         </Styles>
     </dx:ASPxGridView>
     <asp:SqlDataSource ID="Article_SH" runat="server" ConnectionString="<%$ ConnectionStrings:SocialHerb %>"
-        SelectCommand=" SELECT TOP 5 articleName,article,creditArt, dateArticle
-                    FROM Article ORDER BY [dateArticle] DESC"></asp:SqlDataSource>
+        SelectCommand=" SELECT TOP 5 articleName,article,articleCredit,dateArt
+                    FROM Article ORDER BY [dateArt] DESC"></asp:SqlDataSource>
+
+
     <h1>
         Infographic ที่แก้ไขล่าสุด</h1>
     <dx:ASPxGridView ID="gv_InfoShow" ClientInstanceName="grid" runat="server" KeyFieldName="EmployeeID"
@@ -322,10 +341,10 @@ namespace="DevExpress.Web" tagprefix="dx" %>
         <Styles>
             <AlternatingRow Enabled="true" />
         </Styles>
-        <Settings ShowFooter="True" />
+        <%--<Settings ShowFooter="True" />--%>
     </dx:ASPxGridView>
     <asp:SqlDataSource ID="Info_SH" runat="server" ConnectionString="<%$ ConnectionStrings:SocialHerb %>"
-        SelectCommand=" SELECT TOP 5 infoName,creditInfo,dateInfo 
+        SelectCommand=" SELECT TOP 5 infoName,creditInfo,dateInfo
                     FROM Infographic  ORDER BY [dateInfo] DESC"></asp:SqlDataSource>
     <br />
     <br />

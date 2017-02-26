@@ -19,7 +19,7 @@
     </style>
 
 
-    <%--<script type="text/javascript">
+   <%-- <script type="text/javascript">
         function onFileUploadComplete(s, e) {
             if (e.callbackData) {
                 var fileData = e.callbackData.split('|');
@@ -67,9 +67,34 @@
                         <AdvancedModeSettings EnableMultiSelect="True" EnableFileList="True" EnableDragAndDrop="True" />
                         <ValidationSettings MaxFileSize="4194304" AllowedFileExtensions=".jpg,.jpeg,.gif,.png">
                         </ValidationSettings>
-                        <%--<ClientSideEvents FilesUploadStart="function(s, e) { DXUploadedFilesContainer.Clear(); }"
+                    <%--<ClientSideEvents FilesUploadStart="function(s, e) { DXUploadedFilesContainer.Clear(); }"
                               FileUploadComplete="onFileUploadComplete" />--%>
                     </dx:ASPxUploadControl>
+                    <br /><br />
+        <p class="note">
+            <dx:ASPxLabel ID="AllowedFileExtensionsLabel" runat="server" Text="Allowed file extensions: .jpg, .jpeg, .gif, .png." Font-Size="8pt">
+            </dx:ASPxLabel>
+            <br />
+            <dx:ASPxLabel ID="MaxFileSizeLabel" runat="server" Text="Maximum file size: 4 MB." Font-Size="8pt">
+            </dx:ASPxLabel>
+       </p>
+
+
+
+
+
+
+ <%--
+    <div>
+        <dx:UploadedFilesContainer ID="FileContainer" runat="server" Width="380" Height="180" 
+            NameColumnWidth="240" SizeColumnWidth="70" HeaderText="Uploaded files" />
+    </div>
+    <div class="contentFooter">
+        <p class="Note">
+            <b>Note</b>: All files uploaded to this demo will be automatically deleted in 5 minutes.
+        </p>
+    </div>--%>
+
                 </td>
             </tr>
             <tr>

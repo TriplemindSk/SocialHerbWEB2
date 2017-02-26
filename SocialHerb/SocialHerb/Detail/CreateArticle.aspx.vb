@@ -8,57 +8,67 @@ Imports System.Drawing
 Public Class CreateArticle
     Inherits System.Web.UI.Page
 
+
+    Public ReadOnly Property UploadDirectory() As String
+        Get
+            Return WebConfigurationManager.AppSettings("ArticleImageUploadFolder")
+        End Get
+
+    End Property
+
+
+    Public Property ArticleCod() As String
+        Get
+            Return ViewState("ArticleCode")
+        End Get
+        Set(ByVal value As String)
+            ViewState("ArticleCode") = value
+        End Set
+    End Property
+
+
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+        Dim RequestArticleID = Request.QueryString("articleID")
 
     End Sub
 
+    Public Function GetNextArticleid() As Integer
+        Dim ctx As New SocialHerbDataContext
+        Dim nextId As Integer = (From aid In ctx.Articles Select CType(aid.articleID, Integer?)).Max.GetValueOrDefault + 1
+        Return nextId
+    End Function
+
+    Public Function GetNextArticleidIMG() As Integer
+        Dim ctx As New SocialHerbDataContext
+        Dim nextId As Integer = (From aIid In ctx.ImgArticles Select CType(aIid.ImgArticleID, Integer?)).Max.GetValueOrDefault + 1
+        Return nextId
+    End Function
 
     Private Sub btnUpdate_Click(sender As Object, e As System.EventArgs) Handles btnUpdate.Click
-        ' AddData()
+        AddData()
     End Sub
-
-
-
 
 
     Private Sub AddData()
-
-        'If CheckValidateCalculate() Then Exit Sub
-        Dim disease As New SocialHerb.Disease
-        Dim date_Article As DateTime
-        Dim imgArticle As String
-        Dim strSQL, strConnString As String
-
-        strConnString = WebConfigurationManager.ConnectionStrings("SocialHerb").ConnectionString
-        strSQL = "insert into Article (articleID,articleName,articleImg,article,creditArt,dateArticle" & _
-        ") values ('" & txtID.Text & "','" & txtNameA.Text & "','" & imgArticle & "','" & txtDetailA.Text & "','" & txtRefA.Text & "','" & date_Article & "')"
-
+        Dim getArticleid As Integer = GetNextArticleid()
         Try
-            Using objConn As New SqlConnection(strConnString)
-                objConn.Open()
-                Dim objCmd As New SqlCommand(strSQL, objConn)
 
-                txtID.Text = ""
-                txtNameA.Text = ""
-                imgArticle = ""
-                txtDetailA.Text = ""
-                txtRefA.Text = ""
-                date_Article = Now
+            Dim article As New Article
+            With article
+                .articleID = getArticleid
+                .articleName = txtNameA.Text
+                .article = txtDetailA.Text
+                .articleCredit = txtRefA.Text
+                .dateArt = Now
 
+            End With
 
-                'objCmd.Parameters.Add("@diseaseID")
-                'cmdInsert.Parameters.Add("@FirstName", Data.SqlDbType.NVarChar).Value = FirstName.Text()
-                'cmdInsert.Parameters.Add("@LastName", Data.SqlDbType.NVarChar).Value = LastName.Text
-                'cmdInsert.Parameters.Add("@Email", Data.SqlDbType.NVarChar).Value = Email.Text
-                'cmdInsert.Parameters.Add("@Phone", Data.SqlDbType.NChar).Value = Phone.Text
-                'cmdInsert.Parameters.Add("@Address", Data.SqlDbType.NVarChar).Value = Address.Text
-                'cmdInsert.Parameters.Add("@City", Data.SqlDbType.NVarChar).Value = City.Text
-                'cmdInsert.Parameters.Add("@State", Data.SqlDbType.NVarChar).Value = State.Text
-                'cmdInsert.Parameters.Add("@Zip", Data.SqlDbType.NChar).Value = Zip.Text
-                objCmd.ExecuteNonQuery()
-
-                objConn.Close()
+            Using ctx As New SocialHerbDataContext
+                ctx.Articles.InsertOnSubmit(article)
+                ctx.SubmitChanges()
             End Using
+
+
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
@@ -68,25 +78,45 @@ Public Class CreateArticle
     End Sub
 
 
+    Private Sub UploadControl_FilesUploadComplete(sender As Object, e As DevExpress.Web.FilesUploadCompleteEventArgs) Handles UploadControl.FilesUploadComplete
+        Dim getArticleImgid As Integer = GetNextArticleidIMG()
+        Dim getArticleid As Integer = GetNextArticleid()
+
+        ' If ArticleCode Is Nothing Then ArticleCode = Request.QueryString("articleID")
+
+        Dim uploadControl As ASPxUploadControl = TryCast(sender, ASPxUploadControl)
+
+        If uploadControl.UploadedFiles IsNot Nothing AndAlso uploadControl.UploadedFiles.Length > 0 Then
+            For i As Integer = 0 To uploadControl.UploadedFiles.Length - 1
+                Dim file As UploadedFile = uploadControl.UploadedFiles(i)
+
+                If file.ContentLength > 0 Then
+                    Dim path = UploadDirectory '& articleID
+                    If Not IO.Directory.Exists(path) Then
+                        IO.Directory.CreateDirectory(path)
+                    End If
+                    file.SaveAs(path & "\" & file.FileName)
+
+                    Dim articleIMG As New ImgArticle
+                    With articleIMG
+                        .ImgArticleID = getArticleImgid
+                        .ArticlepicID = getArticleid
+                        .ImgArticleDate = Now
+                        .ImgArticlename = file.FileName
+                        .ImgArticle = file.FileBytes
+                    End With
+
+                    Using ctx As New SocialHerbDataContext
+                        ctx.ImgArticles.InsertOnSubmit(articleIMG)
+                        ctx.SubmitChanges()
+                    End Using
+
+                End If
+            Next i
+        End If
+
+
+    End Sub
+    
 End Class
 
-'Partial Public Class UploadControl_MultiFileSelection
-'    Inherits Page
-'    Private Const UploadDirectory As String = "~\Upload\UploadArticle"
-'    Protected Sub UploadControl_FileUploadComplete(ByVal sender As Object, ByVal e As FileUploadCompleteEventArgs)
-'        Dim resultExtension As String = Path.GetExtension(e.UploadedFile.FileName)
-'        Dim resultFileName As String = Path.ChangeExtension(Path.GetRandomFileName(), resultExtension)
-'        Dim resultFileUrl As String = UploadDirectory & resultFileName
-'        Dim resultFilePath As String = MapPath(resultFileUrl)
-'        e.UploadedFile.SaveAs(resultFilePath)
-
-'        'UploadingUtils.RemoveFileWithDelay(resultFileName, resultFilePath, 5)
-
-
-'        Dim name As String = e.UploadedFile.FileName
-'        Dim url As String = ResolveClientUrl(resultFileUrl)
-'        Dim sizeInKilobytes As Long = e.UploadedFile.ContentLength / 1024
-'        Dim sizeText As String = sizeInKilobytes.ToString() & " KB"
-'        e.CallbackData = name & "|" & url & "|" & sizeText
-'    End Sub
-'End Class

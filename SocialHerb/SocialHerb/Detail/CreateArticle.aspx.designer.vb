@@ -10,8 +10,6 @@
 Option Strict On
 Option Explicit On
 
-Imports DevExpress.Web
-
 
 Partial Public Class CreateArticle
 
@@ -58,7 +56,25 @@ Partial Public Class CreateArticle
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents UploadControl As ASPxUploadControl
+    Protected WithEvents UploadControl As Global.DevExpress.Web.ASPxUploadControl
+
+    '''<summary>
+    '''AllowedFileExtensionsLabel control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents AllowedFileExtensionsLabel As Global.DevExpress.Web.ASPxLabel
+
+    '''<summary>
+    '''MaxFileSizeLabel control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents MaxFileSizeLabel As Global.DevExpress.Web.ASPxLabel
 
     '''<summary>
     '''txtDetailA control.
@@ -88,11 +104,11 @@ Partial Public Class CreateArticle
     Protected WithEvents btnUpdate As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
-    '''btnCancel control.
+    '''btnDelete control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents btnCancel As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents btnDelete As Global.System.Web.UI.WebControls.Button
 End Class

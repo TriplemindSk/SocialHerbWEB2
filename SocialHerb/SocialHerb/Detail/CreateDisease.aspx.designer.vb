@@ -32,15 +32,6 @@ Partial Public Class CreateDisease
     Protected WithEvents lblErrorEdit As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''txtID control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents txtID As Global.System.Web.UI.WebControls.TextBox
-
-    '''<summary>
     '''txtName control.
     '''</summary>
     '''<remarks>
@@ -57,6 +48,15 @@ Partial Public Class CreateDisease
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents txtDetail As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''txtRelief control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txtRelief As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
     '''txtherb control.
@@ -77,11 +77,11 @@ Partial Public Class CreateDisease
     Protected WithEvents btnUpdate As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
-    '''btnCancel control.
+    '''btnDelete control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents btnCancel As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents btnDelete As Global.System.Web.UI.WebControls.Button
 End Class

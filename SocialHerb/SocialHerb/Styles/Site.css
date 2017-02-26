@@ -140,12 +140,14 @@ first child of the left and right table columns */
 
 .footer
 {
-    color: #4e5766;
+    /*color: #ffffff;
     padding: 8px 0px 0px 0px;
     margin: 0px auto;
     text-align: center;
     line-height: normal;
+    background-color: #2f2f2f;*/
 }
+
 
 
 /* TAB MENU   

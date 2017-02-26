@@ -29,7 +29,7 @@
         <h2 align="right">
         </h2>
         <asp:Label ID="lblErrorEdit" runat="server" ForeColor="Red"></asp:Label>
-        <asp:TextBox ID="txtID" runat="server" Visible="false"></asp:TextBox>
+        <%--<asp:TextBox ID="txtID" runat="server" Visible="false"></asp:TextBox>--%>
         <table border="0" width="600">
             <tr>
                 <td align="right" class="style3">
@@ -45,6 +45,16 @@
                 </td>
                 <td>
                     <asp:TextBox ID="txtDetail" runat="server" Height="100px" TextMode="MultiLine" Width="400px"
+                        CssClass="textbox" Font-Size="Large">
+                    </asp:TextBox>
+                </td>
+            </tr>
+             <tr>
+                <td align="right" class="style3" valign="top">
+                    การบรรเทาอาการ :
+                </td>
+                <td>
+                    <asp:TextBox ID="txtRelief" runat="server" Height="100px" TextMode="MultiLine" Width="400px"
                         CssClass="textbox" Font-Size="Large">
                     </asp:TextBox>
                 </td>

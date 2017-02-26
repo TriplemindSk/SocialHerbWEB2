@@ -14,83 +14,38 @@ Option Explicit On
 Partial Public Class Report
 
     '''<summary>
-    '''carTabPage control.
+    '''ScriptManager1 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents carTabPage As Global.DevExpress.Web.ASPxPageControl
+    Protected WithEvents ScriptManager1 As Global.System.Web.UI.ScriptManager
 
     '''<summary>
-    '''ContentControl1 control.
+    '''ASPxDocumentViewer1 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents ContentControl1 As Global.DevExpress.Web.ContentControl
+    Protected WithEvents ASPxDocumentViewer1 As Global.DevExpress.XtraReports.Web.ASPxDocumentViewer
 
     '''<summary>
-    '''Image1 control.
+    '''ReportViewer1 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents Image1 As Global.DevExpress.Web.ASPxImage
+    Protected WithEvents ReportViewer1 As Global.Microsoft.Reporting.WebForms.ReportViewer
 
     '''<summary>
-    '''ContentControl2 control.
+    '''SqlDataSource1 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents ContentControl2 As Global.DevExpress.Web.ContentControl
-
-    '''<summary>
-    '''Image2 control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents Image2 As Global.DevExpress.Web.ASPxImage
-
-    '''<summary>
-    '''ContentControl3 control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents ContentControl3 As Global.DevExpress.Web.ContentControl
-
-    '''<summary>
-    '''Image3 control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents Image3 As Global.DevExpress.Web.ASPxImage
-
-    '''<summary>
-    '''ContentControl4 control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents ContentControl4 As Global.DevExpress.Web.ContentControl
-
-    '''<summary>
-    '''ASPxImage1 control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents ASPxImage1 As Global.DevExpress.Web.ASPxImage
+    Protected WithEvents SqlDataSource1 As Global.System.Web.UI.WebControls.SqlDataSource
 End Class

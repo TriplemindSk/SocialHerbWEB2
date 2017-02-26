@@ -33,108 +33,81 @@
 
     </div>
 
-    <dx:ASPxGridView ID="gv_HerbShow" ClientInstanceName="gv_HerbShow" runat="server" KeyFieldName="herbID"
-      AutoGenerateColumns="False" EnableRowsCache="false" DataSourceID="Herb_SH"
-        Width="100%" Style="text-align: center" Enabled="True">
+     <dx:ASPxGridView ID="gv_HerbShow" ClientInstanceName="grid" runat="server" KeyFieldName="EmployeeID"
+        PreviewFieldName="Notes" AutoGenerateColumns="False" EnableRowsCache="false"
+        DataSourceID="Herb_SH" Width="100%">
         <Columns>
             <dx:GridViewDataColumn FieldName="HerbName" VisibleIndex="0" Caption="ชื่อสมุนไพร"
-                ReadOnly="True"  SortOrder="Descending" HeaderStyle-HorizontalAlign="Center" Width="100px">
+                ReadOnly="True" SortOrder="Descending" HeaderStyle-HorizontalAlign="Center" Width="100px">
                 <EditCellStyle HorizontalAlign="Center">
                 </EditCellStyle>
-                <%-- <DataItemTemplate>
-                            <asp:LinkButton ID="lnk_HerbN" runat="server" Text='<%# Eval("HerbName") %>'
-                                CommandArgument='<%# Eval("HerbName") %>' >
-                            </asp:LinkButton>
-                        </DataItemTemplate>--%>
-                        <EditItemTemplate>
-                            <asp:Label ID="lbl_HerbN" runat="server" Text='<%# Eval("HerbName") %>'></asp:Label>
-                        </EditItemTemplate>
-                        
-                        <Settings AutoFilterCondition="Contains" />
+                <DataItemTemplate>
+                    <asp:LinkButton ID="lnk_HerbN" runat="server" Text='<%# Eval("herbName") %>' CommandArgument='<%# Eval("herbName") %>'>
+                    </asp:LinkButton>
+                </DataItemTemplate>
+                <EditItemTemplate>
+                    <asp:Label ID="lbl_HerbN" runat="server" Text='<%# Eval("herbName") %>'></asp:Label>
+                </EditItemTemplate>
+                <Settings AutoFilterCondition="Contains" />
             </dx:GridViewDataColumn>
             <dx:GridViewDataColumn FieldName="HerbOtherName" VisibleIndex="1" Caption="ชื่อสมุนไพร(อื่นๆ)"
-                ReadOnly="True"  HeaderStyle-HorizontalAlign="Center" Width="100px">
+                ReadOnly="True" HeaderStyle-HorizontalAlign="Center" Width="100px">
                 <EditCellStyle HorizontalAlign="Center">
                 </EditCellStyle>
                 <EditItemTemplate>
-                    <asp:Label ID="lbl_HerbOtherName" runat="server" Text='<%# Eval("HerbOtherName") %>'>
-                            </asp:Label>
+                    <asp:Label ID="lbl_HerbOtherName" runat="server" Text='<%# Eval("herbOtherName") %>'>
+                    </asp:Label>
                 </EditItemTemplate>
                 <Settings AutoFilterCondition="Contains" />
             </dx:GridViewDataColumn>
-            <dx:GridViewDataColumn FieldName="Properties" VisibleIndex="2" Caption="ลักษณะทั่วไป" ReadOnly="True"
-                 HeaderStyle-HorizontalAlign="Center" Width="100px">
+            <dx:GridViewDataColumn FieldName="Properties" VisibleIndex="2" Caption="ลักษณะทั่วไป"
+                ReadOnly="True" HeaderStyle-HorizontalAlign="Center" Width="100px">
                 <EditCellStyle HorizontalAlign="Center">
                 </EditCellStyle>
                 <EditItemTemplate>
-                    <asp:Label ID="lbl_Properties" runat="server" Text='<%# Eval("Properties") %>'>
-                            </asp:Label>
+                    <asp:Label ID="lbl_Properties" runat="server" Text='<%# Eval("properties") %>'>
+                    </asp:Label>
                 </EditItemTemplate>
                 <Settings AutoFilterCondition="Contains" />
             </dx:GridViewDataColumn>
-            <dx:GridViewDataColumn FieldName="researchName" VisibleIndex="3" Caption="งานวิจัยที่เกี่ยวข้อง" ReadOnly="True"
-                 HeaderStyle-HorizontalAlign="Center" Width="100px">
+            <dx:GridViewDataColumn FieldName="researchName" VisibleIndex="3" Caption="งานวิจัยที่เกี่ยวข้อง"
+                ReadOnly="True" HeaderStyle-HorizontalAlign="Center" Width="100px">
                 <EditCellStyle HorizontalAlign="Center">
                 </EditCellStyle>
                 <EditItemTemplate>
                     <asp:Label ID="lbl_researchName" runat="server" Text='<%# Eval("researchName") %>'>
-                            </asp:Label>
+                    </asp:Label>
                 </EditItemTemplate>
                 <Settings AutoFilterCondition="Contains" />
             </dx:GridViewDataColumn>
-            <dx:GridViewDataColumn FieldName="dateHerb" VisibleIndex="4" Caption="วันที่แก้ไข" ReadOnly="True"
-                HeaderStyle-HorizontalAlign="Center" Width="50px">
+            <dx:GridViewDataColumn FieldName="dateHerb" VisibleIndex="4" Caption="วันที่แก้ไข"
+                ReadOnly="True" HeaderStyle-HorizontalAlign="Center" Width="50px">
                 <EditCellStyle HorizontalAlign="Center">
                 </EditCellStyle>
                 <EditItemTemplate>
                     <asp:Label ID="lbl_dateHerb" runat="server" Text='<%# Eval("dateHerb", "{0:d/MM/yyyy}") %>'>
-                            </asp:Label>
+                    </asp:Label>
                 </EditItemTemplate>
                 <Settings AutoFilterCondition="Contains" />
             </dx:GridViewDataColumn>
-            <dx:GridViewDataColumn FieldName="infoName" VisibleIndex="5" Caption="แก้ไขข้อมูล"
-                ReadOnly="True"  HeaderStyle-HorizontalAlign="Center" Width="50px"  CellStyle-HorizontalAlign="Center">
-                <EditCellStyle HorizontalAlign="Center">
-                </EditCellStyle>
-                <DataItemTemplate>
-                    <asp:LinkButton ID="lnk_HerbN" runat="server" Text="Edit"  PostBackUrl="~/Prototype/ProHerb.aspx?HerbName=พญายอ">
-                            </asp:LinkButton>
-                </DataItemTemplate>
-                
-               <%-- <CellStyle HorizontalAlign="Center">
-                </CellStyle>--%>
-                <Settings AutoFilterCondition="Contains" />
-            </dx:GridViewDataColumn>
         </Columns>
-        <SettingsEditing Mode="Inline" />
-       <%-- <Settings ShowGroupPanel="true" />
-        <SettingsBehavior AllowFocusedRow="True" />--%>
-        <%--<ClientSideEvents FocusedRowChanged="function(s, e) { OnGridFocusedRowChanged(); }" />--%>
-        <SettingsSearchPanel Visible="true" />
-         <Settings ShowFooter="True" />
+             <SettingsEditing Mode="Inline" />
+
+                    <SettingsSearchPanel Visible="true" />
+
+                    <%--<Settings ShowFooter="True" />--%>
+
             <SettingsPager>
-                <PageSizeItemSettings Visible="true" Items="10, 20, 50" />
+
+                <PageSizeItemSettings Visible="true" Items="5, 10, 15, 20, 25" />
+
             </SettingsPager>
-            <SettingsBehavior AllowFocusedRow="True" />
+
+                  <SettingsBehavior AllowFocusedRow="True" />   
     </dx:ASPxGridView>
-
-   <%-- <table style="width: 100%; height: 200px" class="OptionsTable TopMargin">
-        <tr>
-            <td style="width: 160px">
-                <dx:ASPxImage runat="server" ID="DetailImage" ClientInstanceName="DetailImage" ClientVisible="false" Width="160px" />
-            </td>
-            <td class="LeftPadding">
-                <dx:ASPxMemo runat="server" ID="DetailNotes" ClientInstanceName="DetailNotes" Width="100%"
-                    Height="170" ReadOnly="true"  BackColor="#afd168"/>
-            </td>
-        </tr>
-    </table>
-    <asp:EntityDataSource runat="server" ID="EmployeesDataSource" ContextTypeName="NorthwindContext" EntitySetName="Employees" />--%>
-
-
-     <asp:SqlDataSource ID="Herb_SH" runat="server" ConnectionString="<%$ ConnectionStrings:SocialHerb %>"
-        SelectCommand=" SELECT Herb.HerbName,Herb.HerbOtherName,Herb.Properties,Herb.dateHerb,HerbResearch.researchName 
-                    FROM Herb LEFT OUTER JOIN HerbResearch ON herbID = HerbResearch.herbREID
+    <asp:SqlDataSource ID="Herb_SH" runat="server" ConnectionString="<%$ ConnectionStrings:SocialHerb %>"
+        SelectCommand=" SELECT Herb.herbName,Herb.herbOtherName,Herb.properties,Herb.dateHerb,HerbResearch.researchName 
+                    FROM Herb LEFT OUTER JOIN HerbResearch ON herbID = HerbResearch.researchID
                      ORDER BY [dateHerb] DESC"></asp:SqlDataSource>
 
 

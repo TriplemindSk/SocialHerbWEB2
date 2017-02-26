@@ -24,31 +24,31 @@
         AutoGenerateColumns="False" EnableRowsCache="false" DataSourceID="Food_SH"
         Width="100%" Style="text-align: center" Enabled="True">
         <Columns>
-            <dx:GridViewDataColumn FieldName="FoodName" VisibleIndex="0" Caption="ชื่ออาหาร" 
+            <dx:GridViewDataColumn FieldName="foodName" VisibleIndex="0" Caption="ชื่ออาหาร" 
                 ReadOnly="True"  SortOrder="Descending" HeaderStyle-HorizontalAlign="Center" Width="100px">
                 <EditCellStyle HorizontalAlign="Center">
                 </EditCellStyle>
-                <%--<DataItemTemplate>
-                    <asp:LinkButton ID="lnk_FoodName" runat="server" Text='<%# Eval("FoodName") %>' CommandArgument='<%# Eval("FoodName") %>'>
+                <DataItemTemplate>
+                    <asp:LinkButton ID="lnk_FoodName" runat="server" Text='<%# Eval("foodName") %>' CommandArgument='<%# Eval("foodName") %>'>
                             </asp:LinkButton>
-                </DataItemTemplate>--%>
+                </DataItemTemplate>
                 <EditItemTemplate>
-                    <asp:Label ID="lbl_FoodName" runat="server" Text='<%# Eval("FoodName") %>'></asp:Label>
+                    <asp:Label ID="lbl_FoodName" runat="server" Text='<%# Eval("foodName") %>'></asp:Label>
                 </EditItemTemplate>
                
                 <Settings AutoFilterCondition="Contains" />
             </dx:GridViewDataColumn>
-            <dx:GridViewDataColumn FieldName="Ingredient" VisibleIndex="1" Caption="ส่วนผสม"
+            <dx:GridViewDataColumn FieldName="foodRecipe" VisibleIndex="1" Caption="ส่วนผสม"
                 ReadOnly="True"  HeaderStyle-HorizontalAlign="Center" Width="300px">
                 <EditCellStyle HorizontalAlign="Center">
                 </EditCellStyle>
                 <EditItemTemplate>
-                    <asp:Label ID="lbl_Ingredient" runat="server" Text='<%# Eval("Ingredient") %>'>
+                    <asp:Label ID="lbl_Ingredient" runat="server" Text='<%# Eval("foodRecipe") %>'>
                             </asp:Label>
                 </EditItemTemplate>
                 <Settings AutoFilterCondition="Contains" />
             </dx:GridViewDataColumn>
-            <dx:GridViewDataColumn FieldName="Benefit" VisibleIndex="2" Caption="คุณประโยชน์"
+            <%--<dx:GridViewDataColumn FieldName="Benefit" VisibleIndex="2" Caption="คุณประโยชน์"
                 ReadOnly="True"  HeaderStyle-HorizontalAlign="Center" Width="300px">
                 <EditCellStyle HorizontalAlign="Center">
                 </EditCellStyle>
@@ -57,28 +57,28 @@
                             </asp:Label>
                 </EditItemTemplate>
                 <Settings AutoFilterCondition="Contains" />
-            </dx:GridViewDataColumn>      
-            <dx:GridViewDataColumn FieldName="Ref" VisibleIndex="3" Caption="ที่มา"
+            </dx:GridViewDataColumn>   --%>   
+            <dx:GridViewDataColumn FieldName="creditFood" VisibleIndex="3" Caption="ที่มา"
                 ReadOnly="True"  HeaderStyle-HorizontalAlign="Center" Width="100px">
                 <EditCellStyle HorizontalAlign="Center">
                 </EditCellStyle>
                 <EditItemTemplate>
-                    <asp:Label ID="lbl_Ref" runat="server" Text='<%# Eval("Ref") %>'>
+                    <asp:Label ID="lbl_Ref" runat="server" Text='<%# Eval("creditFood") %>'>
                             </asp:Label>
                 </EditItemTemplate>
                 <Settings AutoFilterCondition="Contains" />
             </dx:GridViewDataColumn>         
-            <dx:GridViewDataColumn FieldName="FoodDate" VisibleIndex="4" Caption="วันที่แก้ไข" ReadOnly="True"
+            <dx:GridViewDataColumn FieldName="dateFood" VisibleIndex="4" Caption="วันที่แก้ไข" ReadOnly="True"
                 CellStyle-HorizontalAlign="Center" HeaderStyle-HorizontalAlign="Center" Width="50px">
                 <EditCellStyle HorizontalAlign="Center">
                 </EditCellStyle>
                 <EditItemTemplate>
-                    <asp:Label ID="lbl_FoodDate" runat="server" Text='<%# Eval("FoodDate", "{0:d/MM/yyyy}") %>'>
+                    <asp:Label ID="lbl_FoodDate" runat="server" Text='<%# Eval("dateFood", "{0:d/MM/yyyy}") %>'>
                             </asp:Label>
                 </EditItemTemplate>
                 <Settings AutoFilterCondition="Contains" />
             </dx:GridViewDataColumn>
-            <dx:GridViewDataColumn FieldName="infoName" VisibleIndex="5" Caption="แก้ไขข้อมูล"
+            <%--<dx:GridViewDataColumn FieldName="infoName" VisibleIndex="5" Caption="แก้ไขข้อมูล"
                 ReadOnly="True"  HeaderStyle-HorizontalAlign="Center" Width="50px"  CellStyle-HorizontalAlign="Center">
                 <EditCellStyle HorizontalAlign="Center">
                 </EditCellStyle>
@@ -87,26 +87,29 @@
                             </asp:LinkButton>
                 </DataItemTemplate>
                 
-               <%-- <CellStyle HorizontalAlign="Center">
-                </CellStyle>--%>
+                <CellStyle HorizontalAlign="Center">
+                </CellStyle>
                 <Settings AutoFilterCondition="Contains" />
-            </dx:GridViewDataColumn>
+            </dx:GridViewDataColumn>--%>
         </Columns>
         <SettingsEditing Mode="Inline" />
-        <%--<Settings ShowGroupPanel="true" />
-        <SettingsBehavior AllowFocusedRow="True" />--%>
-        <%-- <ClientSideEvents FocusedRowChanged="function(s, e) { OnGridFocusedRowChanged(); }" />--%>
-        <SettingsSearchPanel Visible="true" />
-         <Settings ShowFooter="True" />
+
+                    <SettingsSearchPanel Visible="true" />
+
+                    <%--<Settings ShowFooter="True" />--%>
+
             <SettingsPager>
-                <PageSizeItemSettings Visible="true" Items="10, 20, 50" />
+
+                <PageSizeItemSettings Visible="true" Items="5, 10, 15, 20, 25" />
+
             </SettingsPager>
-            <SettingsBehavior AllowFocusedRow="True" />
+
+                  <SettingsBehavior AllowFocusedRow="True" />   
     </dx:ASPxGridView>
 
     <asp:SqlDataSource ID="Food_SH" runat="server" ConnectionString="<%$ ConnectionStrings:SocialHerb %>"
-                    SelectCommand=" SELECT FoodName,Ingredient,Benefit,Ref,FoodDate
-                    FROM Food ORDER BY [FoodDate] DESC">
+                    SelectCommand=" SELECT foodName,foodRecipe,foodBenefit,creditFood,dateFood
+                    FROM HealthFood ORDER BY [dateFood] DESC">
                 </asp:SqlDataSource>
 
                 <br /><br />

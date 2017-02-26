@@ -10,97 +10,61 @@ Imports System.Drawing
 Public Class CreateInfo
     Inherits System.Web.UI.Page
 
+
+    Public Property InfoCode() As String
+        Get
+            Return ViewState("InfoCode")
+        End Get
+        Set(ByVal value As String)
+            ViewState("InfoCode") = value
+        End Set
+    End Property
+
+    Public ReadOnly Property UploadDirectory() As String
+        Get
+            Return WebConfigurationManager.AppSettings("InfoImageUploadFolder")
+        End Get
+
+    End Property
+
+
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
-        Dim INFOname = Request.QueryString("infoName")
-
-        'If Not IsPostBack Then
-        '    AddDataInForm(INFOname)
-
-        'End If
-
+        Dim RequestInfoID = Request.QueryString("infoID")
 
     End Sub
 
-    'Public Sub AddDataInForm(ByVal InName)
-    '    txtName.Text = InName
-    '    ShowData(InName)
-    'End Sub
+    Public Function GetNextInfoid() As Integer
+        Dim ctx As New SocialHerbDataContext
+        Dim nextId As Integer = (From iid In ctx.Infographics Select CType(iid.infoID, Integer?)).Max.GetValueOrDefault + 1
+        Return nextId
+    End Function
 
-
-    'Public Function chkQuotationByNO(ByVal inNa As String) As Infographic
-    '    Dim infographic As New Infographic
-    '    Using ctx = New SocialHerbDataContext
-    '        infographic = (From q In ctx.Infographics Where q.infoName = inNa).SingleOrDefault
-    '    End Using
-    '    Return infographic
-    'End Function
-
-
-    'Public Sub ShowData(ByVal inNa As String)
-    '    Dim info As New Infographic
-    '    info = chkQuotationByNO(inNa)
-
-
-
-    '    With info
-
-    '        txtNNN.Visible = True
-    '        'txtName.Visible = False
-    '        'txt_Ref.Visible = False
-    '        txtNNN.Text = .infoName
-    '        txtCradit.Visible = True
-    '        txtCradit.Text = .creditInfo
-
-    '        'QuotationID = .Quota_ID
-    '        'cmb_company.Text = .company_name
-    '        'cmb_attn.Text = .attn
-    '        'txt_tel.Text = .tel
-    '        'txt_fax.Text = .fax
-    '        'txt_email.Text = .email
-    '        'txt_totalamount.Text = .total_amount
-    '        'memo_remark.Text = .remark
-
-    '    End With
-
-
-    'End Sub
+    Public Function GetNextInfoImgid() As Integer
+        Dim ctx As New SocialHerbDataContext
+        Dim nextId As Integer = (From iIid In ctx.ImgInfos Select CType(iIid.ImgInfoID, Integer?)).Max.GetValueOrDefault + 1
+        Return nextId
+    End Function
 
     Private Sub AddData()
-
-        'If CheckValidateCalculate() Then Exit Sub
-        Dim disease As New SocialHerb.Disease
-        Dim date_Info As DateTime
-        Dim imgInfo As String
-        Dim strSQL, strConnString As String
-
-        strConnString = WebConfigurationManager.ConnectionStrings("SocialHerb").ConnectionString
-        strSQL = "insert into Infographic (infoID,infoName,infoImg,creditInfo,dateInfo" & _
-        ") values ('" & txtID.Text & "','" & txtName.Text & "','" & imgInfo & "','" & txt_Ref.Text & "','" & date_Info & "')"
-
+        Dim getInfoid As Integer = GetNextInfoid()
         Try
-            Using objConn As New SqlConnection(strConnString)
-                objConn.Open()
-                Dim objCmd As New SqlCommand(strSQL, objConn)
 
-                txtID.Text = ""
-                txtName.Text = ""
-                imgInfo = ""
-                txt_Ref.Text = ""
-                date_Info = Now
+            Dim info As New Infographic
+            With info
+                .infoID = getInfoid
+                .infoName = txtName.Text
+                .creditInfo = txt_Ref.Text
+                .dateInfo = Now
 
-                'objCmd.Parameters.Add("@diseaseID")
-                'cmdInsert.Parameters.Add("@FirstName", Data.SqlDbType.NVarChar).Value = FirstName.Text()
-                'cmdInsert.Parameters.Add("@LastName", Data.SqlDbType.NVarChar).Value = LastName.Text
-                'cmdInsert.Parameters.Add("@Email", Data.SqlDbType.NVarChar).Value = Email.Text
-                'cmdInsert.Parameters.Add("@Phone", Data.SqlDbType.NChar).Value = Phone.Text
-                'cmdInsert.Parameters.Add("@Address", Data.SqlDbType.NVarChar).Value = Address.Text
-                'cmdInsert.Parameters.Add("@City", Data.SqlDbType.NVarChar).Value = City.Text
-                'cmdInsert.Parameters.Add("@State", Data.SqlDbType.NVarChar).Value = State.Text
-                'cmdInsert.Parameters.Add("@Zip", Data.SqlDbType.NChar).Value = Zip.Text
-                objCmd.ExecuteNonQuery()
 
-                objConn.Close()
+            End With
+
+            Using ctx As New SocialHerbDataContext
+                ctx.Infographics.InsertOnSubmit(info)
+                ctx.SubmitChanges()
             End Using
+
+
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
@@ -108,30 +72,47 @@ Public Class CreateInfo
         lblErrorEdit.Text = "Record insert Complete"
 
     End Sub
-
-
-    'Private Const UploadDirectory As String = "~/Upload/UploadInfo/"
-    'Protected Sub UploadControl_FileUploadComplete(ByVal sender As Object, ByVal e As FileUploadCompleteEventArgs)
-    '    Dim resultExtension As String = Path.GetExtension(e.UploadedFile.FileName)
-    '    Dim resultFileName As String = Path.ChangeExtension(Path.GetRandomFileName(), resultExtension)
-    '    Dim resultFileUrl As String = UploadDirectory & resultFileName
-    '    Dim resultFilePath As String = MapPath(resultFileUrl)
-    '    e.UploadedFile.SaveAs(resultFilePath)
-
-
-    '    'UploadingUtils.RemoveFileWithDelay(resultFileName, resultFilePath, 5)
-
-
-
-    '    'Dim name As String = e.UploadedFile.FileName
-    '    'Dim url As String = ResolveClientUrl(resultFileUrl)
-    '    'Dim sizeInKilobytes As Long = e.UploadedFile.ContentLength / 1024
-    '    'Dim sizeText As String = sizeInKilobytes.ToString() & " KB"
-    '    'e.CallbackData = name & "|" & url & "|" & sizeText
-    'End Sub
-
     Private Sub btnUpdate_Click(sender As Object, e As System.EventArgs) Handles btnUpdate.Click
-        'AddData()
+        AddData()
+    End Sub
+
+    Private Sub UploadControl_FilesUploadComplete(sender As Object, e As DevExpress.Web.FilesUploadCompleteEventArgs) Handles UploadControl.FilesUploadComplete
+        Dim getInfoImgid As Integer = GetNextInfoImgid()
+        Dim getInfoid As Integer = GetNextInfoid()
+
+        ' If ArticleCode Is Nothing Then ArticleCode = Request.QueryString("articleID")
+
+        Dim uploadControl As ASPxUploadControl = TryCast(sender, ASPxUploadControl)
+
+        If uploadControl.UploadedFiles IsNot Nothing AndAlso uploadControl.UploadedFiles.Length > 0 Then
+            For i As Integer = 0 To uploadControl.UploadedFiles.Length - 1
+                Dim file As UploadedFile = uploadControl.UploadedFiles(i)
+
+                If file.ContentLength > 0 Then
+                    Dim path = UploadDirectory '& articleID
+                    If Not IO.Directory.Exists(path) Then
+                        IO.Directory.CreateDirectory(path)
+                    End If
+                    file.SaveAs(path & "\" & file.FileName)
+
+                    Dim infoIMG As New ImgInfo
+                    With infoIMG
+                        .ImgInfoID = getInfoImgid
+                        .InfopicID = getInfoid
+                        .ImgInfoDate = Now
+                        .ImgInfoname = file.FileName
+                        .ImgInfo = file.FileBytes
+                    End With
+
+                    Using ctx As New SocialHerbDataContext
+                        ctx.ImgInfos.InsertOnSubmit(infoIMG)
+                        ctx.SubmitChanges()
+                    End Using
+
+                End If
+            Next i
+        End If
+
     End Sub
 End Class
 
