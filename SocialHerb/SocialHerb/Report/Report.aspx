@@ -22,36 +22,19 @@
     <h2>
         รายงาน</h2> 
         
-    <%--<dx:ASPxNavBar ID="ASPxNavBar1" runat="server" BackColor="#afd168" AllowSelectItem="True"
-        EnableAnimation="True" Visible="true">
-        <Groups>
-            <dx:NavBarGroup Text="รายงาน">
-                <Items>
-                    <dx:NavBarItem Text="อัตราส่วนของข้อมูลระหว่างสมุนไพร,อาการ/โรคและจิตอาสา(เภสัชกร)">
-                        <Image Url="../Images/Chart.png" >
-                    </dx:NavBarItem>
-                    <dx:NavBarItem Text="อัตราส่วนของสมุนไพรที่มีการแสดงความคิดเห็นกับสมุนไพรที่ไม่มีการแสดงความคิดเห็น">
-                        <Image Url="../Images/Chart.png" >
-                    </dx:NavBarItem>
-                    <dx:NavBarItem Text="รายงานแสดงจำนวนการแสดงความคิดเห็นและให้คะแนนของเภสัชกรแต่ละคน">
-                        <Image Url="../Images/Report.png" >
-                    </dx:NavBarItem>
-                    <dx:NavBarItem Text="รายงานแสดงรายละเอียดการแดสงความคิดเห็นและให้คะแนนของเภสัชกรแต่ละคน">
-                        <Image Url="../Images/Report.png" >
-                    </dx:NavBarItem>
-                </Items>
-            </dx:NavBarGroup>
-        </Groups>
-    </dx:ASPxNavBar>--%>
-    <%-- <dx:ASPxPageControl ID="carTabPage" runat="server" ActiveTabIndex="0" EnableHierarchyRecreation="True"
+    
+     <dx:ASPxPageControl ID="carTabPage" runat="server" ActiveTabIndex="0" EnableHierarchyRecreation="True"
         BackColor="#afd168" TabPosition="Left">
         <TabPages>
             <dx:TabPage Text="อัตราส่วนของข้อมูลระหว่างสมุนไพร,อาการ/โรคและจิตอาสา(เภสัชกร)"
                 ActiveTabImage-Url="../Images/Chart.png">
                 <ContentCollection>
                     <dx:ContentControl ID="ContentControl1" runat="server" BackColor="#afd168">
-                        <dx:ASPxImage runat="server" ID="Image1" ImageUrl="~/Images/ChartNMNM.png" Width="800px"
-                            Height="1130px" />
+                        
+
+
+
+
                     </dx:ContentControl>
                 </ContentCollection>
             </dx:TabPage>
@@ -59,8 +42,9 @@
                 ActiveTabImage-Url="../Images/Chart.png">
                 <ContentCollection>
                     <dx:ContentControl ID="ContentControl2" runat="server">
-                        <dx:ASPxImage runat="server" ID="Image2" ImageUrl="~/Images/ChartTWO.png" Width="800px"
-                            Height="1130px" />
+                       
+
+
                     </dx:ContentControl>
                 </ContentCollection>
             </dx:TabPage>
@@ -68,8 +52,9 @@
                 ActiveTabImage-Url="../Images/Report.png">
                 <ContentCollection>
                     <dx:ContentControl ID="ContentControl3" runat="server">
-                        <dx:ASPxImage runat="server" ID="Image3" ImageUrl="~/Images/ReportFF.png" Width="800px"
-                            Height="1130px" />
+                       
+
+
                     </dx:ContentControl>
                 </ContentCollection>
             </dx:TabPage>
@@ -77,8 +62,9 @@
                 ActiveTabImage-Url="../Images/Report.png">
                 <ContentCollection>
                     <dx:ContentControl ID="ContentControl4" runat="server">
-                        <dx:ASPxImage runat="server" ID="ASPxImage1" ImageUrl="~/Images/ReportNM.png" Width="800px"
-                            Height="1130px" />
+                        
+
+
                     </dx:ContentControl>
                 </ContentCollection>
             </dx:TabPage>
@@ -90,12 +76,12 @@
     <<br />
     <br />
     <br />
-    <br />--%>
+    <br />
     <asp:ScriptManager ID="ScriptManager1" runat="server">
     </asp:ScriptManager>
     
     <dx:ASPxDocumentViewer ID="ASPxDocumentViewer1" runat="server" Height="1100px" 
-        Width="100%">
+        Width="100%" >
     </dx:ASPxDocumentViewer>
 
   

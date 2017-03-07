@@ -1,189 +1,161 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 35, 18.5" name="SocialHerb">
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 23.125, 11.5" name="SocialHerb">
   <DataContextMoniker Name="/SocialHerbDataContext" />
   <nestedChildShapes>
-    <classShape Id="aa3e0511-0abd-44ca-adfb-c5b3fe679f1a" absoluteBounds="32.5, 2.125, 2, 1.1939925130208333">
+    <classShape Id="4c1c77fc-13ad-44c4-be1d-766ce1ee2ea9" absoluteBounds="20.125, 0.625, 2, 1.3862939453125">
       <DataClassMoniker Name="/SocialHerbDataContext/Admin" />
       <nestedChildShapes>
-        <elementListCompartment Id="0dbcc80f-a957-4be2-8a74-dfee443bb417" absoluteBounds="32.515, 2.585, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="8083be02-5e30-4344-b5e1-8a08344500ce" absoluteBounds="20.14, 1.0850000000000009, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="7242f089-5648-44c6-a82b-1382b6a92c1b" absoluteBounds="32.5, 5.5, 2, 1.7708968098958331">
+    <classShape Id="4565783e-372c-48e4-8b6c-c58eb0b7d9ff" absoluteBounds="19.25, 4.125, 2, 1.7708968098958331">
       <DataClassMoniker Name="/SocialHerbDataContext/Article" />
       <nestedChildShapes>
-        <elementListCompartment Id="8265c8b9-eeff-4332-80bb-3ca4d0258573" absoluteBounds="32.515, 5.9600000000000009, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="497a7da1-575f-45ad-9e69-c8cc0f120336" absoluteBounds="19.265, 4.585, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="e6cbf647-2099-4f9e-99c6-2ce1d0139588" absoluteBounds="32.75, 9.625, 2, 1.5785953776041666">
+    <classShape Id="2ef30be7-1c23-4fe8-9b53-723441374346" absoluteBounds="19.5, 6.75, 2, 1.5785953776041666">
       <DataClassMoniker Name="/SocialHerbDataContext/ArticleRating" />
       <nestedChildShapes>
-        <elementListCompartment Id="48f9048f-f947-4db2-a05d-5d4854fe91ab" absoluteBounds="32.765, 10.085, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="e1a663be-a930-45b9-83cf-e5c4307f3567" absoluteBounds="19.515, 7.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(33.625 : 7.27089680989583); (33.625 : 9.625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
-      <AssociationMoniker Name="/SocialHerbDataContext/Article/Article_ArticleRating" />
-      <nodes>
-        <classShapeMoniker Id="7242f089-5648-44c6-a82b-1382b6a92c1b" />
-        <classShapeMoniker Id="e6cbf647-2099-4f9e-99c6-2ce1d0139588" />
-      </nodes>
-    </associationConnector>
-    <classShape Id="5dd79ab0-3667-48af-a902-1a5452f1e65f" absoluteBounds="29, 1.5, 2, 2.3478011067708335">
+    <classShape Id="69db4cfc-4dd1-4fbf-99c2-a5305fcfbbc6" absoluteBounds="17, 0.5, 2, 2.3478011067708335">
       <DataClassMoniker Name="/SocialHerbDataContext/Contact" />
       <nestedChildShapes>
-        <elementListCompartment Id="158b7751-73e8-4473-9a08-4224c4e46631" absoluteBounds="29.015, 1.96, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="3afb8080-8f23-4423-9510-f8cb7521d794" absoluteBounds="17.015, 0.96, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="1f4b0816-b54b-48e7-bc6d-3e15821bb114" absoluteBounds="20.75, 1.5, 2, 1.9631982421875">
+    <classShape Id="959922e8-ef66-4a9e-8e41-d5c74cd41e90" absoluteBounds="16, 3.625, 2, 1.9631982421875">
       <DataClassMoniker Name="/SocialHerbDataContext/Disease" />
       <nestedChildShapes>
-        <elementListCompartment Id="2d1eec33-b618-4870-b851-70236574481b" absoluteBounds="20.765, 1.96, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="180ae817-6a80-4fc3-adca-e56ae0663d84" absoluteBounds="16.015, 4.085, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="8db42c2b-8a7a-4bcf-bef1-2ee127c038c3" absoluteBounds="25.125, 1.75, 2, 1.5785953776041666">
+    <classShape Id="5b65b276-a490-414c-88bf-da23746e99dd" absoluteBounds="16, 6.875, 2, 1.5785953776041666">
       <DataClassMoniker Name="/SocialHerbDataContext/DiseaseRating" />
       <nestedChildShapes>
-        <elementListCompartment Id="f9de1779-ae28-4c2b-a9d2-e70d142b4267" absoluteBounds="25.14, 2.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="24daa450-4c12-4f9d-9414-57aed11e9ef2" absoluteBounds="16.015, 7.335, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(22.75 : 2.53929768880208); (25.125 : 2.53929768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
-      <AssociationMoniker Name="/SocialHerbDataContext/Disease/Disease_DiseaseRating" />
-      <nodes>
-        <classShapeMoniker Id="1f4b0816-b54b-48e7-bc6d-3e15821bb114" />
-        <classShapeMoniker Id="8db42c2b-8a7a-4bcf-bef1-2ee127c038c3" />
-      </nodes>
-    </associationConnector>
-    <classShape Id="907c988f-f0ba-42aa-bdf3-766602a41384" absoluteBounds="16.875, 1.375, 2, 2.1554996744791666">
+    <classShape Id="d35f7789-0561-4815-a2d0-c0324dc47877" absoluteBounds="13.5, 0.625, 2, 2.1554996744791666">
       <DataClassMoniker Name="/SocialHerbDataContext/HealthFood" />
       <nestedChildShapes>
-        <elementListCompartment Id="f41a5a77-83f9-4f8c-a4c6-3d09c6be5760" absoluteBounds="16.89, 1.8350000000000009, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="08efb8af-16b8-4099-a0e3-d63c7508873f" absoluteBounds="13.515, 1.085, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="5461b3ea-8a17-4778-a4b7-c0b77347f16a" absoluteBounds="7, 6.375, 2, 2.1554996744791666">
-      <DataClassMoniker Name="/SocialHerbDataContext/Herb" />
-      <nestedChildShapes>
-        <elementListCompartment Id="f5824b56-4571-41a2-adf9-f30234230f5f" absoluteBounds="7.015, 6.8350000000000009, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
-      </nestedChildShapes>
-    </classShape>
-    <classShape Id="f14e2dc6-b867-4909-bde5-659464b834d2" absoluteBounds="2.5, 2.625, 2, 1.7708968098958331">
+    <classShape Id="d3d77212-14bd-4799-ac84-816fc7835e3c" absoluteBounds="1.5, 1.375, 2, 1.7708968098958331">
       <DataClassMoniker Name="/SocialHerbDataContext/HerbComment" />
       <nestedChildShapes>
-        <elementListCompartment Id="ffd44425-5744-4cd5-9dd0-009562aafc4c" absoluteBounds="2.5149999999999997, 3.085, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="0c7b7c27-46f5-4dd7-b9e4-febe1af715fd" absoluteBounds="1.5150000000000006, 1.835, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="d958aeb9-e34f-4888-a1ee-69f078071471" absoluteBounds="7, 12.5, 2.5, 2.5401025390625">
+    <classShape Id="e8ccb0a7-9027-4a06-8ce1-87533418428a" absoluteBounds="1.5, 7.125, 2, 2.5401025390625">
       <DataClassMoniker Name="/SocialHerbDataContext/HerbImg" />
       <nestedChildShapes>
-        <elementListCompartment Id="87e95afe-05b4-49a7-a34e-833d51a2d131" absoluteBounds="7.015, 12.96, 2.4699999999999998, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="66e02eca-c6c8-4e3a-978e-b84d197011be" absoluteBounds="1.5150000000000006, 7.585, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(8.57230638624398 : 8.53049967447917); (8.57230638624398 : 12.5)]" manuallyRouted="true" fixedFrom="Algorithm" fixedTo="Caller">
-      <AssociationMoniker Name="/SocialHerbDataContext/Herb/Herb_HerbImg" />
-      <nodes>
-        <classShapeMoniker Id="5461b3ea-8a17-4778-a4b7-c0b77347f16a" />
-        <classShapeMoniker Id="d958aeb9-e34f-4888-a1ee-69f078071471" />
-      </nodes>
-    </associationConnector>
-    <classShape Id="230b67f0-ce6d-4533-a751-92ea1d105bb1" absoluteBounds="6.875, 2.5, 2, 1.7708968098958331">
+    <classShape Id="d3f104a1-0848-4c80-8ee7-a1ccf005fab5" absoluteBounds="4.25, 1.375, 2, 1.7708968098958331">
       <DataClassMoniker Name="/SocialHerbDataContext/HerbRating" />
       <nestedChildShapes>
-        <elementListCompartment Id="0bd7491d-9534-4f40-9071-9d9841165418" absoluteBounds="6.89, 2.9600000000000009, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="033fd2b7-b62c-4bc0-8966-b66b1fcf9db8" absoluteBounds="4.2650000000000006, 1.835, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="5c83bde9-3637-43d4-ad4f-4b57c11b488e" absoluteBounds="2.375, 6.75, 2, 1.7708968098958331">
-      <DataClassMoniker Name="/SocialHerbDataContext/HerbResearch" />
-      <nestedChildShapes>
-        <elementListCompartment Id="baa298ac-c347-4fcc-b0ca-37d3901152e1" absoluteBounds="2.3899999999999997, 7.2100000000000009, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
-      </nestedChildShapes>
-    </classShape>
-    <classShape Id="6ccc7dfe-edb2-47a1-a497-ae216440fa79" absoluteBounds="32.75, 12.5, 2, 1.7708968098958331">
+    <classShape Id="0755ca96-da96-4688-8d6b-4d051938acf1" absoluteBounds="20.875, 9, 2, 1.7708968098958331">
       <DataClassMoniker Name="/SocialHerbDataContext/ImgArticle" />
       <nestedChildShapes>
-        <elementListCompartment Id="f875974a-9a8c-475e-a293-20e61f418c63" absoluteBounds="32.765, 12.96, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="8c7a1ac3-54e0-405f-82b2-b6f01b9c37e0" absoluteBounds="20.89, 9.46, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="69b4387e-87bc-4097-8d47-cf4e05c7d0f4" absoluteBounds="13.75, 1.75, 2, 1.7708968098958331">
+    <classShape Id="a06474b6-c737-4429-8d0c-31f47b131dd7" absoluteBounds="10.875, 0.875, 2, 1.7708968098958331">
       <DataClassMoniker Name="/SocialHerbDataContext/ImgFood" />
       <nestedChildShapes>
-        <elementListCompartment Id="4fa11f65-afb4-47dc-bfa0-788282f8ad4d" absoluteBounds="13.765, 2.2100000000000009, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="2a11f42d-4cd2-452b-85b4-2b537de3a780" absoluteBounds="10.89, 1.335, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="9d88fd8f-c8b4-4c32-aae1-2f8c2c65dd06" absoluteBounds="2.5, 10.75, 2, 1.7708968098958331">
+    <classShape Id="ddfe00f1-c89c-4344-9091-b2deba5f6071" absoluteBounds="4.25, 4.5, 2, 1.7708968098958331">
       <DataClassMoniker Name="/SocialHerbDataContext/ImgHerb" />
       <nestedChildShapes>
-        <elementListCompartment Id="8d1ff3d6-1de6-486d-b812-f7bf3eb53d0c" absoluteBounds="2.5149999999999997, 11.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="766cee68-bb9a-486d-b9d5-01392d6fe516" absoluteBounds="4.2650000000000006, 4.9600000000000009, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="d0e148fb-8032-45b6-acf0-97aaabeabd37" absoluteBounds="2.25, 15, 2, 1.7708968098958331">
-      <DataClassMoniker Name="/SocialHerbDataContext/ImgHerbBranch" />
-      <nestedChildShapes>
-        <elementListCompartment Id="143ce527-44b2-482b-9cee-c847501eb091" absoluteBounds="2.2650000000000006, 15.46, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
-      </nestedChildShapes>
-    </classShape>
-    <classShape Id="0671af7d-c28a-472e-9df6-024ba8f7daf4" absoluteBounds="6, 16.5, 2, 1.7708968098958331">
+    <classShape Id="3054d1cb-bc29-4b0f-9ac7-9e039abb78c5" absoluteBounds="7.125, 8.875, 2, 1.7708968098958331">
       <DataClassMoniker Name="/SocialHerbDataContext/ImgHerbFlower" />
       <nestedChildShapes>
-        <elementListCompartment Id="676ce57b-7a14-40a1-8f7a-9b83703c5647" absoluteBounds="6.0150000000000006, 16.96, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="80fc5a48-cf52-4827-a8ef-66927dece969" absoluteBounds="7.1400000000000006, 9.335, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="28fe771f-aacb-4626-bf75-982b27619781" absoluteBounds="10.375, 16.5, 2, 1.7708968098958331">
+    <classShape Id="155529d2-ffcf-420e-a0b3-eccd9e9c2b79" absoluteBounds="9.75, 9, 2, 1.7708968098958331">
       <DataClassMoniker Name="/SocialHerbDataContext/ImgHerbFruit" />
       <nestedChildShapes>
-        <elementListCompartment Id="ebddbbce-3114-4033-83c0-4b57dd4f3601" absoluteBounds="10.39, 16.96, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="95e13fd4-4962-4603-9b94-cf0c37441ebe" absoluteBounds="9.765, 9.46, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="e79c4fd0-cb19-4b0e-bc4d-09687bcee630" absoluteBounds="11.875, 13.75, 2, 1.7708968098958331">
+    <classShape Id="3f425c92-42da-4e95-b635-87076e1699c0" absoluteBounds="12.5, 9.125, 2, 1.7708968098958331">
       <DataClassMoniker Name="/SocialHerbDataContext/ImgHerbLeaf" />
       <nestedChildShapes>
-        <elementListCompartment Id="357fd74c-d95d-4fa1-a1ec-7cba72931df4" absoluteBounds="11.89, 14.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="b113a8d5-78f3-4136-8f5b-7775e2352df7" absoluteBounds="12.515, 9.585, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="234bbd0d-88b2-4b37-9723-9c32b7cf39ac" absoluteBounds="15, 16.375, 2, 1.7708968098958331">
+    <classShape Id="28cfefff-c79b-48ab-b4de-33981b9be42e" absoluteBounds="7.25, 6.625, 2, 1.7708968098958331">
       <DataClassMoniker Name="/SocialHerbDataContext/ImgHerbRoot" />
       <nestedChildShapes>
-        <elementListCompartment Id="a2c4a5da-eb81-4904-9aed-3bda26712a2c" absoluteBounds="15.015, 16.835, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="c4df1629-ed7d-4e5a-9c96-30d15a21f1ac" absoluteBounds="7.2650000000000006, 7.085, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="24f23a1f-f5ce-4963-8e0b-341df7b83b3d" absoluteBounds="16.125, 13.125, 2, 1.7708968098958331">
+    <classShape Id="d2b43f42-fe35-44f3-a27b-31ae848a1bb8" absoluteBounds="7.125, 4.125, 2, 1.7708968098958331">
       <DataClassMoniker Name="/SocialHerbDataContext/ImgHerbSeed" />
       <nestedChildShapes>
-        <elementListCompartment Id="01bff9d7-379c-4807-a2aa-93f1a7de1427" absoluteBounds="16.14, 13.585, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="5f76736d-51b2-4f4a-9e78-1749bbdbde4b" absoluteBounds="7.14, 4.585, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="05c30739-f3d4-4754-b93f-25140fd2b3e1" absoluteBounds="19.625, 15.875, 2, 1.7708968098958331">
+    <classShape Id="89542678-2509-48f0-b250-0e1661726f05" absoluteBounds="10.125, 6.75, 2, 1.7708968098958331">
       <DataClassMoniker Name="/SocialHerbDataContext/ImgHerbTrunk" />
       <nestedChildShapes>
-        <elementListCompartment Id="85559362-1016-4853-acf9-5d30303b78fc" absoluteBounds="19.64, 16.335, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="bff6010f-fee4-4c64-a7bf-09ebc85aa1b7" absoluteBounds="10.14, 7.2100000000000009, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="559fa0bc-51db-435a-8b0c-08081b2c5f83" absoluteBounds="26.75, 9, 2, 1.7708968098958331">
+    <classShape Id="28212695-879d-4dca-9b80-386ea68c7c25" absoluteBounds="10.5, 4.375, 2, 1.7708968098958331">
       <DataClassMoniker Name="/SocialHerbDataContext/ImgInfo" />
       <nestedChildShapes>
-        <elementListCompartment Id="c214396f-ff36-4833-8b98-10c7252a2b7c" absoluteBounds="26.765, 9.46, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="d5ee3d1a-20ba-45e5-9ec2-debe3ffe24e1" absoluteBounds="10.515, 4.835, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="34604022-7100-4807-85b5-bf07855394e6" absoluteBounds="28.375, 6, 2, 1.5785953776041666">
+    <classShape Id="f459c4ec-d80d-48e1-bb53-22f28fb008d9" absoluteBounds="18, 9.625, 2, 1.5785953776041666">
       <DataClassMoniker Name="/SocialHerbDataContext/Infographic" />
       <nestedChildShapes>
-        <elementListCompartment Id="62144658-5aca-4fac-bdf1-1ae61db75937" absoluteBounds="28.39, 6.4600000000000009, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="5ca35616-b54d-458c-9b45-bb9927b9d72c" absoluteBounds="18.015, 10.085, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="0bdaba35-7754-4407-8e5b-bc3e65de624f" absoluteBounds="23.625, 6.125, 2, 1.5785953776041666">
+    <classShape Id="e4af93a4-dcd0-4911-bab6-1c57eaddc295" absoluteBounds="15.5, 9.625, 2, 1.5785953776041666">
       <DataClassMoniker Name="/SocialHerbDataContext/InfographicRating" />
       <nestedChildShapes>
-        <elementListCompartment Id="5d45347b-098d-4904-b0eb-1feb51eeacdf" absoluteBounds="23.64, 6.5850000000000009, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="f20da7fb-1535-4359-a51d-630517fe4019" absoluteBounds="15.515, 10.085, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(28.375 : 6.85179768880208); (25.625 : 6.85179768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
-      <AssociationMoniker Name="/SocialHerbDataContext/Infographic/Infographic_InfographicRating" />
-      <nodes>
-        <classShapeMoniker Id="34604022-7100-4807-85b5-bf07855394e6" />
-        <classShapeMoniker Id="0bdaba35-7754-4407-8e5b-bc3e65de624f" />
-      </nodes>
-    </associationConnector>
-    <classShape Id="e9080f6c-1fa7-4cbb-b5ee-2db56763ecb5" absoluteBounds="13.875, 7.375, 2, 1.3862939453125">
+    <classShape Id="aa968844-437f-4ca8-b616-8df38294bbfb" absoluteBounds="13.125, 5.875, 2, 1.5785953776041666">
       <DataClassMoniker Name="/SocialHerbDataContext/Pharmacist" />
       <nestedChildShapes>
-        <elementListCompartment Id="10f92f57-f795-4d1d-b508-fd49f0892b67" absoluteBounds="13.89, 7.8350000000000009, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="e21086f7-3cdb-4c12-80e1-a4cbbcb9b4e3" absoluteBounds="13.14, 6.335, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="975b2161-d4ac-44db-ab95-c3d041589b61" absoluteBounds="4.375, 8, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/SocialHerbDataContext/ImgHerbBranch" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d012baa7-2ae3-46bb-9720-7f0835132f19" absoluteBounds="4.39, 8.46, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6046cab4-4aaa-4997-a451-745626f08fa7" absoluteBounds="1, 4.125, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/SocialHerbDataContext/Herb" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1baf2561-e5d6-417c-b46d-b87a454f1375" absoluteBounds="1.0150000000000001, 4.585, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="445a32e4-d552-444a-9260-4322fbc6dea3" absoluteBounds="7.375, 1.625, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/SocialHerbDataContext/HerbResearch" />
+      <nestedChildShapes>
+        <elementListCompartment Id="894ec36d-e680-412b-ba16-b174a6549af2" absoluteBounds="7.3900000000000006, 2.085, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
   </nestedChildShapes>

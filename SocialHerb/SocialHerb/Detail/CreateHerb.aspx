@@ -148,7 +148,7 @@
                     รูปใบ :
                 </td>--%>
                 <td>
-                    <dx:ASPxUploadControl ID="ASPxUploadControl1" runat="server" ClientInstanceName="UploadControl"
+                    <dx:ASPxUploadControl ID="ASPxUploadControlLEAF" runat="server" ClientInstanceName="UploadControl"
                         Width="320" NullText="เลือกรูปใบ..." UploadMode="Advanced" ShowUploadButton="True"
                         ShowProgressPanel="True">
                         <AdvancedModeSettings EnableMultiSelect="True" EnableFileList="True" EnableDragAndDrop="True" />
@@ -172,7 +172,7 @@
                     รูปราก :
                 </td>--%>
                 <td>
-                    <dx:ASPxUploadControl ID="ASPxUploadControl2" runat="server" ClientInstanceName="UploadControl"
+                    <dx:ASPxUploadControl ID="ASPxUploadControlROOT" runat="server" ClientInstanceName="UploadControl"
                         Width="320" NullText="เลือกรูปราก..." UploadMode="Advanced" ShowUploadButton="True"
                         ShowProgressPanel="True">
                         <AdvancedModeSettings EnableMultiSelect="True" EnableFileList="True" EnableDragAndDrop="True" />
@@ -196,7 +196,7 @@
                     รูปลำต้น :
                 </td>--%>
                 <td>
-                    <dx:ASPxUploadControl ID="ASPxUploadControl3" runat="server" ClientInstanceName="UploadControl"
+                    <dx:ASPxUploadControl ID="ASPxUploadControlTRUNK" runat="server" ClientInstanceName="UploadControl"
                         Width="320" NullText="เลือกรูปลำต้น..." UploadMode="Advanced" ShowUploadButton="True"
                         ShowProgressPanel="True">
                         <AdvancedModeSettings EnableMultiSelect="True" EnableFileList="True" EnableDragAndDrop="True" />
@@ -220,7 +220,7 @@
                     รูปเมล็ด :
                 </td>--%>
                 <td>
-                    <dx:ASPxUploadControl ID="ASPxUploadControl4" runat="server" ClientInstanceName="UploadControl"
+                    <dx:ASPxUploadControl ID="ASPxUploadControlSEED" runat="server" ClientInstanceName="UploadControl"
                         Width="320" NullText="เลือกรูปเมล็ด..." UploadMode="Advanced" ShowUploadButton="True"
                         ShowProgressPanel="True">
                         <AdvancedModeSettings EnableMultiSelect="True" EnableFileList="True" EnableDragAndDrop="True" />
@@ -244,7 +244,7 @@
                     รูปผล :
                 </td>--%>
                 <td>
-                    <dx:ASPxUploadControl ID="ASPxUploadControl5" runat="server" ClientInstanceName="UploadControl"
+                    <dx:ASPxUploadControl ID="ASPxUploadControlFRUIT" runat="server" ClientInstanceName="UploadControl"
                         Width="320" NullText="เลือกรูปผล..." UploadMode="Advanced" ShowUploadButton="True"
                         ShowProgressPanel="True">
                         <AdvancedModeSettings EnableMultiSelect="True" EnableFileList="True" EnableDragAndDrop="True" />
@@ -268,7 +268,7 @@
                     รูปกิ่ง :
                 </td>--%>
                 <td>
-                    <dx:ASPxUploadControl ID="ASPxUploadControl6" runat="server" ClientInstanceName="UploadControl"
+                    <dx:ASPxUploadControl ID="ASPxUploadControlBRANCH" runat="server" ClientInstanceName="UploadControl"
                         Width="320" NullText="เลือกรูปกิ่ง..." UploadMode="Advanced" ShowUploadButton="True"
                         ShowProgressPanel="True">
                         <AdvancedModeSettings EnableMultiSelect="True" EnableFileList="True" EnableDragAndDrop="True" />
@@ -292,7 +292,7 @@
                     รูปดอก :
                 </td>--%>
                 <td>
-                    <dx:ASPxUploadControl ID="ASPxUploadControl7" runat="server" ClientInstanceName="UploadControl"
+                    <dx:ASPxUploadControl ID="ASPxUploadControlFLOWER" runat="server" ClientInstanceName="UploadControl"
                         Width="320" NullText="เลือกรูปดอก..." UploadMode="Advanced" ShowUploadButton="True"
                         ShowProgressPanel="True">
                         <AdvancedModeSettings EnableMultiSelect="True" EnableFileList="True" EnableDragAndDrop="True" />

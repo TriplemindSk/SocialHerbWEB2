@@ -70,7 +70,7 @@ namespace="DevExpress.Web" tagprefix="dx" %>
                 </EditItemTemplate>
                 <Settings AutoFilterCondition="Contains" />
             </dx:GridViewDataColumn>
-            <dx:GridViewDataColumn FieldName="HerbOtherName" VisibleIndex="1" Caption="ชื่อสมุนไพร(อื่นๆ)"
+            <dx:GridViewDataColumn FieldName="herbOtherName" VisibleIndex="1" Caption="ชื่อสมุนไพร(อื่นๆ)"
                 ReadOnly="True" HeaderStyle-HorizontalAlign="Center" Width="100px">
                 <EditCellStyle HorizontalAlign="Center">
                 </EditCellStyle>
@@ -80,7 +80,7 @@ namespace="DevExpress.Web" tagprefix="dx" %>
                 </EditItemTemplate>
                 <Settings AutoFilterCondition="Contains" />
             </dx:GridViewDataColumn>
-            <dx:GridViewDataColumn FieldName="Properties" VisibleIndex="2" Caption="ลักษณะทั่วไป"
+            <dx:GridViewDataColumn FieldName="properties" VisibleIndex="2" Caption="ลักษณะทั่วไป"
                 ReadOnly="True" HeaderStyle-HorizontalAlign="Center" Width="100px">
                 <EditCellStyle HorizontalAlign="Center">
                 </EditCellStyle>
@@ -233,7 +233,7 @@ namespace="DevExpress.Web" tagprefix="dx" %>
                 </EditItemTemplate>
                 <Settings AutoFilterCondition="Contains" />
             </dx:GridViewDataColumn>
-           <%-- <dx:GridViewDataColumn FieldName="dateArticle" VisibleIndex="3" Caption="วันที่แก้ไข"
+            <dx:GridViewDataColumn FieldName="dateArt" VisibleIndex="3" Caption="วันที่แก้ไข"
                 ReadOnly="True" CellStyle-HorizontalAlign="Center" HeaderStyle-HorizontalAlign="Center"
                 Width="50px">
                 <EditCellStyle HorizontalAlign="Center">
@@ -243,7 +243,7 @@ namespace="DevExpress.Web" tagprefix="dx" %>
                     </asp:Label>
                 </EditItemTemplate>
                 <Settings AutoFilterCondition="Contains" />
-            </dx:GridViewDataColumn>--%>
+            </dx:GridViewDataColumn>
         </Columns>
         <SettingsEditing Mode="Inline" />
         <%--<Settings ShowGroupPanel="true" />

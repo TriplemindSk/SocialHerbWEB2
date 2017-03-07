@@ -3,8 +3,8 @@
 <%@ Register Assembly="DevExpress.Web.v16.2, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a"
     Namespace="DevExpress.Web" TagPrefix="dx" %>
 
+    
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
-
 <style type="text/css">
         .style1
         {
@@ -16,9 +16,9 @@
             color: #3e2723 ;
         }
     </style>
-
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
+
 <center>
         <table border="0" width="600">
             <tr style="height: 20px">
@@ -108,10 +108,5 @@
             </tr>
         </table>
     </center>
-
-
-
-
-
 
 </asp:Content>

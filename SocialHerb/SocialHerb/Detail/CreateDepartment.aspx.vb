@@ -30,14 +30,14 @@ Public Class CreateDepartment
 
             Dim department As New Contact
             With department
-                '    .ID = getDepartmentid
-                '    .contactName = txtName.Text
-                '    .tel = txtDetail.Text
-                '    .email = txtRelief.Text
-                '    .Address = txtherb.Text
-                '    .role =
-                '    .website =
-                '.date = Now
+                .ID = getDepartmentid
+                .contactName = txt_DEName.Text
+                .tel = txt_Tel.Text
+                .email = txt_Email.Text
+                .Address = txt_Address.Text
+                .role = txt_Role.Text
+                .website = txt_Website.Text
+                .date = Now
             End With
 
             Using ctx As New SocialHerbDataContext
@@ -49,15 +49,15 @@ Public Class CreateDepartment
             MsgBox(ex.Message)
         End Try
 
-        ' lblErrorEdit.Text = "Record insert Complete"
+        lblErrorEdit.Text = "Record insert Complete"
 
     End Sub
 
 
-    'Private Sub btnUpdate_Click(sender As Object, e As System.EventArgs) Handles btnUpdate.Click
+    Private Sub btnUpdate_Click(sender As Object, e As System.EventArgs) Handles btnUpdate.Click
 
-    '    AddData()
+        AddData()
 
-    'End Sub
+    End Sub
 
 End Class

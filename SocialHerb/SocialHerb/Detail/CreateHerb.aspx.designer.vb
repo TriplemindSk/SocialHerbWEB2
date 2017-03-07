@@ -10,8 +10,6 @@
 Option Strict On
 Option Explicit On
 
-Imports DevExpress.Web
-
 
 Partial Public Class CreateHerb
 
@@ -85,7 +83,7 @@ Partial Public Class CreateHerb
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents UploadControl As ASPxUploadControl
+    Protected WithEvents UploadControl As Global.DevExpress.Web.ASPxUploadControl
 
     '''<summary>
     '''txt_Howto control.
@@ -151,13 +149,13 @@ Partial Public Class CreateHerb
     Protected WithEvents txt_leaf As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''ASPxUploadControl1 control.
+    '''ASPxUploadControlLEAF control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents ASPxUploadControl1 As ASPxUploadControl
+    Protected WithEvents ASPxUploadControlLEAF As Global.DevExpress.Web.ASPxUploadControl
 
     '''<summary>
     '''txt_Root control.
@@ -169,13 +167,13 @@ Partial Public Class CreateHerb
     Protected WithEvents txt_Root As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''ASPxUploadControl2 control.
+    '''ASPxUploadControlROOT control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents ASPxUploadControl2 As ASPxUploadControl
+    Protected WithEvents ASPxUploadControlROOT As Global.DevExpress.Web.ASPxUploadControl
 
     '''<summary>
     '''txt_trunk control.
@@ -187,13 +185,13 @@ Partial Public Class CreateHerb
     Protected WithEvents txt_trunk As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''ASPxUploadControl3 control.
+    '''ASPxUploadControlTRUNK control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents ASPxUploadControl3 As ASPxUploadControl
+    Protected WithEvents ASPxUploadControlTRUNK As Global.DevExpress.Web.ASPxUploadControl
 
     '''<summary>
     '''txt_Seed control.
@@ -205,13 +203,13 @@ Partial Public Class CreateHerb
     Protected WithEvents txt_Seed As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''ASPxUploadControl4 control.
+    '''ASPxUploadControlSEED control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents ASPxUploadControl4 As ASPxUploadControl
+    Protected WithEvents ASPxUploadControlSEED As Global.DevExpress.Web.ASPxUploadControl
 
     '''<summary>
     '''txt_Fruit control.
@@ -223,13 +221,13 @@ Partial Public Class CreateHerb
     Protected WithEvents txt_Fruit As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''ASPxUploadControl5 control.
+    '''ASPxUploadControlFRUIT control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents ASPxUploadControl5 As ASPxUploadControl
+    Protected WithEvents ASPxUploadControlFRUIT As Global.DevExpress.Web.ASPxUploadControl
 
     '''<summary>
     '''txt_Branch control.
@@ -241,13 +239,13 @@ Partial Public Class CreateHerb
     Protected WithEvents txt_Branch As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''ASPxUploadControl6 control.
+    '''ASPxUploadControlBRANCH control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents ASPxUploadControl6 As ASPxUploadControl
+    Protected WithEvents ASPxUploadControlBRANCH As Global.DevExpress.Web.ASPxUploadControl
 
     '''<summary>
     '''txt_Flower control.
@@ -259,13 +257,13 @@ Partial Public Class CreateHerb
     Protected WithEvents txt_Flower As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''ASPxUploadControl7 control.
+    '''ASPxUploadControlFLOWER control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents ASPxUploadControl7 As ASPxUploadControl
+    Protected WithEvents ASPxUploadControlFLOWER As Global.DevExpress.Web.ASPxUploadControl
 
     '''<summary>
     '''btnUpdate control.
@@ -277,11 +275,11 @@ Partial Public Class CreateHerb
     Protected WithEvents btnUpdate As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
-    '''btnCancel control.
+    '''btnDelete control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents btnCancel As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents btnDelete As Global.System.Web.UI.WebControls.Button
 End Class

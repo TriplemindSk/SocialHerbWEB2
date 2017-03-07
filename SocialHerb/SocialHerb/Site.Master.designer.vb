@@ -23,6 +23,15 @@ Partial Public Class Site
     Protected WithEvents HeadContent As Global.System.Web.UI.WebControls.ContentPlaceHolder
 
     '''<summary>
+    '''lbl_LoginName control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lbl_LoginName As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
     '''HeadLoginView control.
     '''</summary>
     '''<remarks>

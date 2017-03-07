@@ -12,6 +12,17 @@ Imports System.Linq
 Public Class Disease
     Inherits System.Web.UI.Page
 
+
+    Public Property DiseaseCode() As String
+        Get
+            Return ViewState("DiseaseCode")
+        End Get
+        Set(ByVal value As String)
+            ViewState("DiseaseCode") = value
+        End Set
+    End Property
+
+
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
 
         hpDisease.NavigateUrl = "~\Detail\CreateDisease.aspx"

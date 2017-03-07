@@ -33,16 +33,17 @@
 
     </div>
 
-     <dx:ASPxGridView ID="gv_HerbShow" ClientInstanceName="grid" runat="server" KeyFieldName="EmployeeID"
+     <dx:ASPxGridView ID="gv_HerbShow" ClientInstanceName="grid" runat="server" KeyFieldName="herbID"
         PreviewFieldName="Notes" AutoGenerateColumns="False" EnableRowsCache="false"
         DataSourceID="Herb_SH" Width="100%">
         <Columns>
-            <dx:GridViewDataColumn FieldName="HerbName" VisibleIndex="0" Caption="ชื่อสมุนไพร"
+            <dx:GridViewDataColumn FieldName="herbName" VisibleIndex="0" Caption="ชื่อสมุนไพร"
                 ReadOnly="True" SortOrder="Descending" HeaderStyle-HorizontalAlign="Center" Width="100px">
                 <EditCellStyle HorizontalAlign="Center">
                 </EditCellStyle>
                 <DataItemTemplate>
-                    <asp:LinkButton ID="lnk_HerbN" runat="server" Text='<%# Eval("herbName") %>' CommandArgument='<%# Eval("herbName") %>'>
+                    <asp:LinkButton ID="lnk_HerbN" runat="server" Text='<%# Eval("herbName") %>' CommandArgument='<%# Eval("herbName") %>'
+                    OnCommand="ListItem_Command" Enabled="True" CommandName="OpenCreateHerb">
                     </asp:LinkButton>
                 </DataItemTemplate>
                 <EditItemTemplate>
@@ -50,8 +51,8 @@
                 </EditItemTemplate>
                 <Settings AutoFilterCondition="Contains" />
             </dx:GridViewDataColumn>
-            <dx:GridViewDataColumn FieldName="HerbOtherName" VisibleIndex="1" Caption="ชื่อสมุนไพร(อื่นๆ)"
-                ReadOnly="True" HeaderStyle-HorizontalAlign="Center" Width="100px">
+            <dx:GridViewDataColumn FieldName="herbOtherName" VisibleIndex="1" Caption="ชื่อสมุนไพร(อื่นๆ)"
+                ReadOnly="True" HeaderStyle-HorizontalAlign="Center" Width="100px" >
                 <EditCellStyle HorizontalAlign="Center">
                 </EditCellStyle>
                 <EditItemTemplate>
@@ -60,7 +61,7 @@
                 </EditItemTemplate>
                 <Settings AutoFilterCondition="Contains" />
             </dx:GridViewDataColumn>
-            <dx:GridViewDataColumn FieldName="Properties" VisibleIndex="2" Caption="ลักษณะทั่วไป"
+            <dx:GridViewDataColumn FieldName="properties" VisibleIndex="2" Caption="ลักษณะทั่วไป"
                 ReadOnly="True" HeaderStyle-HorizontalAlign="Center" Width="100px">
                 <EditCellStyle HorizontalAlign="Center">
                 </EditCellStyle>
@@ -106,7 +107,7 @@
                   <SettingsBehavior AllowFocusedRow="True" />   
     </dx:ASPxGridView>
     <asp:SqlDataSource ID="Herb_SH" runat="server" ConnectionString="<%$ ConnectionStrings:SocialHerb %>"
-        SelectCommand=" SELECT Herb.herbName,Herb.herbOtherName,Herb.properties,Herb.dateHerb,HerbResearch.researchName 
+        SelectCommand=" SELECT Herb.herbName, Herb.herbOtherName, Herb.properties, Herb.dateHerb, HerbResearch.researchName 
                     FROM Herb LEFT OUTER JOIN HerbResearch ON herbID = HerbResearch.researchID
                      ORDER BY [dateHerb] DESC"></asp:SqlDataSource>
 

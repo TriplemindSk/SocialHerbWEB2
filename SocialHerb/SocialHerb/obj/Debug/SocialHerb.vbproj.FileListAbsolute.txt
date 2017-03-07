@@ -30,6 +30,7 @@ C:\Users\Minddy\Documents\SocialHerbWEB2\SocialHerbWEB2\SocialHerbWEB2\SocialHer
 C:\Users\Minddy\Documents\SocialHerbWEB2\SocialHerbWEB2\SocialHerbWEB2\SocialHerbWEB2\SocialHerb\SocialHerb\bin\SocialHerb.pdb
 C:\Users\Minddy\Documents\SocialHerbWEB2\SocialHerbWEB2\SocialHerbWEB2\SocialHerbWEB2\SocialHerb\SocialHerb\bin\SocialHerb.xml
 C:\Users\Minddy\Documents\SocialHerbWEB2\SocialHerbWEB2\SocialHerbWEB2\SocialHerbWEB2\SocialHerb\SocialHerb\bin\Bonzen.Utils.dll
+C:\Users\Minddy\Documents\SocialHerbWEB2\SocialHerbWEB2\SocialHerbWEB2\SocialHerbWEB2\SocialHerb\SocialHerb\obj\Debug\SocialHerb.XtraReport1.resources
 C:\Users\Minddy\Documents\SocialHerbWEB2\SocialHerbWEB2\SocialHerbWEB2\SocialHerbWEB2\SocialHerb\SocialHerb\obj\Debug\SocialHerb.Resources.resources
 C:\Users\Minddy\Documents\SocialHerbWEB2\SocialHerbWEB2\SocialHerbWEB2\SocialHerbWEB2\SocialHerb\SocialHerb\obj\Debug\SocialHerb.vbproj.GenerateResource.Cache
 C:\Users\Minddy\Documents\SocialHerbWEB2\SocialHerbWEB2\SocialHerbWEB2\SocialHerbWEB2\SocialHerb\SocialHerb\obj\Debug\SocialHerb.dll.licenses

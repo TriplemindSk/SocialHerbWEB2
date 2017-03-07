@@ -14,6 +14,51 @@ Option Explicit On
 Partial Public Class Report
 
     '''<summary>
+    '''carTabPage control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents carTabPage As Global.DevExpress.Web.ASPxPageControl
+
+    '''<summary>
+    '''ContentControl1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents ContentControl1 As Global.DevExpress.Web.ContentControl
+
+    '''<summary>
+    '''ContentControl2 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents ContentControl2 As Global.DevExpress.Web.ContentControl
+
+    '''<summary>
+    '''ContentControl3 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents ContentControl3 As Global.DevExpress.Web.ContentControl
+
+    '''<summary>
+    '''ContentControl4 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents ContentControl4 As Global.DevExpress.Web.ContentControl
+
+    '''<summary>
     '''ScriptManager1 control.
     '''</summary>
     '''<remarks>

@@ -13,7 +13,7 @@ Public Class WebForm1
 
 
 
-    Public Property ArticleCod() As String
+    Public Property ArticleCode() As String
         Get
             Return ViewState("ArticleCode")
         End Get

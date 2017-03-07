@@ -20,7 +20,7 @@
 
     </div>
 
-    <dx:ASPxGridView ID="gv_FoodShow" ClientInstanceName="gv_FoodShow" runat="server" KeyFieldName="FoodName"
+    <dx:ASPxGridView ID="gv_FoodShow" ClientInstanceName="gv_FoodShow" runat="server" KeyFieldName="foodID"
         AutoGenerateColumns="False" EnableRowsCache="false" DataSourceID="Food_SH"
         Width="100%" Style="text-align: center" Enabled="True">
         <Columns>
@@ -29,7 +29,8 @@
                 <EditCellStyle HorizontalAlign="Center">
                 </EditCellStyle>
                 <DataItemTemplate>
-                    <asp:LinkButton ID="lnk_FoodName" runat="server" Text='<%# Eval("foodName") %>' CommandArgument='<%# Eval("foodName") %>'>
+                    <asp:LinkButton ID="lnk_FoodName" runat="server" Text='<%# Eval("foodName") %>' CommandArgument='<%# Eval("foodID") %>' 
+                    OnCommand="ListItem_Command" Enabled="True" CommandName="OpenCreateFood">
                             </asp:LinkButton>
                 </DataItemTemplate>
                 <EditItemTemplate>
@@ -39,7 +40,7 @@
                 <Settings AutoFilterCondition="Contains" />
             </dx:GridViewDataColumn>
             <dx:GridViewDataColumn FieldName="foodRecipe" VisibleIndex="1" Caption="ส่วนผสม"
-                ReadOnly="True"  HeaderStyle-HorizontalAlign="Center" Width="300px">
+                ReadOnly="True"  HeaderStyle-HorizontalAlign="Center" Width="300px" Visible="false">
                 <EditCellStyle HorizontalAlign="Center">
                 </EditCellStyle>
                 <EditItemTemplate>
@@ -108,7 +109,7 @@
     </dx:ASPxGridView>
 
     <asp:SqlDataSource ID="Food_SH" runat="server" ConnectionString="<%$ ConnectionStrings:SocialHerb %>"
-                    SelectCommand=" SELECT foodName,foodRecipe,foodBenefit,creditFood,dateFood
+                    SelectCommand=" SELECT foodID,foodName,foodRecipe,foodBenefit,creditFood,dateFood
                     FROM HealthFood ORDER BY [dateFood] DESC">
                 </asp:SqlDataSource>
 

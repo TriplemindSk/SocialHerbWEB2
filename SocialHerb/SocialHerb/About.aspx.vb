@@ -13,35 +13,38 @@ Public Class About
 
     End Sub
 
+
+    Public Function GetNextAdminid() As Integer
+        Dim ctx As New SocialHerbDataContext
+        Dim nextId As Integer = (From adid In ctx.Admins Select CType(adid.adminID, Integer?)).Max.GetValueOrDefault + 1
+        Return nextId
+    End Function
+
     Public Sub AddData()
 
-        Dim admin As SocialHerb.Admin
-        Dim strSQL, strConnString As String
-
-        strConnString = WebConfigurationManager.ConnectionStrings("SocialHerb").ConnectionString
-        strSQL = "insert into Admin (usernameAd,passwordAd" & _
-        ") values ('" & txtUser.Text & "','" & txtPass.Text & "')"
+        Dim getAdminid As Integer = GetNextAdminid()
 
         Try
-            Using objConn As New SqlConnection(strConnString)
-                objConn.Open()
-                Dim objCmd As New SqlCommand(strSQL, objConn)
+            Dim admin As New Admin
+            With admin
+                .adminID = getAdminid
+                .usernameAd = txtUser.Text
+                .passwordAd = txtPass.Text
 
+            End With
 
-                txtUser.Text = ""
-                txtPass.Text = ""
-
-                objCmd.ExecuteNonQuery()
-
-                objConn.Close()
+            Using ctx As New SocialHerbDataContext
+                ctx.Admins.InsertOnSubmit(admin)
+                ctx.SubmitChanges()
             End Using
+
+
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
 
-
-
         lblErrorEdit.Text = "Record insert Complete"
+
 
 
     End Sub

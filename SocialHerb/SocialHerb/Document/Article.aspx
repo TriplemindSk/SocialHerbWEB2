@@ -75,7 +75,7 @@
                 </EditItemTemplate>
                 <Settings AutoFilterCondition="Contains" />
             </dx:GridViewDataColumn>
-           <%-- <dx:GridViewDataColumn FieldName="dateArticle" VisibleIndex="3" Caption="วันที่แก้ไข"
+            <dx:GridViewDataColumn FieldName="dateArt" VisibleIndex="3" Caption="วันที่แก้ไข"
                 ReadOnly="True" CellStyle-HorizontalAlign="Center" HeaderStyle-HorizontalAlign="Center"
                 Width="50px">
                 <EditCellStyle HorizontalAlign="Center">
@@ -85,7 +85,7 @@
                     </asp:Label>
                 </EditItemTemplate>
                 <Settings AutoFilterCondition="Contains" />
-            </dx:GridViewDataColumn>--%>
+            </dx:GridViewDataColumn>
         </Columns>
              <SettingsEditing Mode="Inline" />
 
