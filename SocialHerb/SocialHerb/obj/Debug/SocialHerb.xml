@@ -478,6 +478,14 @@ txtDetail control.
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
+</member><member name="F:SocialHerb.ProDisease.TextBox1">
+	<summary>
+TextBox1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
 </member><member name="F:SocialHerb.ProDisease.txtherb">
 	<summary>
 txtherb control.
@@ -670,6 +678,14 @@ UploadControl control.
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
+</member><member name="F:SocialHerb.ProHerb.imgName">
+	<summary>
+imgName control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
 </member><member name="F:SocialHerb.ProHerb.imgInfo">
 	<summary>
 imgInfo control.
@@ -737,6 +753,14 @@ To modify move field declaration from designer file to code-behind file.
 </member><member name="F:SocialHerb.ProHerb.ASPxUploadControl1">
 	<summary>
 ASPxUploadControl1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:SocialHerb.ProHerb.imgLeaf">
+	<summary>
+imgLeaf control.
 </summary>
 	<remarks>
 Auto-generated field.
@@ -841,6 +865,14 @@ To modify move field declaration from designer file to code-behind file.
 </member><member name="F:SocialHerb.ProHerb.ASPxUploadControl7">
 	<summary>
 ASPxUploadControl7 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:SocialHerb.ProHerb.imgFlower">
+	<summary>
+imgFlower control.
 </summary>
 	<remarks>
 Auto-generated field.
@@ -1018,6 +1050,14 @@ To modify move field declaration from designer file to code-behind file.
 </member><member name="F:SocialHerb.ProArticle.UploadControl">
 	<summary>
 UploadControl control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:SocialHerb.ProArticle.imgName">
+	<summary>
+imgName control.
 </summary>
 	<remarks>
 Auto-generated field.
@@ -1575,6 +1615,14 @@ UploadControl control.
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
+</member><member name="F:SocialHerb.ProFood.imgName">
+	<summary>
+imgName control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
 </member><member name="F:SocialHerb.ProFood.imgInfo">
 	<summary>
 imgInfo control.
@@ -1690,6 +1738,14 @@ To modify move field declaration from designer file to code-behind file.
 </member><member name="F:SocialHerb.ProInfo.UploadControl">
 	<summary>
 UploadControl control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:SocialHerb.ProInfo.imgName">
+	<summary>
+imgName control.
 </summary>
 	<remarks>
 Auto-generated field.

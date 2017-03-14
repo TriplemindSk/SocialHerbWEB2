@@ -60,7 +60,8 @@
 
              <tr>
             <td align="right" class="style3" valign="top">
-           ข้าวโพด.jpg
+              <asp:Label ID="imgName" runat="server" Text=" ข้าวโพด.jpg"></asp:Label>
+          
             </td>
             <td>
             <asp:Image ID="imgInfo" runat="server" ImageUrl="~/Images/ข้าวโพด.jpg" Width="500px" Height="353px"/> 

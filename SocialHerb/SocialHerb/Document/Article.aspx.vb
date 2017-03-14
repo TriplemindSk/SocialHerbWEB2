@@ -43,7 +43,7 @@ Public Class WebForm1
         Select Case e.CommandName
             Case "OpenCreateArticle"
                 'Session("IsEditing") = True
-                Response.Redirect("~\Detail\CreateArticle.aspx?articleID=" & e.CommandArgument)
+                Response.Redirect("~\Prototype\ProArticle.aspx?articleID=" & e.CommandArgument)
         End Select
     End Sub
 

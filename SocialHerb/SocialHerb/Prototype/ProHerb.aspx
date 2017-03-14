@@ -68,7 +68,8 @@
 </tr>
               <tr>  
             <td align="right" class="style3" valign="top">
-            พญายอ.jpg
+            <asp:Label ID="imgName" runat="server" Text="พญายอ.jpg"></asp:Label>
+            
             </td>
             <td>
             <asp:Image ID="imgInfo" runat="server" ImageUrl="~/Images/พญายอ.jpg" Width="250px" Height="150px"/> 
@@ -162,7 +163,7 @@
                 </td>
 
             <td align="right" class="style3" valign="top">
-            ใบพญายอ.jpg
+            <asp:Label ID="imgLeaf" runat="server" Text="ใบพญายอ.jpg"></asp:Label>             
             </td>
             <td>
             <asp:Image ID="Image1" runat="server" ImageUrl="~/Images/ใบพญายอ.jpg" Width="250px" Height="150px"/> 
@@ -316,7 +317,7 @@
                 </td>
 
                  <td align="right" class="style3" valign="top">
-            ดอกพญายอ.jpg
+                  <asp:Label ID="imgFlower" runat="server" Text="ดอกพญายอ.jpg"></asp:Label>           
             </td>
             <td>
             <asp:Image ID="Image2" runat="server" ImageUrl="~/Images/ดอกพญายอ.jpg" Width="250px" Height="150px"/> 

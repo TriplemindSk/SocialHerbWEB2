@@ -38,7 +38,7 @@ Public Class Herb
         Select Case e.CommandName
             Case "OpenCreateHerb"
                 'Session("IsEditing") = True
-                Response.Redirect("~\Detail\CreateHerb.aspx?herbID=" & e.CommandArgument)
+                Response.Redirect("~\Prototype\ProHerb.aspx?herbID=" & e.CommandArgument)
         End Select
     End Sub
 

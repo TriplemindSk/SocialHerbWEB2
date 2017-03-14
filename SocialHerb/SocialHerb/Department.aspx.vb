@@ -20,7 +20,7 @@ Public Class Department
         Select Case e.CommandName
             Case "OpenCreateDepartment"
                 'Session("IsEditing") = True
-                Response.Redirect("~\Detail\CreateDepartment.aspx?ID= " & e.CommandArgument)
+                Response.Redirect("~\Prototype\ProDepartment.aspx?ID= " & e.CommandArgument)
         End Select
     End Sub
 End Class

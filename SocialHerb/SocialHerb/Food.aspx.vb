@@ -42,7 +42,7 @@ Public Class Food
         Select Case e.CommandName
             Case "OpenCreateFood"
                 'Session("IsEditing") = True
-                Response.Redirect("~\Detail\CreateFood.aspx?foodID=" & e.CommandArgument)
+                Response.Redirect("~\Prototype\ProFood.aspx?foodID=" & e.CommandArgument)
         End Select
     End Sub
 

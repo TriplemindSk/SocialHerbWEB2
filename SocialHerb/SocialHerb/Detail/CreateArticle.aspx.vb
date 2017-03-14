@@ -5,6 +5,8 @@ Imports DevExpress.Web
 Imports System.IO
 Imports System.Web.Configuration
 Imports System.Drawing
+
+
 Public Class CreateArticle
     Inherits System.Web.UI.Page
 
@@ -17,7 +19,7 @@ Public Class CreateArticle
     End Property
 
 
-    Public Property ArticleCod() As String
+    Public Property ArticleCode() As String
         Get
             Return ViewState("ArticleCode")
         End Get
@@ -29,6 +31,15 @@ Public Class CreateArticle
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         Dim RequestArticleID = Request.QueryString("articleID")
+
+        If Not IsPostBack Then
+           
+            ViewState("articleID") = CInt(Request.QueryString("articleID"))
+
+        End If
+
+        ArticleCode = Request.QueryString("articleID")
+
 
     End Sub
 
@@ -119,7 +130,96 @@ Public Class CreateArticle
     End Sub
 
 
-    Private Sub ShowData()
+    Public Function chkArticleByID(ByVal aID As String) As Article
+        Dim article As New Article
+        Using ctx = New SocialHerbDataContext
+            article = (From q In ctx.Articles Where q.articleID = 5).SingleOrDefault
+        End Using
+        Return article
+    End Function
+
+
+    Private Sub ShowData(ByVal aID As String)
+
+        Dim arti As New Article
+        arti = chkArticleByID(aID)
+
+
+        If arti IsNot Nothing Then
+
+            With arti
+                .articleID = 5
+                .articleName = txtNameA.Text
+                .article = txtDetailA.Text
+                .articleCredit = txtRefA.Text
+                .dateArt = Now
+            End With
+        End If
+
+        'Dim quota As New Quotation
+        'quota = chkQuotationByNO(qno)
+        'txt_booking.Text = quotapro.BookingBy
+        'txt_title.Text = quotapro.Title
+
+        'If quota IsNot Nothing Then
+        '    btn_AddQuotation.Visible = False
+        '    btn_SaveQuotation.Visible = True
+        '    btn_ApproveQuotation.Visible = True
+        '    'btn_edit.Enabled = True
+        '    'btn_editRemark.Enabled = True
+        '    btnDeleteSelectedRows.Enabled = True
+        '    txt_totalamount.ClientEnabled = True
+        '    memo_remark.ClientEnabled = True
+
+        '    'memo_remark.BackColor = Drawing.Color.LightGray
+        '    With quota
+        '        QuotationID = .Quota_ID
+        '        cmb_company.Text = .company_name
+        '        cmb_attn.Text = .attn
+        '        txt_tel.Text = .tel
+        '        txt_fax.Text = .fax
+        '        txt_email.Text = .email
+        '        txt_totalamount.Text = .total_amount
+        '        memo_remark.Text = .remark
+        '        'code เก่า
+        '        'memo_remark.Text = .remark
+        '        'memo_condition.Text = .condition
+
+        '        'Using ctx = New DlmsDataContext
+        '        '    Dim quota_item As New List(Of QuotationItem)
+        '        '    Dim subDataList As New List(Of String)
+        '        '    quota_item = (From qi In ctx.QuotationItems Where qi.Quota_ID = .Quota_ID).ToList
+        '        '    For Each i In quota_item
+        '        '        Dim q_DescriptionSub As New QuotationDescriptionSub
+        '        '        With q_DescriptionSub
+        '        '            .ID_Q_Detail_Main = i.QuotationDescriptionSub.ID_Q_Detail_Main
+        '        '            .ID_Q_Detail_Sub = i.ID_Q_Detail_Sub
+        '        '            .Q_Detail_Sub = i.QuotationDescriptionSub.Q_Detail_Sub
+        '        '            .Price = i.price
+        '        '        End With
+        '        '        subDataList.Add(StrDetailData(q_DescriptionSub, i.unit))
+        '        '    Next
+        '        '    'code เก่า
+        '        '    'txt_subData.Text = String.Join(";", subDataList)
+        '        '    'gv_addmodule_DataBind()
+        '        'End Using
+        '    End With
+
+        'Else
+        '    btn_SaveQuotation.Visible = False
+        '    btn_ApproveQuotation.Visible = False
+        '    btn_AddQuotation.Visible = True
+        '    'btn_edit.Enabled = False
+        '    'btn_editRemark.Enabled = False
+        '    btnDeleteSelectedRows.Enabled = False
+        '    txt_totalamount.ClientEnabled = True
+        '    memo_remark.ClientEnabled = True
+        '    ulc_QuotationFile.Enabled = False
+        '    memo_remark.BackColor = Drawing.Color.White
+        '    txt_totalamount.BackColor = Drawing.Color.White
+        'End If
+
+
 
 
 

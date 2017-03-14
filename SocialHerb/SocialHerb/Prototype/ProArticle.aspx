@@ -59,7 +59,9 @@
             </tr>
               <tr>
             <td align="right" class="style3" valign="top">
-            น้ำท่วม.jpg
+
+            <asp:Label ID="imgName" runat="server" Text="น้ำท่วม.jpg"></asp:Label>
+            
             </td>
             <td>
             <asp:Image ID="imgInfo" runat="server" ImageUrl="~/Images/น้ำท่วม.jpg" Width="500px" Height="353px"/> 

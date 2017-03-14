@@ -94,7 +94,8 @@
             </tr>
             <tr>
             <td align="right" class="style3" valign="top">
-            วิ่ง_สู่_4_มิติสุขภาวะ.jpg
+              <asp:Label ID="imgName" runat="server" Text="วิ่ง_สู่_4_มิติสุขภาวะ.jpg"></asp:Label>
+           
             </td>
             <td>
             <asp:Image ID="imgInfo" runat="server" ImageUrl="~/Images/วิ่ง_สู่_4_มิติสุขภาวะ.jpg" Width="500px" Height="353px"/> 

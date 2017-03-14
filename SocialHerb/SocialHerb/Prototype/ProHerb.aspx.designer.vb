@@ -86,6 +86,15 @@ Partial Public Class ProHerb
     Protected WithEvents UploadControl As Global.DevExpress.Web.ASPxUploadControl
 
     '''<summary>
+    '''imgName control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents imgName As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
     '''imgInfo control.
     '''</summary>
     '''<remarks>
@@ -165,6 +174,15 @@ Partial Public Class ProHerb
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents ASPxUploadControl1 As Global.DevExpress.Web.ASPxUploadControl
+
+    '''<summary>
+    '''imgLeaf control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents imgLeaf As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
     '''Image1 control.
@@ -282,6 +300,15 @@ Partial Public Class ProHerb
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents ASPxUploadControl7 As Global.DevExpress.Web.ASPxUploadControl
+
+    '''<summary>
+    '''imgFlower control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents imgFlower As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
     '''Image2 control.

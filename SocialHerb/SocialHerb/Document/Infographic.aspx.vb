@@ -37,7 +37,7 @@ Public Class Infographic
         Select Case e.CommandName
             Case "OpenCreateInfo"
                 'Session("IsEditing") = True
-                Response.Redirect("~\Detail\CreateInfo.aspx?infoID=" & e.CommandArgument)
+                Response.Redirect("~\Prototype\ProInfo.aspx?infoID=" & e.CommandArgument)
         End Select
     End Sub
 

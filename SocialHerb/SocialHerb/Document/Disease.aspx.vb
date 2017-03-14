@@ -42,7 +42,7 @@ Public Class Disease
         Select Case e.CommandName
             Case "OpenCreateDisease"
                 'Session("IsEditing") = True
-                Response.Redirect("~\Detail\CreateDisease.aspx?diseaseID= " & e.CommandArgument)
+                Response.Redirect("~\Prototype\ProDisease.aspx?diseaseID= " & e.CommandArgument)
         End Select
     End Sub
 End Class
