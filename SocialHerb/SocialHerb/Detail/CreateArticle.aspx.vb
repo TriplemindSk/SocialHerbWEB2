@@ -117,6 +117,51 @@ Public Class CreateArticle
 
 
     End Sub
-    
+
+
+    Private Sub ShowData()
+
+
+
+    End Sub
+
+
+
+
+
+
+
+    Public Sub GetFiles()
+        '    Dim dt As New DataTable
+        '    dt.Columns.Add("Q_FileID", GetType(String))
+        '    dt.Columns.Add("filename", GetType(String))
+        '    dt.Columns.Add("link", GetType(String))
+
+        '    Dim quotationList As List(Of QuotationFile)
+        '    quotationList = GetQuotationFile(QuotationCode)
+
+        '    Try
+        '        Dim Path = UploadDirectory & QuotationCode
+        '        If IO.Directory.Exists(Path) Then
+        '            Dim dirs As New IO.DirectoryInfo(Path)
+        '            For Each f As IO.FileInfo In dirs.GetFiles
+        '                Dim fname As String = f.Name
+        '                Dim fpath As String = "DownloadFile.aspx?FilePath=" & Web.HttpUtility.UrlEncode(Path & "\" & f.Name)
+        '                For Each i In quotationList
+        '                    If i.Q_FileName = fname Then
+        '                        dt.Rows.Add(i.Q_FileID, fname, fpath)
+        '                    End If
+        '                Next
+        '            Next
+        '        End If
+        '    Catch ex As Exception
+        '        dt.Clear()
+        '    End Try
+        '    gv_QFile.DataSource = dt
+
+    End Sub
+
+
+
 End Class
 

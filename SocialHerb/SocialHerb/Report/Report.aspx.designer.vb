@@ -32,6 +32,15 @@ Partial Public Class Report
     Protected WithEvents ContentControl1 As Global.DevExpress.Web.ContentControl
 
     '''<summary>
+    '''ASPxDocumentViewer2 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents ASPxDocumentViewer2 As Global.DevExpress.XtraReports.Web.ASPxDocumentViewer
+
+    '''<summary>
     '''ContentControl2 control.
     '''</summary>
     '''<remarks>
@@ -39,33 +48,6 @@ Partial Public Class Report
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents ContentControl2 As Global.DevExpress.Web.ContentControl
-
-    '''<summary>
-    '''ContentControl3 control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents ContentControl3 As Global.DevExpress.Web.ContentControl
-
-    '''<summary>
-    '''ContentControl4 control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents ContentControl4 As Global.DevExpress.Web.ContentControl
-
-    '''<summary>
-    '''ScriptManager1 control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents ScriptManager1 As Global.System.Web.UI.ScriptManager
 
     '''<summary>
     '''ASPxDocumentViewer1 control.
@@ -77,20 +59,38 @@ Partial Public Class Report
     Protected WithEvents ASPxDocumentViewer1 As Global.DevExpress.XtraReports.Web.ASPxDocumentViewer
 
     '''<summary>
-    '''ReportViewer1 control.
+    '''ContentControl3 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents ReportViewer1 As Global.Microsoft.Reporting.WebForms.ReportViewer
+    Protected WithEvents ContentControl3 As Global.DevExpress.Web.ContentControl
 
     '''<summary>
-    '''SqlDataSource1 control.
+    '''ASPxDocumentViewer3 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents SqlDataSource1 As Global.System.Web.UI.WebControls.SqlDataSource
+    Protected WithEvents ASPxDocumentViewer3 As Global.DevExpress.XtraReports.Web.ASPxDocumentViewer
+
+    '''<summary>
+    '''ContentControl4 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents ContentControl4 As Global.DevExpress.Web.ContentControl
+
+    '''<summary>
+    '''ASPxDocumentViewer4 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents ASPxDocumentViewer4 As Global.DevExpress.XtraReports.Web.ASPxDocumentViewer
 End Class

@@ -37,12 +37,12 @@
         PreviewFieldName="Notes" AutoGenerateColumns="False" EnableRowsCache="false"
         DataSourceID="Herb_SH" Width="100%">
         <Columns>
-            <dx:GridViewDataColumn FieldName="herbName" VisibleIndex="0" Caption="ชื่อสมุนไพร"
+            <dx:GridViewDataColumn FieldName="herbID" VisibleIndex="0" Caption="ชื่อสมุนไพร"
                 ReadOnly="True" SortOrder="Descending" HeaderStyle-HorizontalAlign="Center" Width="100px">
                 <EditCellStyle HorizontalAlign="Center">
                 </EditCellStyle>
                 <DataItemTemplate>
-                    <asp:LinkButton ID="lnk_HerbN" runat="server" Text='<%# Eval("herbName") %>' CommandArgument='<%# Eval("herbName") %>'
+                    <asp:LinkButton ID="lnk_HerbN" runat="server" Text='<%# Eval("herbName") %>' CommandArgument='<%# Eval("herbID") %>'
                     OnCommand="ListItem_Command" Enabled="True" CommandName="OpenCreateHerb">
                     </asp:LinkButton>
                 </DataItemTemplate>
@@ -91,6 +91,20 @@
                 </EditItemTemplate>
                 <Settings AutoFilterCondition="Contains" />
             </dx:GridViewDataColumn>
+
+            <dx:GridViewDataColumn  VisibleIndex="4" Caption=" "
+                ReadOnly="True" HeaderStyle-HorizontalAlign="Center" Width="50px" Visible="false">
+                <EditCellStyle HorizontalAlign="Center">
+                </EditCellStyle>
+                <EditItemTemplate>
+                     <asp:LinkButton ID="lnk_HerbN" runat="server" Text="DELETE" >
+                    </asp:LinkButton>
+                </EditItemTemplate>
+                <Settings AutoFilterCondition="Contains" />
+            </dx:GridViewDataColumn>
+
+
+
         </Columns>
              <SettingsEditing Mode="Inline" />
 
@@ -107,7 +121,7 @@
                   <SettingsBehavior AllowFocusedRow="True" />   
     </dx:ASPxGridView>
     <asp:SqlDataSource ID="Herb_SH" runat="server" ConnectionString="<%$ ConnectionStrings:SocialHerb %>"
-        SelectCommand=" SELECT Herb.herbName, Herb.herbOtherName, Herb.properties, Herb.dateHerb, HerbResearch.researchName 
+        SelectCommand=" SELECT Herb.herbID, Herb.herbName, Herb.herbOtherName, Herb.properties, Herb.dateHerb, HerbResearch.researchName 
                     FROM Herb LEFT OUTER JOIN HerbResearch ON herbID = HerbResearch.researchID
                      ORDER BY [dateHerb] DESC"></asp:SqlDataSource>
 

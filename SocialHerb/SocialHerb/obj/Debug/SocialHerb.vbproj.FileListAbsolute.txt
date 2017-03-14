@@ -39,3 +39,7 @@ C:\Users\Minddy\Documents\SocialHerbWEB2\SocialHerbWEB2\SocialHerbWEB2\SocialHer
 C:\Users\Minddy\Documents\SocialHerbWEB2\SocialHerbWEB2\SocialHerbWEB2\SocialHerbWEB2\SocialHerb\SocialHerb\obj\Debug\SocialHerb.dll
 C:\Users\Minddy\Documents\SocialHerbWEB2\SocialHerbWEB2\SocialHerbWEB2\SocialHerbWEB2\SocialHerb\SocialHerb\obj\Debug\SocialHerb.xml
 C:\Users\Minddy\Documents\SocialHerbWEB2\SocialHerbWEB2\SocialHerbWEB2\SocialHerbWEB2\SocialHerb\SocialHerb\obj\Debug\SocialHerb.pdb
+C:\Users\Minddy\Documents\SocialHerbWEB2\SocialHerbWEB2\SocialHerbWEB2\SocialHerbWEB2\SocialHerb\SocialHerb\obj\Debug\SocialHerb.vbprojResolveAssemblyReference.cache
+C:\Users\Minddy\Documents\SocialHerbWEB2\SocialHerbWEB2\SocialHerbWEB2\SocialHerbWEB2\SocialHerb\SocialHerb\obj\Debug\SocialHerb.XtraReport2.resources
+C:\Users\Minddy\Documents\SocialHerbWEB2\SocialHerbWEB2\SocialHerbWEB2\SocialHerbWEB2\SocialHerb\SocialHerb\obj\Debug\SocialHerb.XtraReport3.resources
+C:\Users\Minddy\Documents\SocialHerbWEB2\SocialHerbWEB2\SocialHerbWEB2\SocialHerbWEB2\SocialHerb\SocialHerb\obj\Debug\SocialHerb.XtraReport4.resources

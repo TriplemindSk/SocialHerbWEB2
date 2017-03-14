@@ -19,15 +19,17 @@ Partial Public Class XtraReport1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(XtraReport1))
         Dim Series1 As DevExpress.XtraCharts.Series = New DevExpress.XtraCharts.Series()
         Dim SeriesPoint1 As DevExpress.XtraCharts.SeriesPoint = New DevExpress.XtraCharts.SeriesPoint("อาการ/โรค", New Object() {CType(20.0R, Object)}, 0)
         Dim SeriesPoint2 As DevExpress.XtraCharts.SeriesPoint = New DevExpress.XtraCharts.SeriesPoint("สมุนไพร", New Object() {CType(50.0R, Object)}, 1)
         Dim SeriesPoint3 As DevExpress.XtraCharts.SeriesPoint = New DevExpress.XtraCharts.SeriesPoint("จิตอาสา(เภสัชกร)", New Object() {CType(30.0R, Object)}, 2)
         Dim DoughnutSeriesView1 As DevExpress.XtraCharts.DoughnutSeriesView = New DevExpress.XtraCharts.DoughnutSeriesView()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(XtraReport1))
         Me.Detail = New DevExpress.XtraReports.UI.DetailBand()
+        Me.XrLabel2 = New DevExpress.XtraReports.UI.XRLabel()
+        Me.XrChart1 = New DevExpress.XtraReports.UI.XRChart()
         Me.TopMargin = New DevExpress.XtraReports.UI.TopMarginBand()
-        Me.XrLabel1 = New DevExpress.XtraReports.UI.XRLabel()
+        Me.XrPageInfo1 = New DevExpress.XtraReports.UI.XRPageInfo()
         Me.XrLine1 = New DevExpress.XtraReports.UI.XRLine()
         Me.XrPictureBox1 = New DevExpress.XtraReports.UI.XRPictureBox()
         Me.BottomMargin = New DevExpress.XtraReports.UI.BottomMarginBand()
@@ -41,13 +43,11 @@ Partial Public Class XtraReport1
         Me.DiseaseTableAdapter1 = New SocialHerb.SocialHerbnewDataSetTableAdapters.DiseaseTableAdapter()
         Me.PharmacistTableAdapter1 = New SocialHerb.SocialHerbnewDataSetTableAdapters.PharmacistTableAdapter()
         Me.HerbTableAdapter1 = New SocialHerb.SocialHerbnewDataSetTableAdapters.HerbTableAdapter()
-        Me.XrChart1 = New DevExpress.XtraReports.UI.XRChart()
-        Me.XrLabel2 = New DevExpress.XtraReports.UI.XRLabel()
-        CType(Me.SocialHerbDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.SocialHerbnewDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.XrChart1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Series1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(DoughnutSeriesView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SocialHerbDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SocialHerbnewDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
         '
         'Detail
@@ -59,43 +59,76 @@ Partial Public Class XtraReport1
         Me.Detail.Padding = New DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100.0!)
         Me.Detail.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
         '
+        'XrLabel2
+        '
+        Me.XrLabel2.Borders = DevExpress.XtraPrinting.BorderSide.None
+        Me.XrLabel2.Dpi = 100.0!
+        Me.XrLabel2.Font = New System.Drawing.Font("Angsana New", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.XrLabel2.LocationFloat = New DevExpress.Utils.PointFloat(60.33332!, 28.08332!)
+        Me.XrLabel2.Name = "XrLabel2"
+        Me.XrLabel2.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+        Me.XrLabel2.SizeF = New System.Drawing.SizeF(539.5833!, 38.62499!)
+        Me.XrLabel2.StylePriority.UseBorders = False
+        Me.XrLabel2.StylePriority.UseFont = False
+        Me.XrLabel2.StylePriority.UseTextAlignment = False
+        Me.XrLabel2.Text = "อัตราส่วนของข้อมูลระหว่างสมุนไพร,อาการ/โรคและจิตอาสา(เภสัชกร)"
+        Me.XrLabel2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter
+        '
+        'XrChart1
+        '
+        Me.XrChart1.BorderColor = System.Drawing.Color.Black
+        Me.XrChart1.Borders = DevExpress.XtraPrinting.BorderSide.None
+        Me.XrChart1.Dpi = 100.0!
+        Me.XrChart1.Legend.AlignmentVertical = DevExpress.XtraCharts.LegendAlignmentVertical.Bottom
+        Me.XrChart1.Legend.Name = "Default Legend"
+        Me.XrChart1.LocationFloat = New DevExpress.Utils.PointFloat(29.79164!, 106.6668!)
+        Me.XrChart1.Name = "XrChart1"
+        Series1.Name = "Series 1"
+        SeriesPoint1.ColorSerializable = "#FFFF00"
+        SeriesPoint2.ColorSerializable = "#9BBB59"
+        SeriesPoint3.ColorSerializable = "#F79646"
+        Series1.Points.AddRange(New DevExpress.XtraCharts.SeriesPoint() {SeriesPoint1, SeriesPoint2, SeriesPoint3})
+        Series1.View = DoughnutSeriesView1
+        Me.XrChart1.SeriesSerializable = New DevExpress.XtraCharts.Series() {Series1}
+        Me.XrChart1.SizeF = New System.Drawing.SizeF(586.1669!, 476.0417!)
+        '
         'TopMargin
         '
-        Me.TopMargin.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.XrLabel1, Me.XrLine1, Me.XrPictureBox1})
+        Me.TopMargin.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.XrPageInfo1, Me.XrLine1, Me.XrPictureBox1})
         Me.TopMargin.Dpi = 100.0!
-        Me.TopMargin.HeightF = 137.5!
+        Me.TopMargin.HeightF = 242.5835!
         Me.TopMargin.Name = "TopMargin"
         Me.TopMargin.Padding = New DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100.0!)
         Me.TopMargin.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
         '
-        'XrLabel1
+        'XrPageInfo1
         '
-        Me.XrLabel1.Dpi = 100.0!
-        Me.XrLabel1.Font = New System.Drawing.Font("Angsana New", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.XrLabel1.LocationFloat = New DevExpress.Utils.PointFloat(514.5833!, 78.83339!)
-        Me.XrLabel1.Name = "XrLabel1"
-        Me.XrLabel1.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-        Me.XrLabel1.SizeF = New System.Drawing.SizeF(135.4167!, 23.0!)
-        Me.XrLabel1.StylePriority.UseFont = False
-        Me.XrLabel1.Text = "วันที่ 4 มีนาคม 2560"
+        Me.XrPageInfo1.Dpi = 100.0!
+        Me.XrPageInfo1.Font = New System.Drawing.Font("Angsana New", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.XrPageInfo1.LocationFloat = New DevExpress.Utils.PointFloat(519.6252!, 196.5834!)
+        Me.XrPageInfo1.Name = "XrPageInfo1"
+        Me.XrPageInfo1.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+        Me.XrPageInfo1.PageInfo = DevExpress.XtraPrinting.PageInfo.DateTime
+        Me.XrPageInfo1.SizeF = New System.Drawing.SizeF(96.33325!, 23.00001!)
+        Me.XrPageInfo1.StylePriority.UseFont = False
         '
         'XrLine1
         '
         Me.XrLine1.Dpi = 100.0!
         Me.XrLine1.ForeColor = System.Drawing.Color.Maroon
         Me.XrLine1.LineWidth = 2
-        Me.XrLine1.LocationFloat = New DevExpress.Utils.PointFloat(0.0!, 112.4166!)
+        Me.XrLine1.LocationFloat = New DevExpress.Utils.PointFloat(29.79164!, 219.5835!)
         Me.XrLine1.Name = "XrLine1"
-        Me.XrLine1.SizeF = New System.Drawing.SizeF(650.0!, 23.0!)
+        Me.XrLine1.SizeF = New System.Drawing.SizeF(600.3334!, 23.0!)
         Me.XrLine1.StylePriority.UseForeColor = False
         '
         'XrPictureBox1
         '
         Me.XrPictureBox1.Dpi = 100.0!
         Me.XrPictureBox1.Image = CType(resources.GetObject("XrPictureBox1.Image"), System.Drawing.Image)
-        Me.XrPictureBox1.LocationFloat = New DevExpress.Utils.PointFloat(0.0!, 21.83332!)
+        Me.XrPictureBox1.LocationFloat = New DevExpress.Utils.PointFloat(29.79164!, 135.2502!)
         Me.XrPictureBox1.Name = "XrPictureBox1"
-        Me.XrPictureBox1.SizeF = New System.Drawing.SizeF(190.7085!, 90.58327!)
+        Me.XrPictureBox1.SizeF = New System.Drawing.SizeF(151.1251!, 84.3333!)
         Me.XrPictureBox1.Sizing = DevExpress.XtraPrinting.ImageSizeMode.ZoomImage
         '
         'BottomMargin
@@ -148,57 +181,23 @@ Partial Public Class XtraReport1
         '
         Me.HerbTableAdapter1.ClearBeforeFill = True
         '
-        'XrChart1
-        '
-        Me.XrChart1.BorderColor = System.Drawing.Color.Black
-        Me.XrChart1.Borders = DevExpress.XtraPrinting.BorderSide.None
-        Me.XrChart1.Dpi = 100.0!
-        Me.XrChart1.Legend.AlignmentVertical = DevExpress.XtraCharts.LegendAlignmentVertical.Bottom
-        Me.XrChart1.Legend.Name = "Default Legend"
-        Me.XrChart1.LocationFloat = New DevExpress.Utils.PointFloat(29.79164!, 136.8751!)
-        Me.XrChart1.Name = "XrChart1"
-        Series1.Name = "Series 1"
-        SeriesPoint1.ColorSerializable = "#FFFF00"
-        SeriesPoint2.ColorSerializable = "#9BBB59"
-        SeriesPoint3.ColorSerializable = "#F79646"
-        Series1.Points.AddRange(New DevExpress.XtraCharts.SeriesPoint() {SeriesPoint1, SeriesPoint2, SeriesPoint3})
-        Series1.View = DoughnutSeriesView1
-        Me.XrChart1.SeriesSerializable = New DevExpress.XtraCharts.Series() {Series1}
-        Me.XrChart1.SizeF = New System.Drawing.SizeF(600.3334!, 513.5416!)
-        '
-        'XrLabel2
-        '
-        Me.XrLabel2.Borders = DevExpress.XtraPrinting.BorderSide.None
-        Me.XrLabel2.Dpi = 100.0!
-        Me.XrLabel2.Font = New System.Drawing.Font("Angsana New", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.XrLabel2.LocationFloat = New DevExpress.Utils.PointFloat(60.33332!, 28.08332!)
-        Me.XrLabel2.Name = "XrLabel2"
-        Me.XrLabel2.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96.0!)
-        Me.XrLabel2.SizeF = New System.Drawing.SizeF(539.5833!, 38.62499!)
-        Me.XrLabel2.StylePriority.UseBorders = False
-        Me.XrLabel2.StylePriority.UseFont = False
-        Me.XrLabel2.StylePriority.UseTextAlignment = False
-        Me.XrLabel2.Text = "อัตราส่วนของข้อมูลระหว่างสมุนไพร,อาการ/โรคและจิตอาสา(เภสัชกร)"
-        Me.XrLabel2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter
-        '
         'XtraReport1
         '
         Me.Bands.AddRange(New DevExpress.XtraReports.UI.Band() {Me.Detail, Me.TopMargin, Me.BottomMargin})
         Me.Font = New System.Drawing.Font("Angsana New", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Margins = New System.Drawing.Printing.Margins(98, 100, 138, 100)
+        Me.Margins = New System.Drawing.Printing.Margins(98, 100, 243, 100)
         Me.Version = "16.2"
-        CType(Me.SocialHerbDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.SocialHerbnewDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(DoughnutSeriesView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Series1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.XrChart1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SocialHerbDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SocialHerbnewDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
 
     End Sub
     Friend WithEvents Detail As DevExpress.XtraReports.UI.DetailBand
     Friend WithEvents TopMargin As DevExpress.XtraReports.UI.TopMarginBand
     Friend WithEvents BottomMargin As DevExpress.XtraReports.UI.BottomMarginBand
-    Friend WithEvents XrLabel1 As DevExpress.XtraReports.UI.XRLabel
     Friend WithEvents XrLine1 As DevExpress.XtraReports.UI.XRLine
     Friend WithEvents XrPictureBox1 As DevExpress.XtraReports.UI.XRPictureBox
     Friend WithEvents DiseaseTableAdapter As SocialHerb.SocialHerbDataSetTableAdapters.DiseaseTableAdapter
@@ -213,4 +212,5 @@ Partial Public Class XtraReport1
     Friend WithEvents PharmacistTableAdapter1 As SocialHerb.SocialHerbnewDataSetTableAdapters.PharmacistTableAdapter
     Friend WithEvents HerbTableAdapter1 As SocialHerb.SocialHerbnewDataSetTableAdapters.HerbTableAdapter
     Friend WithEvents XrLabel2 As DevExpress.XtraReports.UI.XRLabel
+    Friend WithEvents XrPageInfo1 As DevExpress.XtraReports.UI.XRPageInfo
 End Class
